@@ -226,3 +226,11 @@ div.glow:hover{
   /* color:white; */
 mix-blend-mode: difference;
 }
+
+
+.clickable{
+  color:#0000EE;
+}
+.clickable:hover{
+  cursor:pointer;
+}

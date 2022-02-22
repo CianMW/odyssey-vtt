@@ -7,10 +7,12 @@ import { setLocation, setUser } from "../../Actions/index.js";
 import "../../styleSheets/homeStyle.css";
 import RecentGames from "./RecentGames.jsx";
 import MyCharacters from "./MyCharacters.jsx";
+import MyVerticallyCenteredModal from "../CreateGame/NewGameModal.jsx";
 
 const Home = () => {
   const [games, setGames] = useState(null);
   const currentState = useSelector((state) => state);
+  const [modalShow, setModalShow] = useState(false);
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -55,10 +57,13 @@ const Home = () => {
             <Row>
           <Col className="d-flex d-none col-md-2 d-md-block"></Col>
           <Col className="col-12 col-md-8 ">
+          <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}/>
 
 
             <Accordion>
-             <RecentGames/>
+             <RecentGames setModalShow={setModalShow}/>
              <MyCharacters/>
 
             </Accordion>

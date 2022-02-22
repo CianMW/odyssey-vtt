@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { CButton } from "../../SingleComponents/CButton";
 
 
-const RecentGames = () => {
+const RecentGames = ({setModalShow}) => {
     const currentState = useSelector((state) => state);
     const dispatch = useDispatch();
 
@@ -21,7 +21,8 @@ const RecentGames = () => {
   
          <Container className="bordered py-2 bg-white">
                 <Row className="p-0 m-0">
-            {currentState.user.info.games.filter((game, idx) => idx <= 3).map((game) => ( 
+
+            {currentState.user.info.games.length > 1 ? (currentState.user.info.games.filter((game, idx) => idx <= 3).map((game) => ( 
               <Col key={Math.random()} className="col-12 p-0 m-0">
                  <Row className="justify-content-center align-items-center gx-0">
                           <Col className="col-6 p-0 m-0" sm={6}>
@@ -37,7 +38,10 @@ const RecentGames = () => {
                   </Col>
                  </Row>
               </Col>
-            ))}
+            ))) : (<h6 className="text-muted text-center">Nothing to report here cadet !</h6>)}
+            </Row>
+            <Row>
+              <h4 onClick={e => setModalShow(true)} className="text-center clickable">+ New Game</h4>
             </Row>
           </Container>
 
