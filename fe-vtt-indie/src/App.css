@@ -208,10 +208,9 @@ div.glow:hover{
 }
 
 .chatbar-fixed{
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 0;
   height: 60px;
-
 }
 
 .parent-wide{
