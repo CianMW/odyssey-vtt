@@ -1,6 +1,7 @@
 import React from "react"
 import { Row } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
+import { completeMissionGenerator } from "../../GeneratorFunctions"
 
 
 
@@ -9,7 +10,8 @@ const AvailableCharacters = ({gameId}) => {
     const dispatch = useDispatch()
 
     const dynamicLoad = (e) => {
-       return React.creatElement("h1", {className:"d-flex"}, "hello here")
+       let mission = completeMissionGenerator()
+      console.log("Returned Mission", mission)
     }
 
     const currentGame = currentState.user.info.games.filter(game => game._id === gameId)
@@ -24,7 +26,7 @@ const AvailableCharacters = ({gameId}) => {
                 </Row>
             ))) : (<></>)
     }
-    <button onClick={e => dynamicLoad(e)}>click here</button>
+    <button onClick={e => dynamicLoad(e)}>click here for mission</button>
    </>)
 }
 
