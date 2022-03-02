@@ -208,10 +208,9 @@ div.glow:hover{
 }
 
 .chatbar-fixed{
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 0;
   height: 60px;
-
 }
 
 .parent-wide{
@@ -225,4 +224,12 @@ div.glow:hover{
 .bi.bi-list{
   /* color:white; */
 mix-blend-mode: difference;
+}
+
+
+.clickable{
+  color:#0000EE;
+}
+.clickable:hover{
+  cursor:pointer;
 }
