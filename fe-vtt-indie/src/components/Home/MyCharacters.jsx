@@ -2,8 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CButton } from "../../SingleComponents/CButton";
+import CreateCharacterModal from "../CreateCharacter/CreateCharacterModal";
+import { useState } from "react";
 
 const MyCharacters = () => {
+  const [modalShow, setModalShow] = useState(false)
   const currentState = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -24,6 +27,11 @@ const MyCharacters = () => {
   }
 
   return (
+    <>
+    <CreateCharacterModal 
+    show={modalShow}
+    onHide={() => setModalShow(false)}
+    />
     <Accordion.Item eventKey="1" className="mt-2">
       <Accordion.Header>
         <h3>My Characters</h3>
@@ -77,13 +85,12 @@ const MyCharacters = () => {
             )}
           </Row>
           <Row className="justify-content-center text-center">
-            <Link to="/createCharacter">
-              <h4> + New Character</h4>
-            </Link>
+              <h4 className="text-center clickable" onClick={e => setModalShow(true)}> + New Character</h4>
           </Row>
         </Container>
       </Accordion.Body>
     </Accordion.Item>
+    </>
   );
 };
 

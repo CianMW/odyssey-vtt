@@ -670,14 +670,11 @@ export function completePlanet() {
         species: speciesName,
         culture: planetCulture(),
         featureOfInterest: featureOfInterest(),
-        featureAspect: featureAspect()
-
-
-
+        featureAspect: featureAspect(),
     }
+    return planet
 
 }
-
 
 
 // Galactic Guidebook END
