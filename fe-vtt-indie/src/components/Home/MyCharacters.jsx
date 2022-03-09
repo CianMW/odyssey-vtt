@@ -55,20 +55,20 @@ const MyCharacters = () => {
                           </u>
                           </h5>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>Lvl : {char.level}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>moxie:{char.moxie}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>AC : {char.armorClass}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>smarts:{char.smarts}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6><i class="text-danger bi bi-heart-fill"></i> : {char.hitPoints.maxHitPoints} / {char.hitPoints.currentHitPoints}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>pockets:{char.pockets}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>{char.class}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>wiggles:{char.wiggles}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>{char.race}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>friends:{char.friends}</h6>
                       </Col>
                       <Col className="col-6 col-md-4 col-lg-3">
                         <CButton label="Open Character" type="primary" link={"/character" + char._id} /> 

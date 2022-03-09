@@ -678,3 +678,709 @@ export function completePlanet() {
 
 
 // Galactic Guidebook END
+
+
+
+// Star Hulks & Space Ruins START
+export function randRuinType() {
+
+    const typeList = [
+        "Starship",
+        "Asteroid",
+        "Colony",
+        "Station",
+        "Caves",
+        "Ruins",
+        ]
+        
+        const selected = typeList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randAesthetic() {
+
+    const aestheticList = [
+        "Monolithic or High-Tech",
+        "Primitive or Crystalline",
+        "Fractured or Flooded",
+        "Organic or Luxurious",
+        "Pitch Black or Toxic",
+        "Bizarre or Volatile",
+        ]
+        
+        const selected = aestheticList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randPurpose() {
+
+    const purposeList = [
+        "Transporting or Powering",
+        "Extracting or Venerating",
+        "Computing or Strange",
+        "Recreation or Guarding",
+        "Creating or Learning",
+        "Living or Storing",
+        ]
+        
+        const selected = purposeList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randDangerLevel() {
+    const dangerLevel = {
+        dangerLevel: "",
+        number: "",
+    }
+    const randD20 = Math.ceil(Math.random() * 20)
+        
+       if (randD20 > 14 ) {
+           dangerLevel.dangerLevel = "Death Trap"
+           dangerLevel.number = 15
+       } else if (randD20 > 9 ) {
+           dangerLevel.dangerLevel = "Perilous"
+           dangerLevel.number = 10
+       } else if (randD20 < 10 ) {
+           dangerLevel.dangerLevel = "Milk Run"
+           dangerLevel.number = 5
+       }
+
+    return dangerLevel
+}
+
+export function randDepth() {
+
+    const randD6 = Math.ceil(Math.random() * 6)
+        
+       if (randD6 < 3 ) {
+            return "Miniature, 3 Progress"
+       } else if (randD6 < 5 ) {
+            return "Sizable, 5 Progress"
+       } else if (randD6 > 4){
+           return "Gargantuan, 10 Progress"
+       }
+
+}
+export function randLoomingThreat() {
+
+    const threatList = [
+        "Rival Team",
+        "Being Hunted",
+        "Structural Failure",
+        "Radiation Levels",
+        "Rogue AI",
+        "Insanity",
+        ]
+        
+        const selected = threatList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randMonsterType() {
+
+    const monsterTypeList = [
+        "Reptilian or Crustacean",
+        "Cephalapoid or Slimoid",
+        "Macroviral or Arachnoid",
+        "Mechanoid or Insectoid",
+        "Xenomorph or Beastial",
+        "Silicoid or Plantoid",
+        ]
+        
+        const selected = monsterTypeList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterAspect() {
+
+    const monsterAspectList = [
+        "Armored or Intelligent",
+        "Toxic or Regenerating",
+        "Spawning or Stealthy",
+        "Artificial or Huge",
+        "Fast or Phasing",
+        "Ferocious or Small",
+        ]
+        
+        const selected = monsterAspectList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterBearing() {
+
+    const monsterBearingList = [
+        "Hostile",
+        "Hostile",
+        "Hostile",
+        "Hostile",
+        "Confused",
+        "Friendly",
+        ]
+        
+        const selected = monsterBearingList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterSize() {
+
+    const monsterSizeList = [
+        "1D6 Small (1 Gumption & 1 Harm)",
+        "1D6 Small (1 Gumption & 1 Harm)",
+        "1D6 Small (1 Gumption & 1 Harm)",
+        "1D3 Medium (3 Gumption & 2 Harm)",
+        "1D3 Medium (3 Gumption & 2 Harm)",
+        "Large (6+D6 Gumption & 3 Harm)",
+        ]
+        
+        const selected = monsterSizeList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterHazard() {
+
+    const monsterHazardList = [[
+        "Turret",
+        "Sentinel",
+        "Zero-G",
+        "Lasers",
+        "Flames",
+        "Alarm,",
+    ],
+[
+        "Sealed",
+        "Ravine",
+        "Painfield",
+        "Vacuum",
+        "Darkness",
+        "Blocked,",
+    ],[
+        "Forcefield",
+        "Sleepy Gas",
+        "Spike Ball",
+        "Chompers",
+        "Acid Pool",
+        "Malfunction,",
+    ],
+]
+        
+        const selected = monsterHazardList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randTreasure() {
+
+    const treasureAspectList = [
+        "Trapped",
+        "Venerated",
+        "Preserved",
+        "Forgotten",
+        "Unstable",
+        "Phasing",
+        ]
+    const treasureFeatureList = [
+        "Crystalline",
+        "Precursor",
+        "Xenomorph",
+        "Dimensional",
+        "Temporal",
+        "Cybernetic",
+        ]
+    const treasureFormList = [
+        "Egg",
+        "Artifact",
+        "Archive",
+        "Weapon",
+        "Technology",
+        "Intelligence",
+        ]
+        
+        const treasure = {
+            aspect: treasureAspectList[Math.floor(Math.random() * 6)],
+            feature: treasureFeatureList[Math.floor(Math.random() * 6)],
+            Form: treasureFormList[Math.floor(Math.random() * 6)],
+        }
+
+        return treasure
+}
+
+// Star Hulks & Space Ruins END
+
+// Starship Shenanigans START
+export function randStarshipQuirks() {
+
+    const starshipQuirks = {
+        age: "",
+        quirks: []
+    }
+
+    const age = Math.ceil(Math.random() * 2)
+    
+    if (age === 1 ){
+        starshipQuirks.age = "Shiny"
+    } else {
+        starshipQuirks.age = "Scuffed"
+    }
+
+    for (let i = 0; i < age; i++) {
+        
+ 
+    const starshipQuirkList = [[
+        "Vintage Model",
+        "Smoke Trail",
+        "Infamous",
+        "Space Fleas",
+        "No Seatbelts",
+        "Finicky Gravity",
+    ],
+[
+        "Sticky Floors",
+        "Weird Paint Job",
+        "Faulty Lighting",
+        "Strange Sounds...",
+        "Uniforms Ride Up",
+        "Secondhand AI",
+    ],[
+        "Needs Organic Fuel",
+        "Jumpy Self-Destruct",
+        "Smells Of Chowder",
+        "Too Many Buttons",
+        "Check Engine Light",
+        "Surly Sonic Showers",
+    ],
+]
+        
+    const selected = starshipQuirkList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+    starshipQuirks.quirks.push(selected)
+    }
+    return starshipQuirks
+}
+
+
+
+export function randStarshipPerks() {
+
+    const starshipPerks = {
+        type: "",
+        perks: []
+    }
+
+    const starshipClass = Math.ceil(Math.random() * 2)
+    
+    if (starshipClass === 1 ){
+        starshipQuirks.type = "Economy"
+    } else {
+        starshipQuirks.type = "Luxury"
+    }
+
+    for (let i = 0; i < starshipClass; i++) {
+        
+ 
+    const starshipPerksList = [[
+        "Bowling Alley",
+        "Star Autochef",
+        "Bigger On Inside",
+        "Smuggler’s Hold",
+        "Extensive Library",
+        "Stylish Uniforms",
+    ],
+[
+        "Zero-G Gym",
+        "Comfy Chairs",
+        "Holodeck",
+        "Lens Flares",
+        "XL Cargo Bay",
+        "Party Mode",
+    ],[
+        "Separable Saucer",
+        "Carpeted Corridors",
+        "Manipulator Arm",
+        "Chameleon Plating",
+        "Calming Engine Hum",
+        "Aftermarket Spoiler",
+    ],[
+        "Farscanner",
+        "Omega Drive",
+        "Afterburner",
+        "Supercomputer",
+        "Posh Quarters",
+        "Ram Scoop",
+    ],[
+        "Medical Holo",
+        "Repair Bot",
+        "Plasmazooka",
+        "Autopilot AI",
+        "Starshielding",
+        "Decoy Buoy",
+    ],[
+        "Gravity Tractor",
+        "Tactical Droid",
+        "Morphing Hull",
+        "EM Torpedos",
+        "Starbug",
+        "Red and Blue Lasers",
+    ],
+]
+        
+    const selected = starshipPerksList[Math.floor(Math.random() * 6)][Math.floor(Math.random() * 6)]
+    starshipPerks.perks.push(selected)
+    }
+
+    return starshipQuirks
+}
+
+export function randHowYouGotIt() {
+
+    const howYouGotItList = [
+        "Don't Ask...",
+        "Loan Shark",
+        "Card Game",
+        "Eccentric Uncle",
+        "Finders Keepers",
+        "Fair-n-Square",
+        ]
+        
+        const selected = howYouGotItList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+// Starship Shenanigans End
+
+// Hyperspace Hubris START
+export function randDistressSignal() {
+    const distressSignal = {
+        type: "",
+        reason: ""
+    }
+    const rollD6 = Math.ceil(Math.random() * 6)
+    if (rollD6 < 3) {
+        distressSignal.type = "It's A Trap!"
+    } else {
+        distressSignal.type = "Not A Trap"
+    }
+
+    const distressReasonList = [
+        "Out of Fuel",
+        "Damaged, Need Repairs!",
+        "Halp! Under Attack!",
+        "Escape Pod SOS",
+        "Nothing But Debris",
+        "Abandoned(?) Derelict",
+        ]
+        
+        const selected = distressReasonList[Math.floor(Math.random() * 6)]
+        distressSignal.reason = selected
+    return distressSignal
+}
+
+
+export function randSpaceWeather() {
+
+    const spaceWeatherList = [
+        "Solar Flare (Sensors blinded)",
+        "Energy Wave (Computers offline)",
+        "Meteor Shower (Engines clogged)",
+        "Ion Storms (Weapons backfire)",
+        "Dark Matter Field (Reactor offline)",
+        "Supernova (Hyperdrive disabled",
+        ]
+        
+        const selected = spaceWeatherList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randAnotherShip() {
+
+    const anotherShipList = [
+        [
+            "Luxury Liner",
+            "Space Pirate",
+            "Merchant Ship",
+            "Patrol Vessel",
+            "Colonist Ship",
+            "Prison Convoy",
+    ],[
+        "Bounty Hunter",
+        "Battle Cruiser",
+        "Smuggler Craft",
+        "Diplomatic Envoy",
+        "1D6 Swarm Ships",
+        "Refugee Ships",
+    ]]
+        
+    const selected = anotherShipList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randShipStatus() {
+
+    const shipStatusList = [
+        [
+            "Drifting",
+            "Hailing You",
+            "In Battle...",
+            "In Pursuit...",
+            "Fleeing...",
+            "Salvaging",
+    ],[
+        "Running Silent",
+        "Docked With...",
+        "Sending SOS",
+        "Abandoning Ship",
+        "Dumping Cargo",
+        "Attacking You",
+    ]]
+        
+    const selected = shipStatusList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randSpaceCreatures() {
+
+    const spaceCreatures = {
+        demeanour: "",
+        species: ""
+    }
+    const randD6 = Math.ceil(Math.random() * 6)
+
+    if (randD6 < 3) {
+        spaceCreatures.demeanour = "Friendly"
+    } else if (randD6 < 5) {
+        spaceCreatures.demeanour = "Hostile"
+    } else {
+        spaceCreatures.demeanour = "In Peril"
+    }
+
+    const spaceCreaturesList = [
+        "Void Kraken",
+        "Astro Shark",
+        "Space Whales",
+        "Pulsar Piranhas",
+        "Galactic Turtle",
+        "Stellar Jellyfish",
+   ]
+        
+    spaceCreatures.species = spaceCreaturesList[Math.floor(Math.random() * 6)]
+
+    return spaceCreatures
+}
+
+
+export function randOnboardIssues() {
+
+    const onboardIssues = {
+        level: "",
+        issue: ""
+    }
+    const randD6 = Math.ceil(Math.random() * 6)
+
+    if (randD6 < 3) {
+        onboardIssues.level = "Major"
+    } else {
+        onboardIssues.level = "Minor"
+    }
+
+    const onboardIssuesList = [
+        "Disagreement",
+        "Stowaway",
+        "Infestation",
+        "Sickness",
+        "Bad News",
+        "Malfunction",
+   ]
+        
+   onboardIssues.issues = onboardIssuesList[Math.floor(Math.random() * 6)]
+
+    return onboardIssues
+}
+export function randStrangeEncounter() {
+
+
+    const strangeEncounterList = [
+        "Rogue Planet",
+        "Drone Swarm Hive",
+        "Stuck In Time Loop",
+        "Mysterious Outpost",
+        "Doppelgängers",
+        "Dark Matter Comet",
+   ]
+        
+   const selected = strangeEncounterList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+// Hyperspace Hubris END
+
+// Friends & Frenemies START
+
+export function randNotableQuirk() {
+
+    const notableQuirkList = [
+        [
+            "Formal",
+            "Hums",
+            "Twitchy",
+            "Terse",
+            "Drawl",
+            "Yells",
+    ],[
+        "Mumbles",
+        "Rambles",
+        "Squeaky",
+        "Prankster",
+        "Awkward",
+        "Narrates",
+    ], [
+        "Vocal Fry",
+        "Know-It-All",
+        "Anecdotes",
+        "Perma-Smile",
+        "Monotone",
+        "Evil Laugh",
+    ]]
+        
+    const selected = notableQuirkList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randHelpfulForte() {
+
+    const helpfulForteList = [
+        [
+            "Brave",
+            "Wealthy",
+            "Loyal",
+            "Educated",
+            "Technical",
+            "Skilled",
+    ], [
+        "Connected",
+        "Powerful",
+        "Generous",
+        "Sneaky",
+        "Tactical",
+        "Inventive",
+    ]]
+        
+    const selected = helpfulForteList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randExploitableFlaw() {
+
+    const exploitableFlawList = [
+        [
+            "Greedy",
+            "Naive",
+            "Paranoid",
+            "Cowardly",
+            "Indebted",
+            "Vain",
+    ], [
+        "Unstable",
+        "Infamous",
+        "Temper",
+        "Imposter",
+        "Addicted",
+        "Spiteful",
+    ]]
+        
+    const selected = exploitableFlawList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randGoal() {
+
+    const goalList = 
+        [
+            "Give or Seek",
+            "Help or Hinder",
+            "Create or Destroy",
+            "Hide or Reveal",
+            "Save or Escape",
+            "Achieve or Defeat",
+    ]
+        
+    const selected = goalList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randObject() {
+
+    const objectList = 
+        [
+            "Knowledge or Love",
+            "Power or Justice",
+            "Friend or Enemy",
+            "Fortune or Object",
+            "Secret or Obligation",
+            "Peace or Conflict",
+    ]
+        
+    const selected = objectList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randSecret() {
+
+    const secretList = 
+        [
+            "Identity",
+            "Agenda",
+            "Information",
+            "Ability",
+            "History",
+            "Resources",
+    ]
+        
+    const selected = secretList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+
+export function randDemeanour() {
+
+    const demeanourList = [
+        [
+            "Show-off",
+            "Confused",
+            "Nervous",
+            "Serene",
+            "Arrogant",
+            "Carefree",
+        ],
+        [
+            "Logical",
+            "Intense",
+            "Bleak",
+            "Wild",
+            "Irritable",
+            "Positive",
+    ], [
+        "Charming",
+        "Suspicious",
+        "Distracted",
+        "Sarcastic",
+        "Confident",
+        "Menacing",
+    ]]
+        
+    const selected = demeanourList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+
+// Friends & Frenemies END
