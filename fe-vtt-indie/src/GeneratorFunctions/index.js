@@ -1384,3 +1384,800 @@ export function randDemeanour() {
 
 
 // Friends & Frenemies END
+
+// Gadgets and Gizmos Start
+
+export function randGizmoType() {
+
+    const typeList = [
+        [
+            "Ancient",
+            "Organic",
+            "Miniature",
+            "Unstable",
+            "Crystalline",
+            "Glowing",
+        ],
+        [
+            "Sentient",
+            "Notorious",
+            "Awkward",
+            "Oversized",
+            "Symbiotic",
+            "Cybernetic",
+    ], [
+        "Ramshackle",
+        "Resonating",
+        "Experimental",
+        "Autonomous",
+        "Collapsable",
+        "Overpowered",
+    ]]
+        
+    const selected = typeList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randGizmoForm() {
+
+    const formList = [
+        [
+            "Saber",
+            "Blaster",
+            "Ring",
+            "Staff",
+            "Droid",
+            "Watch",
+        ],
+        [
+           "Guitar",
+           "Towel",
+           "Skates",
+           "Armor",
+           "Injector",
+           "Lasso",
+    ], [
+        "Goggles",
+        "Augment",
+        "Bazooka",
+        "Spanner",
+        "Knuckles",
+        "Boomerang",
+    ]]
+        
+    const selected = formList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randGizmoEffect() {
+
+    const effectList = [
+        [
+            "Obscure",
+            "Locate",
+            "Reduce",
+            "Reflect",
+            "Warp",
+            "Create",
+        ],
+        [
+            "Enhance",
+            "Deflect",
+            "Attract",
+            "Control",
+            "Absorb",
+            "Focus",
+    ], [
+        "Asplode",
+        "Convert",
+        "Transfer",
+        "Speak To",
+        "Remove",
+        "Scan",
+    ]]
+        
+    const selected = effectList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randGizmoAspect() {
+
+    const aspectList = [
+        [
+            "Light",
+            "Heat",
+            "Cold",
+            "Liquid",
+            "Energy",
+            "Gravity",
+        ],
+        [
+            "Motion",
+            "Feelings",
+            "Flora",
+            "Scent",
+            "Thought",
+            "Memory",
+    ], [
+        "Fauna",
+        "Sight",
+        "Sound",
+        "Metal",
+        "Time",
+        "Charm",
+    ]]
+        
+    const selected = aspectList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randGizmoPrefix() {
+
+    const prefixList = [
+        [
+            "Sonic-",
+            "Void-",
+            "Blink-",
+            "Ray-",
+            "Mega-",
+            "Hyper-",
+        ],
+        [
+            "Robo-",
+            "Flux-",
+            "Bio-",
+            "Nano-",
+            "Multi-",
+            "Holo-",
+    ]]
+        
+    const selected = prefixList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randGizmoDurability() {
+
+    const durabilityList = [
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+        ]
+        
+    const selected = durabilityList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+// Gadgets and Gizmos End
+
+
+// Mighty Mechs START
+
+
+export function randMechWeapons() {
+
+    const mechWeaponsList = [
+        [
+            "Gatling Canon",
+            "Ion Accelerator",
+            "Photon Burst",
+            "Neutron Ram",
+            "Missile Battery",
+            "Beam Rifle",
+        ],
+        [
+        "Laser Discerang",
+        "Blazing Sword",
+        "Razor Claws",
+        "Power Gauntlet",
+        "Plasma Spikes",
+        "Electro Whip",
+    ], [
+        "Impact Hammer",
+        "Shock Net",
+        "Blitz Turret",
+        "Arc Blaster",
+        "Thermal Harpoon",
+        "Radiant Spear",
+    ]
+]
+        
+    const selected = mechWeaponsList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMechSystems() {
+
+    const mechSystemsList = [
+        [
+            "Jump Jets",
+            "Grapple Cable",
+            "3D Printer",
+            "Stealth Cloak",
+            "Robodog",
+            "Onboard AI",
+        ],
+        [
+            "Energy Barrier",
+            "Shrike Armor",
+            "Deepscanners",
+            "Sprint Jets",
+            "Blip Displacer",
+            "Repair Nanites",
+    ], [
+        "Kinetic Absorbing",
+        "Graphene Shield",
+        "Holoprojector",
+        "Siege Mode",
+        "Nano-Musculature",
+        "Overclock Hack",
+    ], [
+        "Power Siphon",
+        "Sentry Drone",
+        "Precog Algo",
+        "Adaptive Armor",
+        "Modular Frame",
+        "Extra Limbs",
+    ],[
+        "Aerial Upgrade",
+        "Agility Upgrade",
+        "Tactical Array",
+        "Self Destruct",
+        "Static Jammer",
+        "Berserk Mode",
+    ], [
+        "Gravitic Beam",
+        "Cargo Pod",
+        "Multi-Targeting",
+        "Beast Mode",
+        "Boring Drill",
+        "Reactor Charger",
+    ]
+]
+        
+    const selected = mechSystemsList[Math.floor(Math.random() * 6)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+// Mighty Mechs END
+
+// Massive Monsters START
+export function randMonsterClass() {
+
+    const monsterClassList = [
+      {
+          classLevel: 1,
+          size: "House",
+          gumption: 10,
+          ability: 1,
+          nature: 1
+        },
+      {
+          classLevel: 2,
+          size: "City Bus",
+          gumption: 20,
+          ability: 2,
+          nature: 2
+        },
+      {
+          classLevel: 3,
+          size: "Sky Scraper",
+          gumption: 30,
+          ability: 3,
+          nature: 3
+        },
+]
+        
+    const selected = monsterClassList[Math.floor(Math.random() * 3)]
+
+    return selected
+}
+
+
+export function randMonsterType() {
+
+    const monsterTypeList = [
+        [
+            "Ultra",
+            "Mecha",
+            "Astro",
+            "Razor",
+            "Thunder",
+            "Inferno",
+        ],
+        [
+            "Arachno",
+            "Infinity",
+            "Giganto",
+            "Muta",
+            "Veloci",
+            "Hydra",
+        ]
+]
+        
+    const selected = monsterTypeList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randMonsterForm() {
+
+    const monsterFormList = [
+        [
+            "Shark",
+            "Crab",
+            "Saur",
+            "Beast",
+            "Kong",
+            "Bat",
+        ],
+        [
+            "Vulture",
+            "Leviathan",
+            "Goliath",
+            "Kraken",
+            "Scorpion",
+            "Dragon",
+        ]
+]
+        
+    const selected = monsterFormList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+export function randMonsterElement() {
+
+    const monsterElementList = [
+        [
+            "Meteor",
+            "Acid",
+            "Void",
+            "Arctic",
+            "Gravity",
+            "Burning",
+        ],
+        [
+            "Sonic",
+            "Atomic",
+            "Gamma",
+            "Lightning",
+            "Magma",
+            "Psionic",
+        ]
+]
+        
+    const selected = monsterElementList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randMonsterAbilityType() {
+
+    const monsterAbilityTypeList = [
+        [
+            "Screech",
+            "Smash",
+            "Storm",
+            "Blast",
+            "Barrier",
+            "Quake",
+        ],
+        [
+            "Wave",
+            "Drain",
+            "Claws",
+            "Portals",
+            "Web",
+            "Aura",
+        ]
+]
+        
+    const selected = monsterAbilityTypeList[Math.floor(Math.random() * 2)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randMonsterNature() {
+
+    const monsterNatureList = [
+        [
+            "Flight",
+            "Burrowing",
+            "Ultraspeed",
+            "Ultratough",
+            "Ultrastrong",
+            "Regenerates",
+        ],
+        [
+            "Amphibious",
+            "Summoning",
+            "Intelligent",
+            "Telekinetic",
+            "Parasitic",
+            "Warping",
+        ],
+        [
+            "Modular",
+            "Telepathic",
+            "Camouflage",
+            "Knows Kung Fu",
+            "Wields Weapon",
+            "Sharp-n-Stabby",
+        ]
+]
+        
+    const selected = monsterNatureList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterWeakSpot() {
+
+    const monsterWeakSpotList = [
+        "Head",
+        "Chest",
+        "Back",
+        "Legs",
+        "Pilot",
+        "Ego",
+]
+        
+    const selected = monsterWeakSpotList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterMotivation() {
+
+    const monsterMotivationList = [
+        "Wonton Chaos",
+        "Hunting A Target",
+        "Spawning",
+        "Invasion",
+        "Hungry",
+        "Fleeing",
+]
+        
+    const selected = monsterMotivationList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+export function randMonsterZoneEffect() {
+
+    const monsterZoneEffectList = [
+        "Acid Fog (harm Gumption)",
+        "Dense Dark (inhibit Wiggles)",
+        "Broken Physics (inhibit Smarts)",
+        "Ion Field (Weapons backfire)",
+        "Hurricane (inhibit Moxie)",
+        "Lava Flows (raises Heat)",
+]
+        
+    const selected = monsterZoneEffectList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+// Massive Monsters END
+
+// Besties & Beasties START
+export function randBeastySize() {
+
+    const beastSizeList = [
+        "small",
+        "small",
+        "medium",
+        "medium",
+        "Large",
+        "Hugemongous",
+]
+        
+    const selected = beastSizeList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randPersonality() {
+
+    const beastPersonalityList = [
+        "Aggressive",
+        "Fearful",
+        "Protective",
+        "Aloof",
+        "Curious",
+        "Friendly",
+]
+        
+    const selected = beastPersonalityList[Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randBeastAppearance() {
+
+    const beastAppearance = {
+       species : [],
+       type : ""
+    }
+
+
+    const randD6 = Math.floor(Math.random() * 2)
+
+    if (randD6 === 0) {
+        beastAppearance.type = "Single Species"
+    } else {
+        beastAppearance.type = "Hybrid Species"
+
+    }
+    for (let i = 0; i <= randD6; i++) {        
+    
+
+    const beastAppearanceList = [
+        [
+            "Octopod",
+            "Kittonian",
+            "Gerblin",
+            "Fishapod",
+            "Bearoid",
+            "Ponycorn",
+        ],
+        [
+            "Birboid",
+            "Plantoid",
+            "Slothoid",
+            "Rockoid",
+            "Bugoid",
+            "Craboid",
+        ],
+        [
+            "Plushian",
+            "Raccoonian",
+            "Dragosaur",
+            "Puppalonian",
+            "Blobonian",
+            "Bunnypoid",
+        ]
+]
+        
+    beastAppearance.push(beastAppearanceList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)])
+    }
+    return beastAppearance
+}
+
+
+
+export function randBeastTrait() {
+
+
+    const beastTraitList = [
+        [
+            "Armored",
+            "Talks",
+            "Robotic",
+            "Floatey",
+            "Jumps",
+            "Glowing",
+        ],
+        [
+            "Spiked",
+            "Invisible",
+            "Swims",
+            "Flies",
+            "Digs",
+            "Climbs",
+        ],
+        [
+            "Bedazzled",
+            "Hungry",
+            "Extra Limbs",
+            "Extra Eyes",
+            "Oversized Feature",
+            "Undersized Feature",
+        ]
+]
+        
+    const selected = beastTraitList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+
+export function randBeastSpecialAbility() {
+
+
+    const beastSpecialAbilityList = [
+        [
+            "Defending",
+            "Bonking",
+            "Sensing",
+            "Finding",
+            "Poisoning",
+            "Unhurting",
+        ],
+        [
+            "Hiding",
+            "Speeding",
+            "Charming",
+            "Burning",
+            "Freezing",
+            "Thiefing",
+        ],
+        [
+            "Electrifying",
+            "Illuminating",
+            "Telekinetic",
+            "Teleporting",
+            "Weakening",
+            "Telepathy",
+        ]
+]
+        
+    const selected = beastSpecialAbilityList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
+
+    return selected
+}
+
+// Besties & Beasties End
+
+// Backstory Baloney START
+
+export function randPlaceOfOrigin() {
+
+const randD6 = Math.ceil(Math.random() * 6)
+
+
+if (randD6 < 4) {
+    const planet = {
+        planetType: planetType(),
+        culture: planetCulture()
+    }
+    return planet
+} else if (randD6 < 6) {
+    const spaceStation = {
+        spaceStationAspect: randLocationAspect()
+    }
+} else {
+    const starship = randAnotherShip()
+
+}
+}
+
+export function randPersonality() {
+const personality = {
+    personality: randNotableQuirk(),
+    demeanour: randDemeanour()
+}
+
+return personality
+
+}
+
+export function randEarlyLife() {
+
+const goal = {
+    goal: randGoal() + " " + randObject()
+}
+
+return goal
+
+}
+
+export function randFirstSteps() {
+
+const firstStep = {
+    firstSteps: randGoal() + " " + randObject()
+}
+
+return firstStep
+
+}
+export function randHowDidItGo() {
+
+const howItWentList = [
+    "Terribly (Roll twice on Woe...)",
+    "Poorly (Roll once on Woe...)",
+    "Interesting Event (Roll on MacGuffin Maker pg. 23)",
+    "Interesting Event (Roll on MacGuffin Maker pg. 23)",
+    "Pretty Well (Roll once on Woo!)",
+    "Tremendously (Roll twice on Woo!)",
+]
+    const selected = howItWentList[Math.floor(Math.random() * 6)]
+
+return selected
+
+}
+export function randWoo(text, times) {
+
+const wooList = [
+    "Developed A Forte: " + randHelpfulForte(),
+    "Made A Friend: ",
+    "Faction owes you favor: " + randFaction(),
+    "Acquired A Gizmo: ",
+    "Woo’d A Beasty: ",
+    "Acquired A Mech: ",
+    "Acquired A Ship: ",
+]
+    const selected = wooList[Math.floor(Math.random() * 7)]
+
+return selected
+
+}
+
+
+// Backstory Baloney END
+
+// The Lab START
+
+export function randOmnipotentEntity() {
+
+    const entityTask = [
+        "Brain Transference",
+        "Back To The Future",
+        "Mirrorverse Mixup",
+        "Honey I Shrunk The PCs",
+        "Deadly Board Game",
+        "Benjamin Buttoned",
+    ]
+
+
+    const selected = entityTask[Math.floor(Math.random() * 6)]
+    return selected
+}
+export function randPlayerProfessions() {
+
+    const professionPrefixList = [
+        "Fired",
+        "Jaded",
+        "Retired",
+        "Notorious",
+        "Maverick",
+        "Ace",
+    ]
+
+    const selectedPrefix = professionPrefixList[Math.floor(Math.random() * 6)]
+
+    const playerProfessionsList = [
+        "Cat Burglar",
+        "Psionic Bartender",
+        "Spacefari Guide",
+        "Super Spy",
+        "Comet Wrangler",
+        "Astro Mall Cop",
+        "Spaceball Star",
+        "Mad Scientist",
+        "Net H@ck3r",
+        "Archeologist",
+        "Xeno Veterinarian",
+        "Space Cowboy",
+        "Rocket Racer",
+        "Chrononaut",
+        "Live Streamer",
+        "Redshirt Sidekick",
+        "Stellar Knight",
+        "Kid Detective",
+        "Galactic Food Critic",
+        "Escaped Experiment",
+    ]
+
+    const selectedEntity = playerProfessionsList[Math.floor(Math.random() * 6)]
+
+
+    return `${selectedPrefix} ${selectedEntity}`
+}
+
+
+
+// The Lab END
