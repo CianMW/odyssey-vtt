@@ -955,6 +955,7 @@ export function randStarshipQuirks() {
     const selected = starshipQuirkList[Math.floor(Math.random() * 3)][Math.floor(Math.random() * 6)]
     starshipQuirks.quirks.push(selected)
     }
+
     return starshipQuirks
 }
 
@@ -970,9 +971,9 @@ export function randStarshipPerks() {
     const starshipClass = Math.ceil(Math.random() * 2)
     
     if (starshipClass === 1 ){
-        starshipQuirks.type = "Economy"
+        starshipPerks.type = "Economy"
     } else {
-        starshipQuirks.type = "Luxury"
+        starshipPerks.type = "Luxury"
     }
 
     for (let i = 0; i < starshipClass; i++) {
@@ -1028,7 +1029,7 @@ export function randStarshipPerks() {
     starshipPerks.perks.push(selected)
     }
 
-    return starshipQuirks
+    return starshipPerks
 }
 
 export function randHowYouGotIt() {
@@ -1683,7 +1684,7 @@ export function randMonsterClass() {
 }
 
 
-export function randMonsterType() {
+export function randMegaMonsterType() {
 
     const monsterTypeList = [
         [
@@ -2055,7 +2056,7 @@ if (randD6 < 4) {
 }
 }
 
-export function randPersonality() {
+export function randBackstoryPersonality() {
 const personality = {
     personality: randNotableQuirk(),
     demeanour: randDemeanour()
