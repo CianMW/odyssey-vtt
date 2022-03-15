@@ -2,12 +2,19 @@ import "../CreateGame/NewGame.css"
 import { randFaction, randMission, randSnag, randObjective,randLocation, randLocationAspect, randOpposition, randOppositionAgenda, completeMissionGenerator, randScuffle, randTactic, randBearing, randSocial, randEncounter, randDifficulty, randFlavour, planetType, planetaryPickle, speciesPrefix, speciesSuffix, featureAspect, featureOfInterest, randRuinType, randAesthetic, randPurpose, randDepth, randLoomingThreat, randMonsterType, randMonsterAspect, randMonsterBearing, randMonsterSize, randMonsterHazard, randHowYouGotIt, randSpaceWeather, randAnotherShip, randShipStatus, randStrangeEncounter, randNotableQuirk, randHelpfulForte, randExploitableFlaw, randGoal, randObject, randSecret, randDemeanour, randGizmoType, randGizmoForm, randGizmoEffect, randGizmoAspect, randGizmoPrefix, randGizmoDurability, randMechWeapons, randMechSystems, randMonsterClass, randMegaMonsterType, randMonsterForm, randMonsterElement, randMonsterAbilityType, randMonsterNature, randMonsterWeakSpot, randMonsterMotivation, randMonsterZoneEffect, randBeastySize, randPersonality, randBeastTrait, randBeastSpecialAbility, randEarlyLife, randFirstSteps, randHowDidItGo, randOmnipotentEntity, randPlayerProfessions } from "../../GeneratorFunctions"
 import { Container, Modal, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
-
+import ParticleEffectButton from "react-particle-effect-button";
 
 const SingleResponseGeneratorModal = (props) => {
 const [mission, setMission] = useState(false);
 const [genName, setGenName] = useState("Generator");
+const [particleButton, setParticleButton] = useState(true);
 
+
+useEffect(() => {
+    const particleSetter = () => {setParticleButton(!particleButton)
+    }
+    setTimeout(particleSetter, 1500)
+}, [])
 
 useEffect(() => {
     
@@ -306,15 +313,38 @@ let newMission = completeMissionGenerator()
 setMission(completeMissionGenerator())
 }, [])
 
+
+
+const updateMission = () => {
+    setParticleButton(true)
+    setTimeout(changeMission, 2000)
+    function changeMission() {
+        setMission(completeMissionGenerator())
+    }
+
+}
+
+const checkParticleButton = () => {
+    if (particleButton) {
+        setParticleButton(false)
+    }
+}
+
+
+
     return (
-      <Modal id="newGameModalContainer"
+        
+        <Modal onEntered={e => setParticleButton(false)}	
+        id="newGameModalContainer"
         {...props}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         backdrop="static"
       >
-        <Modal.Header id="newGameModalHeader" closeButton closeVariant="white">
+        <div className="d-flex justify-content-center">
+        <ParticleEffectButton onComplete={e => checkParticleButton()} duration={900} particlesAmountCoefficient={3} style={"stroke"} type={"rectangle"} direction={"bottom"} color={"blue"} hidden={particleButton}>
+        <Modal.Header id="newGameModalHeader" closeVariant="white">
           <Modal.Title id="contained-modal-title-vcenter">
            <h1>{genName}</h1>
           </Modal.Title>
@@ -329,9 +359,9 @@ setMission(completeMissionGenerator())
                     </Col>
                     </Row>
 
-                    }
+}
                 <Row className="d-flex justify-content-center">
-                    <button onClick={e => setMission(completeMissionGenerator())}>Check the Galactic papers</button>
+                    <button onClick={e => updateMission()}>Check the Galactic papers</button>
                 </Row>
             </Container>
         </Modal.Body>
@@ -341,12 +371,18 @@ setMission(completeMissionGenerator())
 
 
           {/* <Button onClick={props.onHide}>Close</Button> */}
-          <button onClick={props.onHide} className="button-left text-center ">Close</button>
+          {/* <button onClick={props.onHide} className="button-left text-center ">Close</button> */}
+          {/* <ParticleEffectButton hidden={particleButton}> */}
+
+          <button onClick={e => {setParticleButton(false)}} className="button-left text-center ">Close</button>
+          {/* </ParticleEffectButton> */}
           {/* <button onClick={e => createGame()} className="button-right text-center " >Close</button> */}
 
                 </Row>
             </Container>
         </Modal.Footer>
+</ParticleEffectButton>
+</div>
       </Modal>
 
     )
