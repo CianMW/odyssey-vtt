@@ -354,7 +354,7 @@ export function askTheAI(setting) {
     const d20 = Math.ceil(Math.random() * 20)
     let answer 
 
-    if (d20 > setting) {
+    if (d20 >= setting) {
         answer = "yes"
     } else {
         answer = "no"
