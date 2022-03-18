@@ -13,6 +13,11 @@ const dataReducer = (state = initialState, action) => {
 					...state,
 			inGame: action.payload,
 		}
+		case "SETTOAST": 
+			return {
+					...state,
+			toast: action.payload,
+		}
 		default:
 		return state 	
 	}

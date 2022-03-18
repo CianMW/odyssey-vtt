@@ -18,6 +18,7 @@ import TopNav from './components/TopNav';
 import MainSideBar from './components/MainSideBar';
 import './App.css';
 import LandingSideBar from './components/LandingSideBar';
+import SciFiToast from './SingleComponents/SciFiToast';
 
 function App() {
   const [wid, setWid] = useState("closed");
@@ -41,6 +42,7 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
 
   return (
       <Container  className=" full-parent-size m-0 p-0 full-length column-wrapper">
+            <SciFiToast/>
           <Router>
           <TopNav openSideNav={openSideNav} loggedIn={loggedIn} display={display}/>
 

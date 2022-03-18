@@ -1,22 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Row } from "react-bootstrap"
+import { useDispatch, useSelector } from "react-redux";
+import { setToast } from "../Actions";
 import { askTheAI } from "../GeneratorFunctions";
+import SciFiToast from "./SciFiToast";
 
 
 
 const AskTheAI = () => {
     const [chance, setChance] = useState("");
-
+    const currentState = useSelector((state) => state);
+    const dispatch = useDispatch();
     useEffect(() => {
-      askTheAI(chance)
-    
-
+      const textContent = askTheAI(chance)
+      const payload = {
+          isOpen: true,
+          content: textContent
+      }
+      dispatch(setToast(payload))
     }, [chance])
     
 
     return (
         <Row>
-            
     <ButtonGroup aria-label="Basic example">
         <Button onClick={e => setChance(5)} variant={chance === 5 ? "outline-dark":"dark"}>Likely</Button>
         <Button onClick={e => setChance(10)} variant={chance === 10 ? "outline-dark":"dark"}>Possible</Button>

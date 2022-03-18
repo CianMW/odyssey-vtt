@@ -38,5 +38,13 @@ export const setUser = (user) => {
       });
     };
   };
+  export const setToast = (boolCont) => {
+    return async (dispatch) => {
+      dispatch({
+        type: "SETTOAST",
+        payload: boolCont,
+      });
+    };
+  };
   
  
