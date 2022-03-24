@@ -10,7 +10,6 @@ import { connect } from "react-redux";
 import SignUp from './components/login-signup/SignUp';
 import LoginNavBar from './components/login-signup/LoginNavBar';
 import { useEffect, useState } from 'react';
-import CreateGame from './components/CreateGame/CreateGame';
 import { Container } from 'react-bootstrap';
 import GameSocket from './components/LaunchGame/GameSocket';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,7 +18,7 @@ import TopNav from './components/TopNav';
 import MainSideBar from './components/MainSideBar';
 import './App.css';
 import LandingSideBar from './components/LandingSideBar';
-import CreateCharacter from './components/CreateCharacter/CreateCharacter';
+import SciFiToast from './SingleComponents/SciFiToast';
 
 function App() {
   const [wid, setWid] = useState("closed");
@@ -43,6 +42,7 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
 
   return (
       <Container  className=" full-parent-size m-0 p-0 full-length column-wrapper">
+            <SciFiToast/>
           <Router>
           <TopNav openSideNav={openSideNav} loggedIn={loggedIn} display={display}/>
 
@@ -66,8 +66,6 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
             <Route path="/character" element={<CharacterSheet/>}/>
             <Route path="/signUp" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/createGame" element={<CreateGame/>}/>
-            <Route path="/createCharacter" element={<CreateCharacter/>} />
 
           </Routes>
           </div>

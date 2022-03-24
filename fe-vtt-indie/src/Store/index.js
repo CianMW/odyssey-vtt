@@ -14,7 +14,11 @@ export const initialState = {
   data: {
     loggedIn: false,
     loading: true,
-    inGame: false
+    inGame: false,
+    toast: {
+      isOpen: false,
+      content: "No Content",
+    }
   },
   user: {
     info: {}

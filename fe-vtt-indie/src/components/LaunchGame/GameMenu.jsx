@@ -23,19 +23,19 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
     return (
         
         
-          <Tabs className="scifiUI">
+          <Tabs style={{backgroundColor: "lightgray"}} className="scifiUI">
             <TabList>
               <Tab><i className="bi bi-chat-left-text-fill"></i></Tab>
-              <Tab>Characters</Tab>
-              <Tab>Gen</Tab>
-              <Tab>Lib</Tab>
-              <Tab>Config</Tab>
+              <Tab><i className="bi bi-folder-fill"></i></Tab>
+              <Tab><i className="bi bi-dice-6-fill"></i></Tab>
+              <Tab><i className="bi bi-book-half"></i></Tab>
+              <Tab><i className="bi bi-gear-wide-connected"></i></Tab>
             </TabList>
         
             <TabPanel>
-                <Container>
+              <Container>
 
-               <GameChat
+              <GameChat
               chatHistory={chatHistory}
               handleMessageSubmit={handleMessageSubmit}
               message={message}

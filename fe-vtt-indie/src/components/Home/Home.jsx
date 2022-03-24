@@ -11,8 +11,8 @@ import MyVerticallyCenteredModal from "../CreateGame/NewGameModal.jsx";
 
 const Home = () => {
   const [games, setGames] = useState(null);
-  const currentState = useSelector((state) => state);
   const [modalShow, setModalShow] = useState(false);
+  const currentState = useSelector((state) => state);
   const dispatch = useDispatch();
   const location = useLocation();
 
