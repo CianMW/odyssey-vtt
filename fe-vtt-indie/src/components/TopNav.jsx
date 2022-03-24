@@ -9,10 +9,10 @@ const TopNav = ({openSideNav, loggedIn, display}) => {
 <i className="unstyled bi bi-list" ></i>
 </Col>
 <Col sm={8} className="z-on-top align-items-center justify-content-end parent-size p-0 m-0 col-8" style={{display: loggedIn}}>
-    <div className="d-flex justify-content-center align-items-center">
+    {/* <div className="d-flex justify-content-center align-items-center">
 
     <img className="main-logo mt-4 mt-sm-2" src="/image-files/odyssey-logo.png" />
-    </div>
+    </div> */}
 </Col>
 <Col className="col-2"></Col>
 </Row>
