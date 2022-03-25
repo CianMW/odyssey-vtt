@@ -74,6 +74,7 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
           {!currentState.data.inGame && 
            <MainFooter/>
           }
+          
           </Container>
   );
 }
