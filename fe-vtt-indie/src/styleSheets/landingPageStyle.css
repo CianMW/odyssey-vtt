@@ -298,6 +298,13 @@ color: white;
 
 /* AUGMENTED UI TEST */
 
+
+.styleme{
+  width :150px;
+  height: 100px;
+  text-align: center;
+  --aug-border-bg: blue;
+}
 .pitch-core {
     width: 100px;
     height: 100px;
@@ -305,10 +312,9 @@ color: white;
     --aug-border-all: 6px;
     --aug-inlay: initial;
     --aug-inlay-all: 4px;
-    --aug-border-bg: yellow;
-    /* radial-gradient(ellipse at top, gold 25%, transparent 50%), */
-        /* url("https://giphy.com/gifs/clioawards-clio-awards-entertainment-2ALcqRd5OSXTPGFTk9") */
-        /* 50% 50% / 100% 100%; */
+    --aug-border-bg: radial-gradient(ellipse at top, gold 25%, transparent 50%),
+        url("https://giphy.com/gifs/clioawards-clio-awards-entertainment-2ALcqRd5OSXTPGFTk9")
+        50% 50% / 100% 100%;
     --aug-inlay-opacity: 0.5;
 
     --aug-clip-b1: initial;

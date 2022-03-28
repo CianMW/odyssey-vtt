@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CharacterSheet from "../CharacterSheet";
 import { setInGame } from "../../Actions";
 import GameMenu from "./GameMenu";
+import StarfieldAnimation from "react-starfield-animation"
 // import socket  from "./Socket";
 
 
@@ -141,7 +142,13 @@ const GameSocket = () => {
           md={9}
           className=" static-full-height-scroll px-2 m-0 d-none d-md-block col-md-8 bg-custom-textured"
         >
-          <CharacterSheet />
+            <StarfieldAnimation
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%'
+        }}
+      />
         </Col>
         <Col md={3} className="px-0 m-0  full-height col-12 col-md-3">
           <Row className="">

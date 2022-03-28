@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import "../../styleSheets/landingPageStyle.css"
 import ThreeScene from "../ThreeJS/three-scene"
 import SpaceAcesLogo from "./SpaceAcesLogo"
+import LogInButton from "../../SingleComponents/logInButton"
 
 const LandingPage = () => {
 
@@ -23,18 +24,10 @@ const LandingPage = () => {
             <SpaceAcesLogo/>
 
              </Row>
+             <Container className="m-0 p-0 justify-content-center">
 
-             <Row className="mt-5">
-                 <Col md={6}>
-                 <div className=" text-center pitch-core" data-augmented-ui><p>
-                     Test Button
-                      </p>
-                     </div>
-                 </Col>
-                 <Col md={6}>
-                 <div>test button</div>
-                 </Col>
-             </Row>
+             <LogInButton/>
+             </Container>
              
             {/* </Container> */}
             <Row className="m-0 p-0 data-pad-container">
