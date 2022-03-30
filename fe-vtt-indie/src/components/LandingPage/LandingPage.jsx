@@ -45,6 +45,29 @@ const LandingPage = () => {
             </h4>
             </Row>
             </Row>
+            <Row className="text-center mb-5 align-items-center" >
+                <Col md={6} className="d-flex justify-content-center align-items-center">
+                    <img src="/imgFiles/2159.jpg" style={{maxWidth: "50vw", zIndex: "100000"}}/>
+                </Col>
+                    
+                <Col md={6} className=" justify-content-between align-items-between ">
+
+                {/* <img src="/imgFiles/2006.jpg" style={{width: "100vw", height: "100%"}}/> */}
+                <h1 className="tethered-heading">
+                Space Aces - What Is It?
+                </h1>
+            
+                <div>
+
+                <p>
+                Space Aces is an homage to an undying love of happy, hopeful, & campy Sci Fi. A modular, lightweight, optimistic sci-fi tabletop adventure game toolbox for GM-led groups, co-op & solo play. Packed with over 75 tables, oracles & procedural generators for creating near-endless light-hearted rollicking romps through space a la Star Trek meets Futurama meets Hitchhikers Guide To The Galaxy.
+                </p>
+                <p>
+                Space Aces: TNG (The New Guidebook) features simple, sleek, flexible rules with easy & collaborative madlibs spark table style mission generation complete with a twist.
+                </p>
+                </div>
+                </Col>
+            </Row>
         </div>
         </div>
     )

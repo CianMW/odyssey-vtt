@@ -7,11 +7,12 @@ class StarryBackground extends Component {
     return (
       <StarfieldAnimation
         style={{
+          zIndex: 100,
           position: 'absolute',
           width: '100vw',
           height: '100vh'
         }}
-      />
+        />
     )
   }
 }

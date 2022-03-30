@@ -14,8 +14,8 @@ const [signUpButton, setSignUpButton] = useState("tr-scoop tl-clip-x both");
         <Row className="mt-5 ">
                  <Col md={6} className="d-flex justify-content-center align-items-center">
                     <Link to="/login" className="/login">
-                     <Row onMouseLeave={e => setLogInButton("  tl-scoop tr-clip-x both")} onMouseEnter={e => {setLogInButton("   tl-clip t-rect tr-clip r-rect br-clip b-rect bl-clip l-rect both")}} className="d-flex align-items-center justify-content-center text-center styleme" data-augmented-ui={logInButton} >
-                         <span><b>
+                     <Row onMouseLeave={e => setLogInButton("tl-scoop tr-clip-x both")} onMouseEnter={e => {setLogInButton(" tl-scoop br-scoop bl-scoop tr-clip-x both")}} className="d-flex align-items-center justify-content-center text-center styleme" data-augmented-ui={logInButton} >
+                         <span className="Login-Button-Text"><b>
 
                      Log In
                          </b>
@@ -26,10 +26,10 @@ const [signUpButton, setSignUpButton] = useState("tr-scoop tl-clip-x both");
                  </Col>
                  <Col md={6} className="d-flex justify-content-center align-items-center">
                 
-                <Row onMouseLeave={e => setSignUpButton("  tr-scoop tl-clip-x both")} onMouseEnter={e => {setSignUpButton("   tl-clip t-rect tr-clip r-rect br-clip b-rect bl-clip l-rect both")}} className="d-flex align-items-center justify-content-center text-center styleme" data-augmented-ui={signUpButton} >
-                    <span><b>
-
-                Sign Up
+                <Row onMouseLeave={e => setSignUpButton("  tr-scoop tl-clip-x both")} onMouseEnter={e => {setSignUpButton(" tr-scoop br-scoop bl-scoop tl-clip-x both")}} className="d-flex align-items-center justify-content-center text-center styleme" data-augmented-ui={signUpButton} >
+                    <span>
+                    <b>
+                    Sign Up
                     </b>
                     </span>
                     </Row>

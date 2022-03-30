@@ -303,7 +303,9 @@ color: white;
   width :150px;
   height: 100px;
   text-align: center;
-  --aug-border-bg: blue;
+  --aug-border-bg: #005678;
+  color: white;
+
 }
 .pitch-core {
     width: 100px;
@@ -328,6 +330,12 @@ color: white;
 
     --aug-scoop-tr1: initial;
     --aug-tr1: 25px;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe;
   }
   .pitch-core:hover {
     --aug-clip-t1: initial;
@@ -340,6 +348,52 @@ color: white;
     --aug-r-extend1: 50%;
     --aug-l-extend1: 50%;
   }
+
+/* Pulse Animation Start */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+
+/* Pulse Animation End */
+
+.styleme:hover{
+  box-shadow:
+  /* 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #bc13fe,
+  0 0 0.8rem #bc13fe,
+  0 0 2.8rem #bc13fe, */
+  inset 0 0 2rem #05d9e8; 
+  --aug-border-bg: #05d9e8;
+  /* transform: rotateZ(360deg); */
+  transition: 1s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+
+}
 
 
 
