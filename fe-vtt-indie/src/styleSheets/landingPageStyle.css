@@ -242,7 +242,7 @@ img.glitch {
  #stars3:after {
    content: " ";
    position: absolute;
-   top: 2000px;
+   top: 0px;
    width: 3px;
    height: 3px;
    background: transparent;
@@ -256,7 +256,7 @@ img.glitch {
      transform: translateY(0px);
    }
    to {
-     transform: translateY(-2000px);
+     transform: translateY(-4000px);
    }
  }
 

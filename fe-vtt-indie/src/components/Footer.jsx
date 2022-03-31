@@ -5,7 +5,7 @@ import "../styleSheets/mainFooterStyle.css"
 const MainFooter = () => {
     return(
 
-  <Navbar className="parent-width" bg="dark" variant="dark" >
+  <Navbar id="mainFooter" className="parent-width" bg="dark" variant="dark" >
     <Container>
       <Navbar.Brand href="#home">
         <span>Odyssey
