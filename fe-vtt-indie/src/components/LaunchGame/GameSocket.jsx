@@ -15,9 +15,11 @@ import "./GameSocketStyle.css";
 import GameChat from "./GameChat";
 import ADDRESS from "./addressSetup.js";
 import { useDispatch, useSelector } from "react-redux";
-import CharacterSheet from "../CharacterSheet";
+// import CharacterSheet from "../CharacterSheet";
 import { setInGame } from "../../Actions";
 import GameMenu from "./GameMenu";
+import CharacterSheet from "../CreateCharacter/CharacterSheet";
+import DiceInstance from "../DiceRoller/DiceInstance";
 // import socket  from "./Socket";
 
 
@@ -139,9 +141,13 @@ const GameSocket = () => {
         {/* <Col md={2} className=" p-0 m-0 col-lg-2 full-height bg-blue">asdasd</Col> */}
         <Col
           md={9}
-          className=" static-full-height-scroll px-2 m-0 d-none d-md-block col-md-8 bg-custom-textured"
+          className="justify-content-center align-items-center static-full-height-scroll px-2 m-0 d-none d-md-block col-md-8 bg-custom-textured"
+          style={{overflow: "hidden"}}
         >
+          <div>
+          <DiceInstance/>
           <CharacterSheet />
+          </div>
         </Col>
         <Col md={3} className="px-0 m-0  full-height col-12 col-md-3">
           <Row className="">

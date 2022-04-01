@@ -112,11 +112,11 @@ background-opacity:
 }
 
 .button-left:hover:after {
-  animation: 1s glitch;
+  animation: 1s glitched;
   animation-timing-function: steps(2, end);
 }
 
-@keyframes glitch {
+@keyframes glitched {
   0% {
     clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
@@ -213,11 +213,11 @@ background-opacity:
 }
 
 .button-right:hover:after {
-  animation: 1.3s glitch;
+  animation: 1.3s glitched;
   animation-timing-function: steps(2, end);
 }
 
-@keyframes glitch {
+@keyframes glitched {
   0% {
     clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
