@@ -42,9 +42,8 @@ const DiceInstance = () => {
   };
 
   // trigger dice roll
-  const rollDice = (notation, group) => {
+  const rollDice = (notation) => {
     // save which attribute we're rolling for
-    setPendingRoll(group);
     // trigger the dice roll
     Dice.show().roll(notation);
   };

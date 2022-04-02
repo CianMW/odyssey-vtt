@@ -11,15 +11,7 @@ const RecentGames = ({setModalShow}) => {
 
 
     return(
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>
-          <h3>
-          Recent Games
-          </h3>
-          </Accordion.Header>
-        <Accordion.Body>
-  
-         <Container className="bordered py-2 bg-white">
+         <Container className="py-2">
                 <Row className="p-0 m-0">
 
             {currentState.user.info.games.length > 1 ? (currentState.user.info.games.filter((game, idx) => idx <= 3).map((game) => ( 
@@ -44,9 +36,6 @@ const RecentGames = ({setModalShow}) => {
               <h4 onClick={e => setModalShow(true)} className="text-center clickable">+ New Game</h4>
             </Row>
           </Container>
-
-          </Accordion.Body>
-      </Accordion.Item>
     
     ) 
 }
