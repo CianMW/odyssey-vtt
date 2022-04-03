@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, FormControl, Row } from "react-bootstrap";
 import Draggable from "react-draggable";
+import { useDispatch } from "react-redux";
+import { setDiceRoll } from "../../Actions";
 import "./createCharacter.css"
 
 const CharacterSheet = () => {
   const [randomAvatar, setRandomAvatar] = useState("");
   const reference = React.createRef();
-
+  const dispatch = useDispatch();
   useEffect(() => {
     let randomNum =  Math.floor(Math.random() * 10000);
 
@@ -43,7 +45,6 @@ const CharacterSheet = () => {
               <Col>
               <div className="text-center bordered">
                 <h3>Moxie</h3>
-                
               </div>
               </Col>
               <Col>
@@ -52,7 +53,7 @@ const CharacterSheet = () => {
               </div>
               </Col>
               <Col>
-              <div className="text-center bordered">
+              <div onClick={e => dispatch(setDiceRoll("1d6"))} className="text-center bordered">
                 <h3><b>
                   Wiggles
                   </b>

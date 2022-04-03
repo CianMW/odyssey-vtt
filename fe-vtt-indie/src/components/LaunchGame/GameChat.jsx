@@ -9,7 +9,7 @@ const GameChat = ({chatHistory, handleMessageSubmit, message, setMessage}) => {
 
         {/* MIDDLE SECTION: CHAT HISTORY */}
               
-        <ListGroup>
+        <ListGroup className="chat-messages">
                 {chatHistory.length > 1 && chatHistory.map((message, i) => (
                     <ListGroupItem key={i}>
                     <strong>{message.sender}</strong>
@@ -22,12 +22,12 @@ const GameChat = ({chatHistory, handleMessageSubmit, message, setMessage}) => {
                 ))}
               </ListGroup>
               {/* BOTTOM SECTION: NEW MESSAGE INPUT FIELD */}
-              <Row  className="mx-auto parent-wide mt-auto p-0 m-0">
+              <Row  className=" mx-auto parent-wide mt-auto p-0 m-0 chatbar-fixed" >
                   <Col md={12} className="p-0 m-0">
               <Form className=" parent-wide">
                 <textarea
-                  className="form-control parent-wide chatbar-fixed"
-                  placeholder='send a message or roll the dice e.g. "!roll 1d6"'
+                  className="form-control parent-wide "
+                  placeholder='send a message or roll the dice e.g. "1d6"'
                   value={message}
                   onKeyUp={(e) => {handleMessageSubmit(e)}}
                   onChange={(e) => setMessage(e.target.value)}

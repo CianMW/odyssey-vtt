@@ -12,6 +12,7 @@ const aComposeFunctionThatAlwaysWorks = window.__REDUX_DEVTOOLS_EXTENSION_COMPOS
 
 export const initialState = {
   data: {
+    diceNotation:"",
     loggedIn: false,
     loading: true,
     inGame: false,

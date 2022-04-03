@@ -16,7 +16,7 @@ import GameChat from "./GameChat";
 import ADDRESS from "./addressSetup.js";
 import { useDispatch, useSelector } from "react-redux";
 // import CharacterSheet from "../CharacterSheet";
-import { setInGame } from "../../Actions";
+import { setDiceRoll, setInGame } from "../../Actions";
 import GameMenu from "./GameMenu";
 import CharacterSheet from "../CreateCharacter/CharacterSheet";
 import DiceInstance from "../DiceRoller/DiceInstance";
@@ -105,16 +105,25 @@ const GameSocket = () => {
   async function handleMessageSubmit(e) {
     e.preventDefault();
     if (e.key === "Enter") {
-      const newMessage = {
-        text: message,
-        sender: username,
-        id: socket.id,
-        timestamp: Date.now(),
-      };
+      const regex = /(\d*)(D\d*)((?:[+*-](?:\d+|\([A-Z]*\)))*)(?:\+(D\d*))?/gi;
+      const match = regex.test(message);
+      if (match){
+        dispatch(setDiceRoll(message))
+      } else {
 
-      // emitMessage(newMessage);
-      console.log("reeee");
-      setChatHistory([...chatHistory, newMessage]);
+        
+        const newMessage = {
+          text: message,
+          sender: username,
+          id: socket.id,
+          timestamp: Date.now(),
+        };
+        
+        // emitMessage(newMessage);
+        console.log("reeee");
+        setChatHistory([...chatHistory, newMessage]);
+        
+      }
       setMessage("");
     }
   }
