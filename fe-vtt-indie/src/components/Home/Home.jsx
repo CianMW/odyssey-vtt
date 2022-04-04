@@ -8,7 +8,7 @@ import "../../styleSheets/homeStyle.css";
 import RecentGames from "./RecentGames.jsx";
 import MyCharacters from "./MyCharacters.jsx";
 import MyVerticallyCenteredModal from "../CreateGame/NewGameModal.jsx";
-
+import Tilt from "react-parallax-tilt"
 const Home = () => {
   const [games, setGames] = useState(null);
   const [modalShow, setModalShow] = useState(false);
@@ -39,7 +39,7 @@ const Home = () => {
   return (
       <Container className="background-grayed">
         <Row >
-          <Col className="your-games col-12">
+          <Col className="dashboard-home col-12">
             <div>
               <h4 className="mt-2 bottom-border text-center">Dashboard</h4>
               {/* <Link to="/createGame">
@@ -54,22 +54,30 @@ const Home = () => {
                 IF no games at all => "you're not yet part of any gamers, find a game?"
                 */}
             </div>
-            <Row>
-          <Col className="d-flex d-none col-md-2 d-md-block"></Col>
-          <Col className="col-12 col-md-8 ">
+            <Row className="db-div-cont d-flex justify-content-center">
+          <Col className="m-0 p-0 col-8 col-md-8 flex-row ">
           <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}/>
 
+                <Tilt  tiltAngleXInitial={0} tiltAngleYInitial={-45} className="left-panel">
+                  <div data-augmented-ui="tr-clip bl-clip br-round both " className="bd21">
 
-            <Accordion>
              <RecentGames setModalShow={setModalShow}/>
-             <MyCharacters/>
+                  </div>
+                </Tilt>
 
-            </Accordion>
 
           </Col>
-          <Col className="d-flex d-none col-md-2 d-md-block"></Col>
+          <Col className="m-0 p-0 col-4 col-4 flex-row ">
+                <Tilt tiltAngleXInitial={0} tiltAngleYInitial={45} className="right-panel">
+
+                <div data-augmented-ui="tl-clip br-clip bl-round both" className="bd21">
+             <MyCharacters/>
+                </div>
+                </Tilt>
+
+          </Col>
 
             </Row>
           {/* --------------- */}

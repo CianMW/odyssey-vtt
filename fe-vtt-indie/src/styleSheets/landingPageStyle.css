@@ -59,7 +59,8 @@
 /* TEST WORK */
 
 .starry-background {
-    background-color: #000;
+    /* background-color: #000; */
+    /* background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(164,0,151, 0.22) 0%, rgba(164,0,151, 0.22) 50%,rgba(29,100,5, 0.05) 50%, rgba(29,100,5, 0.05) 100%),linear-gradient(227deg, rgba(0,102,116, 0.24) 0%, rgba(0,102,116, 0.24) 50%,rgba(30,17,112, 0.29) 50%, rgba(30,17,112, 0.29) 100%),linear-gradient(240deg, rgba(160,168,69, 0.3) 0%, rgba(160,168,69, 0.3) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(255,255,255, 0.38) 50%, rgba(255,255,255, 0.38) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(49,73,90, 0.17) 50%, rgba(49,73,90, 0.17) 100%),linear-gradient(176deg, rgba(36,31,11, 0.63) 0%, rgba(36,31,11, 0.63) 50%,rgba(49,114,97, 0.58) 50%, rgba(49,114,97, 0.58) 100%),linear-gradient(304deg, rgba(41,24,221, 0.47) 0%, rgba(41,24,221, 0.47) 50%,rgba(51,6,65, 0.69) 50%, rgba(51,6,65, 0.69) 100%),radial-gradient(circle at center center, rgb(6,15,38),rgb(6,15,38)); */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -287,6 +288,7 @@ img.glitch {
 .landing-page-container{
 overflow: hidden;
 background-color: #000;
+background-image:linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(44,7,45,0.7906512946975666) 45%, rgba(10,27,11,0.9167017148656338) 49%, rgba(3,31,4,0.8494748241093313) 55%, rgba(0,0,0,1) 100%);
 display: flex;
 align-items: center;
 justify-content: flex-start;
@@ -398,3 +400,11 @@ color: white;
 
 
   /* <iframe src="https://giphy.com/embed/2ALcqRd5OSXTPGFTk9" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/clioawards-clio-awards-entertainment-2ALcqRd5OSXTPGFTk9">via GIPHY</a></p> */
+
+
+
+  .tester{
+    --aug-all-width: 70%;
+    --aug-border-bg: #c92249;
+    /* --aug-all-height: 100%; */
+  }

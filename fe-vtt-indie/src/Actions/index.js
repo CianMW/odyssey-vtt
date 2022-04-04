@@ -46,5 +46,13 @@ export const setUser = (user) => {
       });
     };
   };
+  export const setDiceRoll = (notation) => {
+    return async (dispatch) => {
+      dispatch({
+        type: "SETDICEROLL",
+        payload: notation,
+      });
+    };
+  };
   
  

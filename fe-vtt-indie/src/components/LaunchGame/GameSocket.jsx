@@ -16,7 +16,7 @@ import GameChat from "./GameChat";
 import ADDRESS from "./addressSetup.js";
 import { useDispatch, useSelector } from "react-redux";
 // import CharacterSheet from "../CharacterSheet";
-import { setInGame } from "../../Actions";
+import { setDiceRoll, setInGame } from "../../Actions";
 import GameMenu from "./GameMenu";
 import CharacterSheet from "../CreateCharacter/CharacterSheet";
 import DiceInstance from "../DiceRoller/DiceInstance";
@@ -105,16 +105,48 @@ const GameSocket = () => {
   async function handleMessageSubmit(e) {
     e.preventDefault();
     if (e.key === "Enter") {
-      const newMessage = {
-        text: message,
-        sender: username,
-        id: socket.id,
-        timestamp: Date.now(),
-      };
+      const regex = /(\d*)(D\d*)((?:[+*-](?:\d+|\([A-Z]*\)))*)(?:\+(D\d*))?/gi;
+      const match = regex.test(message);
+      console.log("MESSAGE!", message[0])
+      // check if all characters are numbers before the initial "d"
+      let charsAreNumbers 
+      let lastNum
 
-      // emitMessage(newMessage);
-      console.log("reeee");
-      setChatHistory([...chatHistory, newMessage]);
+      const checkChars = () => {
+      let loopTerm = message.indexOf("d")  
+
+      for (let i = 0; i < loopTerm; i++) {
+        if (isNaN(parseInt(message[i])) === false) {
+          charsAreNumbers = true
+          lastNum = i
+        } else {
+          charsAreNumbers = false
+          break
+        }
+      }
+    }
+    checkChars()
+
+    console.log(isNaN(message[lastNum+1]))
+    console.log("char are numbers", charsAreNumbers)
+
+      if (match && isNaN(message[lastNum+1]) && charsAreNumbers) {
+        dispatch(setDiceRoll(message))
+      } else {
+
+        
+        const newMessage = {
+          text: message,
+          sender: username,
+          id: socket.id,
+          timestamp: Date.now(),
+        };
+        
+        // emitMessage(newMessage);
+        console.log("reeee");
+        setChatHistory([...chatHistory, newMessage]);
+        
+      }
       setMessage("");
     }
   }

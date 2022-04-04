@@ -18,6 +18,11 @@ const dataReducer = (state = initialState, action) => {
 					...state,
 			toast: action.payload,
 		}
+		case "SETDICEROLL":
+			return {
+			...state,
+			diceNotation: action.payload,
+		}	
 		default:
 		return state 	
 	}

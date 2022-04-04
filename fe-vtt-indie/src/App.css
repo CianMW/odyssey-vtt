@@ -204,13 +204,16 @@ div.glow:hover{
 
 
 .chatContainer{
-  max-height: 100vh;
+  height: 100%;
 }
 
 .chatbar-fixed{
-  position: relative;
-  top: 0;
+  position: absolute;
+  bottom: 0;
   height: 60px;
+}
+.chat-messages{
+  height: calc(100vh - 60px);
 }
 
 .parent-wide{

@@ -14,7 +14,7 @@ return (
 <Row className="m-0 p-0 mb-5">
     <div className="d-flex justify-content-center">
 
-<img className="glitch m-0" src="https://i.ibb.co/8NTXYSJ/space-Aces-Logo-New.png"/>
+<img className="glitch m-0" src="https://i.ibb.co/7nWD0N6/space-Aces-Logo-New.png"/>
     </div>
 
 </Row>

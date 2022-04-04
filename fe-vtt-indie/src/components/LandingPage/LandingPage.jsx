@@ -48,7 +48,7 @@ const LandingPage = () => {
             <Row className="text-center mb-5 align-items-center" >
                 <Col md={6} className="d-flex justify-content-center align-items-center">
                 <div data-augmented-ui="  tl-clip-inset tr-clip-inset r-clip-y br-clip-inset bl-clip-inset l-clip-y both">
-                    <img src="/imgFiles/2159.jpg" style={{maxWidth: "50vw", zIndex: "100000"}}/>
+                    <img src="https://i.ibb.co/yVhdVhC/2262.jpg" style={{maxWidth: "50vw", zIndex: "100000"}}/>
                     </div>
                 </Col>
                     
@@ -118,7 +118,9 @@ const LandingPage = () => {
 
             <Row className="justify-content-center align-items-center">
                 <Col md={5}>
-                    <img src="/imgFiles/spaceman-flag.png" style={{width: "100%"}} />
+                <div data-augmented-ui="  all-hex border " className="tester" style={{width: "50%"}}>
+                    <img src="https://i.ibb.co/NjXrdBC/astronaut-bear-og.jpg" style={{width: "100%"}} />
+                    </div>
                     </Col>
                 <Col md={5}>
                     <span>Space Aces was written / created by Stephen Dick a.k.a P0rthos <span className="secret-code">(space ace code)</span> and successfully Kickstarted in 2021.  The idea was to provide a toolbox for players to play the game in the setting of their choice, or develop/discover it through play.

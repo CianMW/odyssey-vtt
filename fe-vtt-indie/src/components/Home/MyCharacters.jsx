@@ -32,12 +32,7 @@ const MyCharacters = () => {
     show={modalShow}
     onHide={() => setModalShow(false)}
     />
-    <Accordion.Item eventKey="1" className="mt-2">
-      <Accordion.Header>
-        <h3>My Characters</h3>
-      </Accordion.Header>
-      <Accordion.Body>
-        <Container className="bordered py-2 ">
+        <Container className=" py-2 ">
           <Row className="p-0 m-0">
             {currentState.user.info.characters.length > 0 ? (
               currentState.user.info.characters
@@ -88,8 +83,6 @@ const MyCharacters = () => {
               <h4 className="text-center clickable" onClick={e => setModalShow(true)}> + New Character</h4>
           </Row>
         </Container>
-      </Accordion.Body>
-    </Accordion.Item>
     </>
   );
 };
