@@ -107,7 +107,30 @@ const GameSocket = () => {
     if (e.key === "Enter") {
       const regex = /(\d*)(D\d*)((?:[+*-](?:\d+|\([A-Z]*\)))*)(?:\+(D\d*))?/gi;
       const match = regex.test(message);
-      if (match){
+      console.log("MESSAGE!", message[0])
+      // check if all characters are numbers before the initial "d"
+      let charsAreNumbers 
+      let lastNum
+
+      const checkChars = () => {
+      let loopTerm = message.indexOf("d")  
+
+      for (let i = 0; i < loopTerm; i++) {
+        if (isNaN(parseInt(message[i])) === false) {
+          charsAreNumbers = true
+          lastNum = i
+        } else {
+          charsAreNumbers = false
+          break
+        }
+      }
+    }
+    checkChars()
+
+    console.log(isNaN(message[lastNum+1]))
+    console.log("char are numbers", charsAreNumbers)
+
+      if (match && isNaN(message[lastNum+1]) && charsAreNumbers) {
         dispatch(setDiceRoll(message))
       } else {
 
