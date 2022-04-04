@@ -33,7 +33,7 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
             </TabList>
         
             <TabPanel>
-              <Container>
+              <Container className="m-0 p-0">
 
               <GameChat
               chatHistory={chatHistory}

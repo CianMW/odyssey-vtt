@@ -71,9 +71,9 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
           </div>
           </Router>
 
-          {!currentState.data.inGame && 
+          {/* {!currentState.data.inGame && 
            <MainFooter/>
-          }
+          } */}
           
           </Container>
   );
