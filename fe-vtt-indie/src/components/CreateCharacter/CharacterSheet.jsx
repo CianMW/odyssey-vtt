@@ -3,15 +3,19 @@ import { Card, Col, Container, FormControl, Row } from "react-bootstrap";
 import Draggable from "react-draggable";
 import { Resizable, ResizableBox } from 'react-resizable';
 import { useDispatch } from "react-redux";
-import { setDiceRoll } from "../../Actions";
+import { setCharacterClosed, setDiceRoll } from "../../Actions";
 import { Rnd} from "react-rnd";
 import "./createCharacter.css"
 
-const CharacterSheet = () => {
+const CharacterSheet = ({character}) => {
   const [randomAvatar, setRandomAvatar] = useState("");
   const [tempNumber, setTempNumber] = useState(0);
   const reference = React.createRef();
   const dispatch = useDispatch();
+  
+  const [characterSheet, setCharacterSheet] = useState(character);
+
+
   useEffect(() => {
     let randomNum =  Math.floor(Math.random() * 10000);
 
@@ -19,7 +23,6 @@ const CharacterSheet = () => {
     setRandomAvatar(avatarLink);
   
   }, []);
-
 
 const [measurementState, setMeasurementState] = useState({width: 200, height: 200});
 
@@ -40,6 +43,7 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
   minHeight={190}
   maxWidth={"1000"}
   maxHeight={"1000"}
+  bounds="window"
 >
 
     <div className="code-container">
@@ -48,7 +52,7 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
         </div>
 
         <section className="augs bg" data-augmented-ui>
-          <button className="dots" title="change mode"></button>
+          <button onClick={e => dispatch(setCharacterClosed(character._id))} className="dots" title="change mode"></button>
           <Container className=" pt-5 main-partition highcontrast-dark">
             <Row className="pt-5 mb-3">
               <Col md={3}  className="bordered"><img src={randomAvatar} width="200"/></Col>

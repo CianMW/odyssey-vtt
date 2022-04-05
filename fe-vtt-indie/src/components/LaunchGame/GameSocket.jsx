@@ -20,6 +20,7 @@ import { setDiceRoll, setInGame } from "../../Actions";
 import GameMenu from "./GameMenu";
 import CharacterSheet from "../CreateCharacter/CharacterSheet";
 import DiceInstance from "../DiceRoller/DiceInstance";
+import InGameUsers from "./InGameUsers";
 // import socket  from "./Socket";
 
 
@@ -29,7 +30,7 @@ const socket = io(ADDRESS, { transports: ["websocket"] });
 
 
 
-const GameSocket = () => {
+const GameSocket = ({updateUser}) => {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
@@ -177,14 +178,19 @@ const GameSocket = () => {
           style={{overflow: "hidden"}}
         >
           <div>
+            <InGameUsers/>
           <DiceInstance/>
-          <CharacterSheet />
+          {currentState.data.activeCharacters.map( char => 
+          <CharacterSheet character={char}/>
+          )
+          }
           </div>
         </Col>
         <Col md={3} className="px-0 m-0  full-height col-12 col-md-3">
           <Row className="">
             <Col>
             <GameMenu
+            updateUser={updateUser}
              chatHistory={chatHistory}
              handleMessageSubmit={handleMessageSubmit}
              message={message}

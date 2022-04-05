@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Container, Modal, Row, Col, Form, FormControl, InputGroup, CloseButton, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { updateSystem } from "../../Actions";
 import "./../CreateGame/NewGame.css"
 
 
@@ -43,8 +44,9 @@ const CreateCharacterModal = (props) => {
           if (response.ok) {
             const data = await response.json()
             console.log("Success!!", data)
+           await props.updateUser()
             await props.onHide()
-             navigate(`/${data._id}`, {replace: true})
+            //  navigate(`/${data._id}`, {replace: true})
           } else {
             console.log("Problem!!!!")
           }

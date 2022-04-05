@@ -30,43 +30,109 @@ const LandingPage = () => {
              </Container>
              
             {/* </Container> */}
-            <Row className="m-0 p-0 data-pad-container">
-            <img src="/imgFiles/dataPad.png" className="data-pad" alt="image of a data pad"/>
-            <Row className=" m-0 p-0 text-center main-text">
-            <h2>Welcome to the Space Ace Brigade</h2>
-            <h4 className="text-center">
-                The galactic gig economy is alive and thriving. The Galaxy is chock full of things that need doing, anomalies that need exploring, and pickles that need unpickling.
-            </h4>
-            <h4>
-            You, dear recruits, are just the ones to do them! You won't live to regret your choice…
-            </h4>
-            <h4>
-            Mostly competent and highly motivated is good enough in our books. Remember, the contract is sacred, your debts are real, and the alternatives ain't that great. So buck up and strap in! Adventure Awaits!
-            </h4>
+            <Row className="mt-5 m-0 p-0 data-pad-container">
+            <img src="https://i.ibb.co/NSksJv3/Welcome-Space-Ace.png" style={{width: "1000px"}}/>
             </Row>
-            </Row>
-            <Row className="text-center mb-5 align-items-center" >
+            {/* odyssey vtt section */}
+            <Row className="my-5 mx-0 p-0" style={{width:"100%"}}>
+                <Col md={6} className=" mx-0 justify-content-center" style={{paddingLeft:"50px"}}>
+
+            <h1 className="tethered-heading text-center">
+                Odyssey Virtual Tabletop - The Basics
+                </h1>
+            
+                <div style={{paddingLeft:"100px"}}>
+                    <ul className=" d-flex flex-column justify-content-between mt-2">
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                    A Virtual Tabletop focused on OSR games and indie developer support.
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                    Aims to boost immersion and limit distractions outside of the genre.
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                A network of smaller virtual tabletops. 
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                Speeds up gameplay, dice rolling and rules searching.
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-x-square" style={{color:"red", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                    Not a source of nutrition.
+                    </span>
+
+                        </li>
+
+                    </ul>
+                </div>
+                </Col>
+                <Col md={6} className="d-flex justify-content-center">
+                <div data-augmented-ui="  tl-round t-clip tr-2-clip-x br-clip bl-2-clip-x both">
+                <img src="https://i.ibb.co/XXTGBQ3/Odyssey-VTTLogo.png" alt="Odyssey-VTTLogo" border="0"/>
+                </div>
+                </Col>
+                </Row> 
+            {/* odyssey vtt section  End*/}
+
+            <Row className="mt-5 justify-content-center mb-5 align-items-center" >
                 <Col md={6} className="d-flex justify-content-center align-items-center">
                 <div data-augmented-ui="  tl-clip-inset tr-clip-inset r-clip-y br-clip-inset bl-clip-inset l-clip-y both">
                     <img src="https://i.ibb.co/yVhdVhC/2262.jpg" style={{maxWidth: "50vw", zIndex: "100000"}}/>
                     </div>
                 </Col>
                     
-                <Col md={6} className=" justify-content-between align-items-between ">
+                <Col md={6} className=" justify-content-center align-items-center ">
 
                 {/* <img src="/imgFiles/2006.jpg" style={{width: "100vw", height: "100%"}}/> */}
-                <h1 className="tethered-heading">
+                <h1 className="tethered-heading text-center">
                 Space Aces - What Is It?
                 </h1>
             
                 <div>
+                    <ul className=" d-flex flex-column justify-content-between mt-2">
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                    Space Aces is an RPG homage to happy, hopeful, & campy Sci Fi.
+                    </span>
 
-                <p>
-                Space Aces is an homage to an undying love of happy, hopeful, & campy Sci Fi. A modular, lightweight, optimistic sci-fi tabletop adventure game toolbox for GM-led groups, co-op & solo play. Packed with over 75 tables, oracles & procedural generators for creating near-endless light-hearted rollicking romps through space a la Star Trek meets Futurama meets Hitchhikers Guide To The Galaxy.
-                </p>
-                <p>
-                Space Aces: TNG (The New Guidebook) features simple, sleek, flexible rules with easy & collaborative madlibs spark table style mission generation complete with a twist.
-                </p>
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                    Lightweight and easy to use, tools over rules system.
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                A toolbox for GM-led groups, co-op & solo gaming.
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-check-square" style={{color:"green", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                Packed with over 75 tables, oracles & procedural generators.
+                    </span>
+
+                        </li>
+                        <li className="mt-2 d-flex justify-content-start align-items-center text-center">
+                <i className=" bi bi-x-square" style={{color:"red", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
+                    A three-headed donkey named George.
+                    </span>
+
+                        </li>
+
+                    </ul>
                 </div>
                 </Col>
             </Row>
@@ -111,19 +177,19 @@ const LandingPage = () => {
                 <Col md={8} className=""><span><b>Dare to play on Shark Jumping Mode, Hard Mode, and so much more… all in 24 full-color richly illustrated pages.</b></span></Col>
                 </Row>
             </Container>
-            <Container>
-                <Row className="text-center">
-                    <h1>The Author // Buy The Game</h1>
+            <Container className="mt-5 mb-5 justify-content-center">
+                <Row className="mb-3 text-center">
+                    <h1 classNAME="fw-bold">The Author - Support The Game</h1>
                 </Row>
 
-            <Row className="justify-content-center align-items-center">
-                <Col md={5}>
+            <Row className="justify-content-between align-items-center">
+                <Col md={6} className="justify-content-center align-items-start d-flex">
                 <div data-augmented-ui="  all-hex border " className="tester" style={{width: "50%"}}>
                     <img src="https://i.ibb.co/NjXrdBC/astronaut-bear-og.jpg" style={{width: "100%"}} />
                     </div>
                     </Col>
-                <Col md={5}>
-                    <span>Space Aces was written / created by Stephen Dick a.k.a P0rthos <span className="secret-code">(space ace code)</span> and successfully Kickstarted in 2021.  The idea was to provide a toolbox for players to play the game in the setting of their choice, or develop/discover it through play.
+                <Col md={6}>
+                    <span>Space Aces was written / created by Stephen Dick a.k.a P0rthos and successfully Kickstarted in 2021.  The idea was to provide a toolbox for players to play the game in the setting of their choice, or develop/discover it through play.
                     </span>
                     <br/>
                     <p>Stephen has just wrapped up another Space Aces Kickstarter <b>Space Aces: Voyages In Infinite Space</b>, we recommend you check it out </p>

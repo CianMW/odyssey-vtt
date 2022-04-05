@@ -10,7 +10,7 @@ const GameChat = ({chatHistory, handleMessageSubmit, message, setMessage}) => {
         {/* MIDDLE SECTION: CHAT HISTORY */}
               
         <ListGroup className="chat-messages">
-                {chatHistory.length > 1 && chatHistory.map((message, i) => (
+                {chatHistory.length > 0 && chatHistory.map((message, i) => (
                     <ListGroupItem key={i}>
                     <strong>{message.sender}</strong>
                     <span className='mx-1'> | </span>

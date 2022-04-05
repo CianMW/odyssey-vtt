@@ -14,7 +14,7 @@ import ImportCharacterModal from './ImportCharacterModel';
 
 
 
-const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId}) => {
+const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMessage, gameId}) => {
     const [modalShow, setModalShow] = useState(false);
     const currentState = useSelector(state => state)
 
@@ -43,9 +43,10 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
               />
               </Container>
             </TabPanel>
-            <TabPanel>
+            <TabPanel style={{height:"95vh", overflow:"hidden"}}>
               <GameCharacters setModalShow={setModalShow}/>
             <ImportCharacterModal
+            updateUser={updateUser}
             gameId={gameId}
             show={modalShow}
             onHide={() => setModalShow(false)} />

@@ -1,6 +1,7 @@
 import React from "react"
 import { Row } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
+import { addOpenChar } from "../../Actions"
 import { completeMissionGenerator } from "../../GeneratorFunctions"
 
 
@@ -19,14 +20,13 @@ const AvailableCharacters = ({gameId}) => {
     return (<>{
         currentGame[0].characters.length > 0 ? (
         currentGame[0].characters.map(char => (
-                <Row className="justify-content-center">
-                   <p>
+                <Row className="d-flex justify-content-center" onClick={e => dispatch(addOpenChar(char))} style={{cursor:"pointer"}}>
+                   <p className="text-center mt-1">
                         {char.characterName}
                        </p>
                 </Row>
             ))) : (<></>)
     }
-    <button onClick={e => dynamicLoad(e)}>click here for mission</button>
    </>)
 }
 
