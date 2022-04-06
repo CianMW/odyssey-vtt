@@ -21,14 +21,14 @@ const singleResponseModal = (functionName) => {
 }
 
     return (
-      <div style={{height:"100vh", overflowY:"scroll", overflowX: "hidden"}}>
+      <div style={{height:"100%", overflowY:"scroll", overflowX: "hidden"}}>
       <AskTheAI/>
         <Accordion defaultActiveKey={['0']} alwaysOpen>
   <Accordion.Item eventKey="0">
     <Accordion.Header>Mission</Accordion.Header>
     <Accordion.Body>
       <Row className="flex-column">
-      <button onClick={e => setMissionModalShow(true)}>new Mission</button>
+      {/* <button onClick={e => setMissionModalShow(true)}>new Mission</button> */}
       <SciFiButton genName={"Faction"} currentFunction={randFaction} singleResponseModal={singleResponseModal}/>
       <SciFiButton genName={"Objective"} currentFunction={randObjective} singleResponseModal={singleResponseModal}/>
       <SciFiButton genName={"Mission"} currentFunction={randMission} singleResponseModal={singleResponseModal}/>

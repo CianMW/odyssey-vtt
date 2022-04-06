@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -23,7 +23,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
     return (
         
         
-          <Tabs style={{backgroundColor: "lightgray"}} className="scifiUI">
+          <Tabs style={{backgroundColor: "#dfe5ed", height: "100vh", overflow: "hidden"}} className="scifiUI">
             <TabList>
               <Tab><i className="bi bi-chat-left-text-fill"></i></Tab>
               <Tab><i className="bi bi-folder-fill"></i></Tab>
@@ -43,7 +43,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
               />
               </Container>
             </TabPanel>
-            <TabPanel style={{height:"95vh", overflow:"hidden"}}>
+            <TabPanel style={{height:"100%", overflow:"hidden"}}>
               <GameCharacters setModalShow={setModalShow}/>
             <ImportCharacterModal
             updateUser={updateUser}
@@ -59,9 +59,12 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
                 <p>lib</p>
             </TabPanel>
             <TabPanel>
+              <Row className="d-flex justify-content-center">
+
                 <Link to={`/`+ currentState.user.info._id}>
             <Button variant="danger" >Exit Game</Button>
                 </Link>
+              </Row>
             </TabPanel>
           </Tabs>
     )

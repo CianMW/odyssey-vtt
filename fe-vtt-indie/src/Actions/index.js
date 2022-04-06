@@ -101,5 +101,13 @@ export const updateSystem = () => {
       });
     };
   };
+  export const setDiceRollResult = (result) => {
+    return async (dispatch) => {
+      dispatch({
+        type: "SETDICEROLLRESULT",
+        payload: result,
+      });
+    };
+  };
   
  

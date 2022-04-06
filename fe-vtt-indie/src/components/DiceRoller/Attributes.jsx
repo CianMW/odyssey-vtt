@@ -60,22 +60,22 @@ const Attributes = ({ onChange, attributes, onRoll }) => {
     <Row className=" d-flex justify-content-around">
       <Col md={3}></Col>
       <Col md={1}>
-      <button data-augmented-ui="tr-clip bl-clip br-round border" className="d4-btn die-btn" onClick={e => rollD4(e)}><img src="/imgFiles/d4.svg" width="64px"/></button>
+      <button data-augmented-ui="tr-clip bl-clip br-round both" className="d4-btn die-btn" onClick={e => rollD4(e)}><img src="/imgFiles/d4.svg" width="64px"/></button>
       </Col>
       <Col md={1}>
-      <button data-augmented-ui="tr-clip bl-clip br-round border" className="d6-btn die-btn" onClick={e => rollD6(e)}><img src="/imgFiles/d6.svg" width="64px"/></button>
+      <button data-augmented-ui="tr-clip bl-clip br-round both" className="d6-btn die-btn" onClick={e => rollD6(e)}><img src="/imgFiles/d6.svg" width="64px"/></button>
       </Col>
       <Col md={1}>
-      <button data-augmented-ui="tr-clip bl-clip br-round border" className="d8-btn die-btn" onClick={e => rollD8(e)}><img src="/imgFiles/d8.svg" width="64px"/></button>
+      <button data-augmented-ui="tr-clip bl-clip br-round both" className="d8-btn die-btn" onClick={e => rollD8(e)}><img src="/imgFiles/d8.svg" width="64px"/></button>
       </Col>
       <Col md={1}>
-      <button data-augmented-ui="tr-clip bl-clip br-round border" className="d10-btn die-btn" onClick={e => rollD10(e)}><img src="/imgFiles/d10.svg" width="64px"/></button>
+      <button data-augmented-ui="tr-clip bl-clip br-round both" className="d10-btn die-btn" onClick={e => rollD10(e)}><img src="/imgFiles/d10.svg" width="64px"/></button>
       </Col>
       <Col md={1}>
-      <button data-augmented-ui="tr-clip bl-clip br-round border" className="d12-btn die-btn" onClick={e => rollD12(e)}><img src="/imgFiles/d12.svg" width="64px"/></button>
+      <button data-augmented-ui="tr-clip bl-clip br-round both" className="d12-btn die-btn" onClick={e => rollD12(e)}><img src="/imgFiles/d12.svg" width="64px"/></button>
       </Col>
       <Col md={1}>
-      <button data-augmented-ui="tr-clip bl-clip br-round border" className="d20-btn die-btn" onClick={e => rollD20(e)}><img src="/imgFiles/d20.svg" width="64px"/></button>
+      <button data-augmented-ui="tr-clip bl-clip br-round both" className="d20-btn die-btn" onClick={e => rollD20(e)}><img src="/imgFiles/d20.svg" width="64px"/></button>
       </Col>
       <Col md={3}></Col>
 

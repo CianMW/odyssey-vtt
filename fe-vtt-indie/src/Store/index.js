@@ -14,6 +14,7 @@ export const initialState = {
   data: {
     activeCharacters: [],
     diceNotation:"",
+    diceRollResult: "",
     loggedIn: false,
     loading: true,
     inGame: false,

@@ -7,8 +7,8 @@
     min-width: 240px;
     min-height: 150px;
     /* position: relative; */
-    --glow-margin: 70px;
-    filter: drop-shadow(0 0 25px rgb(73, 158, 255));
+    --glow-margin: 0px;
+    filter: drop-shadow(0 0 15px rgb(3, 221, 255));
   }
   
   .code-container::before {
@@ -18,7 +18,7 @@
     right: 90px; */
     z-index: 999;
     color: rgb(255 200 255 / 0.5);
-    text-shadow: 0 0 12px rgb(90, 106, 192);
+    text-shadow: 0 0 0px rgb(255, 255, 255);
     letter-spacing: 0.1em;
   }
   
@@ -48,8 +48,8 @@
     display: grid;
     z-index: 2;
     pointer-events: none;
-    --glow: drop-shadow(0 0 1px violet);
-    filter: var(--glow) brightness(1.5) drop-shadow(0 0 10px violet);
+    --glow: drop-shadow(0 0 1px rgb(0, 17, 255));
+    filter: var(--glow) brightness(1.5) drop-shadow(0 0 10px rgb(60, 38, 251));
   }
   
   .augs {
@@ -81,7 +81,7 @@
   .glow-container .augs {
     --aug-border: initial;
     --aug-border-all: 2px;
-    --aug-border-bg: linear-gradient(to bottom left, rebeccapurple, orange);
+    --aug-border-bg: linear-gradient(to bottom left, rgb(84, 100, 130), rgb(13, 0, 255));
   }
   .dots {
     position: absolute;
@@ -144,7 +144,8 @@
   /* https://marketplace.visualstudio.com/items?itemName=webrender.synthwave-x-fluoromachine */
   .bg {
     background: rgb(179,255,246);
-background: linear-gradient(0deg, rgba(179,255,246,0.8438725832129726) 0%, rgba(223,255,251,1) 30%, rgba(234,255,252,0.8578781854538691) 56%, rgba(255,255,255,0.8046568969384629) 100%);
+    background: rgba(0, 190, 190, 0.1);
+/* background: linear-gradient(0deg, rgba(179,255,246,0.8438725832129726) 0%, rgba(223,255,251,1) 30%, rgba(234,255,252,0.8578781854538691) 56%, rgba(255,255,255,0.8046568969384629) 100%); */
   }
   .bg::after{
     content:'';

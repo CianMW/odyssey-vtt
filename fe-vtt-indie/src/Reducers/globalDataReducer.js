@@ -23,6 +23,11 @@ const dataReducer = (state = initialState, action) => {
 			...state,
 			diceNotation: action.payload,
 		}	
+		case "SETDICEROLLRESULT":
+			return {
+			...state,
+			diceRollResult: action.payload,
+		}	
 		case "ADDOPENCHAR": 
 		return {
 			...state, 

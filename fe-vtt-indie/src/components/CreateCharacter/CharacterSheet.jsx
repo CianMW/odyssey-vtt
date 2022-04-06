@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Container, FormControl, Row } from "react-bootstrap";
 import Draggable from "react-draggable";
 import { Resizable, ResizableBox } from 'react-resizable';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCharacterClosed, setDiceRoll } from "../../Actions";
 import { Rnd} from "react-rnd";
 import "./createCharacter.css"
@@ -11,11 +11,77 @@ const CharacterSheet = ({character}) => {
   const [randomAvatar, setRandomAvatar] = useState("");
   const [tempNumber, setTempNumber] = useState(0);
   const reference = React.createRef();
+  const currentState = useSelector(state => state)
   const dispatch = useDispatch();
   
   const [characterSheet, setCharacterSheet] = useState(character);
 
+  const [shaken, setShaken] = useState(character.ailments.shaken);
+  const [stressed, setStressed] = useState(character.ailments.stressed);
+  const [frustrated, setFrustrated] = useState(character.ailments.frustrated);
+  const [confused, setConfused] = useState(character.ailments.confused);
+  const [frightened, setFrightened] = useState(character.ailments.frightened);
+  const [exhausted, setExhausted] = useState(character.ailments.exhausted);
+  const [characterName, setCharacterName] = useState(character.characterName);
+  const [friends, setFriends] = useState(character.friends);
+  const [moxie, setMoxie] = useState(character.moxie);
+  const [currentGumption, setCurrentGumption] = useState(character.gumption.currentGumption);
+  const [maxGumption, setMaxGumption] = useState(character.maxGumption);
+  const [pockets, setPockets] = useState(character.pockets);
+  const [skill, setSkill] = useState(character.skill);
+  const [style, setStyle] = useState(character.style);
+  const [smarts, setSmarts] = useState(character.smarts);
+  const [wiggles, setWiggles] = useState(character.wiggles);
+  const [firstGrit, setFirstGrit] = useState(character.firstGrit);
+  const [secondGrit, setSecondGrit] = useState(character.secondGrit);
+  const [thirdGrit, setThirdGrit] = useState(character.thirdGrit);
+  const [fourthGrit, setFourthGrit] = useState(character.fourthGrit);
+  const [fifthGrit, setFifthGrit] = useState(character.fifthGrit);
 
+
+  const payload = {
+    ailments: {shaken: shaken, stressed: stressed, frustrated: frustrated, confused: confused, frightened: frightened, exhausted: exhausted},
+    characterName: characterName,
+    friends: friends,
+    grit: {firstGrit: firstGrit, secondGrit: secondGrit, thirdGrit: thirdGrit, fourthGrit: fourthGrit, fifthGrit: fifthGrit},
+    gumption: {maxGumption: maxGumption, currentGumption: currentGumption},
+    moxie: moxie,
+    pockets: pockets,
+    skill: skill,
+    smarts: smarts,
+    style: style,
+    wiggles: wiggles,
+  }
+
+  const updateCharacter = async () => {
+    try{
+      const response = await fetch(`http://localhost:3150/character/${character._id}`,{
+       method: 'PUT',
+       headers: {
+        'Content-Type': 'application/json',
+         authorization: currentState.auth.b64Auth
+        },
+        body: JSON.stringify(payload),
+      } )
+      if (response.ok) {
+        const data = await response.json()
+        console.log("updated the character", data)
+      //  await props.updateUser()
+  } else {
+    console.log("error")
+  } } catch(error) {
+    console.log("error", error)
+  }
+}
+
+const updateAndClose = async () => {
+
+  updateCharacter()
+ await dispatch(setCharacterClosed(character._id))
+
+}
+
+console.log("FUCK", character)
   useEffect(() => {
     let randomNum =  Math.floor(Math.random() * 10000);
 
@@ -36,32 +102,35 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
   default={{
     x: 0,
     y: 0,
-    width: 320,
-    height: 200,
+    width: 1000,
+    height: 400,
   }}
   minWidth={500}
   minHeight={190}
   maxWidth={"1000"}
-  maxHeight={"1000"}
+  maxHeight={"400"}
   bounds="window"
 >
 
-    <div className="code-container">
+    <div className="code-container" >
         <div className="glow-container">
           <div className="augs" data-augmented-ui></div>
         </div>
 
         <section className="augs bg" data-augmented-ui>
-          <button onClick={e => dispatch(setCharacterClosed(character._id))} className="dots" title="change mode"></button>
+          <button onClick={e => updateAndClose()} className="dots" title="change mode"></button>
           <Container className=" pt-5 main-partition highcontrast-dark">
             <Row className="pt-5 mb-3">
-              <Col md={3}  className="bordered"><img src={randomAvatar} width="200"/></Col>
+              <Col md={3}  className="bordered"><img src={character.avatar} width="200"/></Col>
               <Col md={3} className="">
               <FormControl
+              className="text-start"
               data-augmented-ui="tr-clip bl-clip br-round border"
               placeholder="Marsho Stronghold"
               aria-label="Username"
               aria-describedby="basic-addon1"
+              value={characterName}
+              onChange={e => setCharacterName(e.target.value)}
               
               />
               </Col>
@@ -78,8 +147,8 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                 <label for="max">Max</label>
                   </div>
                 <div className="double-input d-flex justify-content-center">
-                  <input className="text-center"  type="number" id="current" placeholder="current Gumption" style={{maxWidth:"100px"}}/>
-                  <input className="text-center" type="number" id="max"  placeholder="Last" style={{maxWidth:"100px"}}/>
+                  <input className="text-center" value={currentGumption} onChange={e => setCurrentGumption(e.currentTarget.value)} type="number" id="current" placeholder="current Gumption" style={{maxWidth:"100px"}}/>
+                  <input className="text-center" value={currentGumption} onChange={e => setCurrentGumption(e.currentTarget.value)} type="number" id="max"  placeholder="Last" style={{maxWidth:"100px"}}/>
                 </div>
                 <Row className="mt-5 justify-content-center">
                   <h5 className="fw-bold text-center">
@@ -88,32 +157,32 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                   </Row>
                   <Row className="m-0 p-0 justify-content-center">
                     <Col >
-                  <div class="squaredGrit">
-                      <input type="checkbox" value="None" id="squaredGrit" name="check" />
+                  <div className="squaredGrit">
+                      <input type="checkbox"  id="squaredGrit" name="firstGrit" onClick={e => setFirstGrit(!firstGrit)} checked={firstGrit}/>
                       <label for="squaredGrit"></label>
                     </div>
                     </Col>
                     <Col>
-                  <div class="squaredGrit">
-                      <input type="checkbox" value="None" id="squaredGrit" name="check" />
+                  <div className="squaredGrit">
+                      <input type="checkbox"  id="squaredGrit" name="check" onChange={e => setSecondGrit(!secondGrit)} checked={secondGrit}/>
                       <label for="squaredGrit"></label>
                     </div>
                     </Col>
                     <Col>
-                  <div class="squaredGrit">
-                      <input type="checkbox" value="None" id="squaredGrit" name="check" />
+                  <div className="squaredGrit">
+                      <input type="checkbox"  id="squaredGrit" name="check" onChange={e => setThirdGrit(!thirdGrit)} checked={thirdGrit}/>
                       <label for="squaredGrit"></label>
                     </div>
                     </Col>
                     <Col>
-                  <div class="squaredGrit">
-                      <input type="checkbox" value="None" id="squaredGrit" name="check" />
+                  <div className="squaredGrit">
+                      <input type="checkbox" value="None" id="squaredGrit" name="check" onChange={e => setFourthGrit(!fourthGrit)} checked={fourthGrit}/>
                       <label for="squaredGrit"></label>
                     </div>
                     </Col>
                     <Col>
-                  <div class="squaredGrit">
-                      <input type="checkbox" value="None" id="squaredGrit" name="check" />
+                  <div className="squaredGrit">
+                      <input type="checkbox" value="None" id="squaredGrit" name="check" onChange={e => setFifthGrit(!fifthGrit)} checked={fifthGrit}/>
                       <label for="squaredGrit"></label>
                     </div>
                     </Col>
@@ -130,7 +199,7 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                     <Col md={6} className="mx-auto ">
                   <label className="d-inline-flex">
                     <div class="squaredThree">
-                      <input type="checkbox" value="None" id="squaredThree" name="check" />
+                      <input type="checkbox" value="None" id="squaredThree" name="check" onChange={e => setShaken(!shaken)} checked={shaken}/>
                       <label for="squaredThree"></label>
                     </div>
                       <span>Shaken</span>
@@ -198,8 +267,8 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                     aria-label="Username"
                     type="number"
                     aria-describedby="basic-addon1"
-                    value={tempNumber}
-                    onChange={e => setTempNumber(e.target.value)}
+                    value={moxie}
+                    onChange={e => setMoxie(e.target.value)}
                     />
               </div>
               </Col>
@@ -211,8 +280,8 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                     aria-label="Username"
                     type="number"
                     aria-describedby="basic-addon1"
-                    value={tempNumber}
-                    onChange={e => setTempNumber(e.target.value)}
+                    value={smarts}
+                    onChange={e => setSmarts(e.target.value)}
                     />
               </div>
               </Col>
@@ -226,8 +295,8 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                     aria-label="Username"
                     type="number"
                     aria-describedby="basic-addon1"
-                    value={tempNumber}
-                    onChange={e => setTempNumber(e.target.value)}
+                    value={wiggles}
+                    onChange={e => setWiggles(e.target.value)}
                     />
               </div>
               </Col>
@@ -239,8 +308,8 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                     aria-label="Username"
                     type="number"
                     aria-describedby="basic-addon1"
-                    value={tempNumber}
-                    onChange={e => setTempNumber(e.target.value)}
+                    value={friends}
+                    onChange={e => setFriends(e.target.value)}
                     />
               </div>
               </Col>
@@ -252,8 +321,8 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                     aria-label="Username"
                     type="number"
                     aria-describedby="basic-addon1"
-                    value={tempNumber}
-                    onChange={e => setTempNumber(e.target.value)}
+                    value={pockets}
+                    onChange={e => setPockets(e.target.value)}
                     />
               </div>
               </Col>

@@ -17,8 +17,11 @@ const AvailableCharacters = ({gameId}) => {
 
     const currentGame = currentState.user.info.games.filter(game => game._id === gameId)
     console.log(currentGame)
-    return (<>{
-        currentGame[0].characters.length > 0 ? (
+    return (
+        <div style={{height: "100%"}}>
+
+        {
+            currentGame[0].characters.length > 0 ? (
         currentGame[0].characters.map(char => (
                 <Row className="d-flex justify-content-center" onClick={e => dispatch(addOpenChar(char))} style={{cursor:"pointer"}}>
                    <p className="text-center mt-1">
@@ -26,8 +29,9 @@ const AvailableCharacters = ({gameId}) => {
                        </p>
                 </Row>
             ))) : (<></>)
-    }
-   </>)
+        }
+        </div>
+        )
 }
 
 export default AvailableCharacters

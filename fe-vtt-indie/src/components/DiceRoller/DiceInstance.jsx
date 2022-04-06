@@ -5,7 +5,7 @@ import Attributes from "./Attributes";
 import { useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { setDiceRoll } from "../../Actions/index.js";
+import { setDiceRoll, setDiceRollResult } from "../../Actions/index.js";
 
 // initialize the Dice Box outside of the component
 Dice.init().then(() => {
@@ -35,19 +35,19 @@ useEffect(() => {
 
   // This method is triggered whenever dice are finished rolling
   Dice.onRollComplete = (results) => {
-    console.log(results);
+    console.log(results, "results");
 
-    const newState = { ...attr };
+    let newState = {}
 
-    if (pendingRoll === "all") {
-      Object.keys(newState).forEach((attr, i) => {
-        newState[attr].total = results[i].value;
-      });
-    } else {
-      newState[pendingRoll].total = results[0].value;
-    }
-    setAttr(newState);
-  };
+    // if (pendingRoll === "all") {
+    //   Object.keys(newState).forEach((attr, i) => {
+    //     newState[attr].total = results[i].value;
+    //   });
+    // } else {
+      newState.total = results[0].value;
+      console.log("the new state", newState);
+      dispatch(setDiceRollResult(results))
+    };
 
   // update attribute from numerical input
   const updateAttributes = (newState) => {
@@ -60,6 +60,7 @@ useEffect(() => {
     // save which attribute we're rolling for
     // trigger the dice roll
     Dice.show().roll(notation);
+
   };
 
   return (

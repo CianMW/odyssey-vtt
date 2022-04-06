@@ -14,9 +14,11 @@ import Tilt from "react-parallax-tilt"
 const Home = ({ updateUser }) => {
   const [games, setGames] = useState(null);
   const [modalShow, setModalShow] = useState(false);
+  const [isReady, setIsReady] = useState(false);
   const currentState = useSelector((state) => state);
   const dispatch = useDispatch();
   const location = useLocation();
+
 
   useEffect(() => {
     // fetchUserData()
@@ -27,12 +29,28 @@ const Home = ({ updateUser }) => {
     console.log(location.pathname);
   }, []);
 
+  useEffect(() => {
+   setTimeout(() => {
+      setIsReady(true)}
+      ,3000) 
+  }, []);
+
   return (
+      <>
+    <header className={isReady && "ready"}>
+  <div className="box"></div>
+  <div className="curve">
+    <div className="left"><div></div></div>
+    <div className="center"></div>
+    <div className="right"><div></div></div>
+  </div>
+</header>
+
       <Container className="background-grayed">
         <Row >
           <Col className="dashboard-home col-12">
             <div>
-              <h2 className="mt-2 bottom-border text-center">User Terminal</h2>
+              <h2 className="mt-4 text-center">Your Personal Terminal</h2>
               {/* <Link to="/createGame">
                     <h6>
                       <i className=" bold bi bi-plus-lg"></i> create a new game{" "}
@@ -77,6 +95,15 @@ const Home = ({ updateUser }) => {
 
         </Row>
       </Container>
+      <footer className={isReady && "ready"}>
+      <div className="curve">
+        <div className="left"><div></div></div>
+        <div className="center"></div>
+        <div className="right"><div></div><div><a href=""><i class="fab fa-facebook-f"></i></a><a href=""><i class="fab fa-instagram"></i></a><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fas fa-envelope"></i></a></div></div>
+      </div>
+      <div className="box"></div>
+    </footer>
+    </>
   );
 };
 

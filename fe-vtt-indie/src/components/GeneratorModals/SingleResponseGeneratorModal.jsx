@@ -343,7 +343,7 @@ const checkParticleButton = () => {
         backdrop="static"
       >
         <div className="d-flex justify-content-center">
-        <ParticleEffectButton onComplete={e => checkParticleButton()} duration={900} particlesAmountCoefficient={3} style={"stroke"} type={"rectangle"} direction={"bottom"} color={"blue"} hidden={particleButton}>
+        <ParticleEffectButton onComplete={e => checkParticleButton()} duration={450} particlesAmountCoefficient={3} style={"stroke"} type={"rectangle"} direction={"bottom"} color={"white"} hidden={particleButton}>
         <Modal.Header id="newGameModalHeader" closeVariant="white">
           <Modal.Title id="contained-modal-title-vcenter">
            <h1>{genName}</h1>
@@ -374,7 +374,7 @@ const checkParticleButton = () => {
           {/* <button onClick={props.onHide} className="button-left text-center ">Close</button> */}
           {/* <ParticleEffectButton hidden={particleButton}> */}
 
-          <button onClick={e => {setParticleButton(false)}} className="button-left text-center ">Close</button>
+          <button onClick={props.onHide} className="button-left text-center ">Close</button>
           {/* </ParticleEffectButton> */}
           {/* <button onClick={e => createGame()} className="button-right text-center " >Close</button> */}
 

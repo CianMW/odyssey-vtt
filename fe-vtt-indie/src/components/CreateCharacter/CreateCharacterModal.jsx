@@ -168,7 +168,6 @@ const CreateCharacterModal = (props) => {
 
              </Row>
              <Row className="justify-content-center"><h2 className="text-center">Stats:</h2></Row>
-            <button onClick={e => console.log(moxie)}>something</button>
             <Row className="justify-content-around">
               <Col className="col-4 col-md-2 m-0 p-0 justify-content-center">
               <p className="text-start mb-1">Moxie</p>
