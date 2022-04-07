@@ -120,12 +120,12 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
         <section className="augs bg" data-augmented-ui>
           <button onClick={e => updateAndClose()} className="dots" title="change mode"></button>
           <Container className=" pt-5 main-partition highcontrast-dark">
-            <Row className="pt-5 mb-3">
-              <Col md={3}  className="bordered"><img src={character.avatar} width="200"/></Col>
-              <Col md={3} className="">
+            <Row className="pt-3">
+              <Col md={3} className="p-0 m-0">
+              <div style={{fontSize:"20px", paddingY:"10px", marginLeft:"10px"}} data-augmented-ui="tr-clip bl-clip br-round border">
+
               <FormControl
-              className="text-start"
-              data-augmented-ui="tr-clip bl-clip br-round border"
+              className="text-center fw-bold"
               placeholder="Marsho Stronghold"
               aria-label="Username"
               aria-describedby="basic-addon1"
@@ -133,8 +133,32 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
               onChange={e => setCharacterName(e.target.value)}
               
               />
+              </div>
               </Col>
-              <Col md={3} className="bordered charSheetContainer">
+              </Row>
+            <Row className=" mb-3">
+              <Col md={3} data-augmented-ui="
+              tl-scoop-x tr-scoop-x br-scoop-x bl-scoop-x both
+            " className="bordered"><img src={character.avatar} width="200"/></Col>
+              <Col md={3} className="">
+                <h5 className="text-center fw-bold">Skill</h5>
+              <div style={{fontSize:"20px", paddingY:"10px", marginLeft:"10px"}} data-augmented-ui="tl-clip tr-clip br-clip bl-clip both">
+                <FormControl
+                type="textarea"
+                value={skill}
+                onChange={e => setSkill(e.target.value)}
+                />
+              </div>
+                <h5 className="text-center fw-bold">Style</h5>
+              <div style={{fontSize:"20px", paddingY:"10px", marginLeft:"10px"}} data-augmented-ui=" tl-clip tr-clip br-clip bl-clip both">
+                <FormControl
+                type="textarea"
+                value={style}
+              onChange={e => setStyle(e.target.value)}
+                />
+              </div>
+              </Col>
+              <Col md={3} data-augmented-ui="tr-clip br-clip l-clip border"  className="bordered charSheetContainer">
               <Row className="justify-content-center">
                   <h5 className="fw-bold text-center">
                     Gumption
@@ -189,7 +213,7 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
                   </Row>
                   </Row>
                   </Col>
-              <Col md={3} className="bordered m-0 p-0">
+              <Col md={3} data-augmented-ui="  tl-clip bl-clip r-clip border"  className=" m-0 p-0">
                 <Row className="justify-content-center">
                   <h5 className="fw-bold text-center">
                   Ailments
@@ -260,7 +284,7 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
             <Row>
               <Col>
               <div className=" text-center bordered">
-                <h3 className="fw-bold" onClick={e => dispatch(setDiceRoll("1d6"))}>Moxie</h3>
+                <h3 className="fw-bold clickable-stat" onClick={e => dispatch(setDiceRoll("1d6"))}>Moxie</h3>
                 <FormControl
                 className="text-center fw-bold"
                 placeholder="Username"
@@ -274,8 +298,9 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
               </Col>
               <Col>
               <div className=" text-center bordered">
-                <h3 className="fw-bold" onClick={e => dispatch(setDiceRoll("1d6"))}>Smarts</h3>
+                <h3 className="fw-bold clickable-stat" onClick={e => dispatch(setDiceRoll("1d6"))}>Smarts</h3>
                 <FormControl
+                 className="text-center fw-bold"
                     placeholder="Username"
                     aria-label="Username"
                     type="number"
@@ -287,10 +312,11 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
               </Col>
               <Col>
               <div className=" text-center bordered">
-                <h3 className="fw-bold" onClick={e => dispatch(setDiceRoll("1d6"))}>
+                <h3 className="fw-bold clickable-stat" onClick={e => dispatch(setDiceRoll("1d6"))}>
                   Wiggles
                   </h3>
                   <FormControl
+                   className="text-center fw-bold"
                     placeholder="Username"
                     aria-label="Username"
                     type="number"
@@ -302,8 +328,9 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
               </Col>
               <Col>
               <div className=" text-center bordered">
-                <h3 className="fw-bold" onClick={e => dispatch(setDiceRoll("1d6"))}>Friends</h3>
+                <h3 className="fw-bold clickable-stat" onClick={e => dispatch(setDiceRoll("1d6"))}>Friends</h3>
                 <FormControl
+                 className="text-center fw-bold"
                     placeholder="Username"
                     aria-label="Username"
                     type="number"
@@ -315,8 +342,9 @@ const [measurementState, setMeasurementState] = useState({width: 200, height: 20
               </Col>
               <Col>
               <div className="text-center bordered">
-                <h3 className="fw-bold" onClick={e => dispatch(setDiceRoll("1d6"))}>Pockets</h3>
+                <h3 className="fw-bold clickable-stat" onClick={e => dispatch(setDiceRoll("1d6"))}>Pockets</h3>
                 <FormControl
+                 className="text-center fw-bold"
                     placeholder="Username"
                     aria-label="Username"
                     type="number"

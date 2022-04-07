@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import LibrarySearch from '../../SingleComponents/LibrarySearch';
 import AvailableCharacters from './AvailableCharacters';
 import GameCharacters from './GameCharacters';
 import GameChat from './GameChat';
@@ -56,7 +57,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
                 <Generators/>
             </TabPanel>
             <TabPanel>
-                <p>lib</p>
+                <LibrarySearch/>
             </TabPanel>
             <TabPanel>
               <Row className="d-flex justify-content-center">

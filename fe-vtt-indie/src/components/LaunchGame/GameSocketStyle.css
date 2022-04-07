@@ -74,4 +74,12 @@
 	 text-indent: 1em;
 	 transition: all 200ms ease-in-out;
 }
+
+.availableCharacterName{
+	color:blueviolet;
+	transition: all 200ms ease-in-out;
+}
+.availableCharacterName:hover{
+	color:rgb(43, 141, 226)
+}
  

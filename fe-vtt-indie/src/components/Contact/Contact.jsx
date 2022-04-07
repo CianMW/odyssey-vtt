@@ -21,21 +21,54 @@ const Contact = () => {
             </div>
             </Col>
             <Col>
-            <Row>
-
-            </Row>
-            </Col>
-            <Col>
             <img src="https://i.ibb.co/0fZFP5d/qr-code.png" width="400px" alt="qr-code" border="0"></img>
             </Col>
+            <Col>
+            <Row>
+            <h1 className="text-center fw-bold">Tech Used</h1>
+            </Row>
+            <Row className="mt-2 justify-content-center align-items-center">
+                <Col md={6}>
+                <img src="/imgFiles/reactLogo.png" width="100%"/>
+                </Col>
+                <Col md={6}>
+                <img src="/imgFiles/threejsLogo.png" width="100%"/>
+                </Col>
+                </Row>
+            <Row className="mt-2 justify-content-center align-items-center">
+                    
+                <Col md={6}>
+                <img src="/imgFiles/bootstrapLogo.svg" width="110%"/>
+                </Col>
+                <Col md={6}>
+                <img src="/imgFiles/mongoDBLogo.png" width="90%"/>
+                </Col>
+                </Row>
+                <Row className="mt-2 justify-content-center align-items-center">
+                <Col md={6}>
+                <img src="/imgFiles/expressLogo.png" width="100%"/>
+                </Col>
+               
+            </Row>
+            </Col>
             </Row>
             <Row>
             <Col>
-            <Row className="justify-content-center">
-                <h1 className="text-center">Tech Used</h1>
+            <Row>
+                <p className="d-flex align-items-center">
+            <h1>
+
+            <i className="bi bi-linkedin"></i> /cian-markwick
+            </h1>
+                </p>
             </Row>
             <Row>
-                <h1>Tech Used</h1>
+                <p className="d-flex align-items-center">
+            <h1>
+
+            <i className="bi bi-share-fill"></i> https://cian-markwick-developer.herokuapp.com/
+            </h1>
+                </p>
             </Row>
             </Col>
             </Row>

@@ -32,7 +32,7 @@ const Home = ({ updateUser }) => {
   useEffect(() => {
    setTimeout(() => {
       setIsReady(true)}
-      ,3000) 
+      ,1500) 
   }, []);
 
   return (
@@ -99,7 +99,7 @@ const Home = ({ updateUser }) => {
       <div className="curve">
         <div className="left"><div></div></div>
         <div className="center"></div>
-        <div className="right"><div></div><div><a href=""><i class="fab fa-facebook-f"></i></a><a href=""><i class="fab fa-instagram"></i></a><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fas fa-envelope"></i></a></div></div>
+        <div className="right"><div></div><div></div></div>
       </div>
       <div className="box"></div>
     </footer>

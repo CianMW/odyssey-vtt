@@ -1,0 +1,188 @@
+{ "spaceAces": [
+{
+    "chapter": "<h2>How to Play Space Aces<\/h2>",
+    "chapterSubtext": "<h4>Core system & GM tips<\/h4>",
+    "subsections": [
+        {
+            "subsectionName": "pretext",
+            "text": "<h4>How To Play Space Aces:<\/h4><p>Space Aces is rooted in a love of all things campy sci-fi. It is a tools over rules system that supports GM-led and GM-less (solo or co-op) play.<\/p><p>The generator tables are crafted to provide a minimalist and evocative `hard edge` for players and GMs to crystallize their ideas on. The fun of Space Aces is often in interpreting the results together<\/p>"
+        },
+        {
+            "subsectionName": "Safety Tools",
+            "text": "<h4 >Safety Tools:<\/h4><p>We all have our limits & boundaries.At any time players may state, noquestions asked, their <b>Lines & Veils<\/b>.<\/p><p><b>Lines:<\/b> Lines determine what boundarieswe do not cross. Lined topics donot exist in the game, they are notpart of a backstory, they won’t bedealt with at the table, at all, ever.<\/p><p><b>Veils:<\/b> Veils cover things we don’t lookat. They may happen off-screen, butthey never get the spotlight or thefocus. The camera fades to black,pans away, the scene ends.<\/p><p>The goal is to create a safe environmentwhere everybody can enjoythemselves. Remember: <i>Be kind, foreveryone is fighting a battle you know nothing about.<\/i><\/p>"
+        },
+        {
+            "subsectionName": "Rolling The Dice and Heat",
+            "text": "<h4>Rolling The Dice & Heat:<\/h4><p>Two dice are rolled every time a risky, dangerous, or uncertain action is taken: A 20-sided (D20) Action die and a 6-sided (D6) Complication die. If a situation is neither risky, dangerous, nor uncertain... don’t roll.<\/p> <p><b>Setting the Difficulty:<\/b> The GM takes into consideration the player’s positioning in the fiction, their approach, previous Benefits or Costs, Skill, and Style adjectives then asks “How hard would it be to do this?” The action is then assigned a Difficulty of <b>Easy (5)<\/b>, <b>Tricky (10)<\/b>, <b>Hard (15)<\/b>, or <b>Epic (20)<\/b>.<\/p> <p><b>Determine the Stakes:<\/b> If something is risky, ask the players: What they are risking? If something is dangerous, ask: What could go wrong? If something is uncertain, ask: What happens if they fail? This short conversation helps with adjudicating the results and setting expectations.<\/p> <p><b>Action D20:<\/b> The players roll when Acting or Reacting to the world. Players describe their desired action, roll their D20, add an appropriate Stat, and compare the results to the Difficulty. If the result is equal or higher the player Succeeds! If it is lower they Fail. A rolled 20 is a critical success. A rolled 1 is a critical fail and the player also marks an Ailment.<\/p><p><b>Complication D6:<\/b> The Complication D6 allows for major or mixed results & Stakes mitigation. It even allows for a super critical success or failure!<\/p> <p><b>Costs:<\/b> When a <b>1<\/b> or <b>2<\/b> is rolled, the player suffers a Cost. Regardless of success or failure, determine a negative consequence of the action and raise the Heat Level by 1.<\/p> <p><b>Benefits:<\/b> When a 5 or 6 is rolled, the player gains a Benefit. Regardless of success or failure, determine a positive consequence of the action.<\/p> <p>Costs & Benefits may be mechanical, tactical, social, physical, emotional... Do what feels right in the moment.<\/p> <p><b>Heat Level:<\/b> Heat helps to adjudicate consequences of Costs. Every Cost that is rolled turns up the Heat Level for the whole party by 1 during the mission. The higher the Heat Level the bigger the consequence of the Cost. Roll a Cost at 1 Heat? You might stub your toe. Roll the same Cost at 20 Heat? You might lose that toe...<\/p>"
+        },
+        {
+            "subsectionName": "Character Stats, Skills & Style:",
+            "text": "<h4>Character Stats, Skills & Style:<\/h4><p>Players rank their stats +3, +2, +1, 0, and -1. How a player approaches a problem determines which Stat they will use. Skill determines their specialty and allows for rolling twice and taking best result. Style is for flavor and fun.<\/p> <p>Moxie: Represents tackling a problem head on and head first.<\/p> <p><b>Smarts:<\/b> Represents approaching a situation brains first.<\/p> <p><b>Wiggles:<\/b> Represents approaching from an angle and with your wits.<\/p> <p><b>Pockets:<\/b> Represents how well your character is equipped. Need that crucial piece of gear? Roll +Pockets vs Difficulty to see if you have it. Your main Skill will often dictate how likely it is that you have an item. Perhaps no roll is even required to check.<\/p> <p><b>Friends:<\/b> Represents your connections & your charm. Roll +Friends vs Difficulty to see if you “know a guy” or are trying to charm your way out of a tight spot.<\/p>"
+        },
+        {
+            "subsectionName": "Gumption",
+            "text": "<h4>Gumption:<\/h4><p>Gumption is your will to stay in the mix. As with superheroes and Saturday morning cartoons, characters can shrug off almost any amount of damage, but if you break their will to fight… that’s another story. This way non-lethal encounters can also carry risk. A failed task, bad news, or a well aimed insult can lower your Gumption. <b>Players start with 6 Gumption<\/b>. If their Gumption ever reaches 0 they are Taken Out like yesterday’s blueberry space bagels!<\/p> <p><b>Recovering Gumption:<\/b> Gumption can be regained in a number of ways. An encouraging pep talk, a well timed hug, your favorite Cool Ranch flavored snack... all could conceivably restore some of a character's Gumption. A player may also Steel Themself, mark an Ailment on their sheet, and recover 2 Gumption.<\/p>"
+        },
+        {
+            "subsectionName": "Using Grit",
+            "text": "<h4>Using Grit<\/h4><p>Our plucky heroes have Grit, up to 5 of it actually. Every failed roll they can mark 1 Grit and eventually they can grit their teeth, spend 5 Grit, and turn a Failed roll into a Standard Success.<\/p><p><b>Note:<\/b>There is room for abuse of this mechanic. It's up to the GM and their players to decide how much abuse of this will be allowed and if doing an otherwise impossible action comes with an additional consequence...<\/p>"
+        },
+        {
+            "subsectionName": "Scuffles",
+            "text": "<h4>Scuffles:<\/h4> <p>Scuffles come in all shapes and sizes. A dance off, a pie eating contest, and yes even fisticuffs can qualify as a Scuffle. Players should think outside the box before starting a Scuffle and utilize any tactical advantage they can to gain the High Ground.<\/p> <p>In general, <b>most PC & NPC standard attacks will cause 1 Harm to Gumption.<\/b> Bigger bad guys may hit for 2 or 3 Harm. Items or rolled Costs & Benefits might modify that number as well.<\/p> <p><b>Dynamic Difficulty:<\/b><i>Difficulty is not fixed!<\/i> It is modified dynamically by the fiction. If a player misses a hit on a Baddy but rolls a Benefit... perhaps it puts their team in a better position, dropping Difficulty for the next attack.<\/p> <p><b>General Difficulty guidelines:<\/b><\/p> <p><b>Small baddies:<\/b>Causing them Harm or dodging their attacks is <b>Easy (5)<\/b>.<\/p> <p><b>Medium baddies:<\/b>Harming them or dodging their attacks is <b>Tricky (10)<\/b>.<\/p> <p><b>Big baddies:<\/b>Harming them or dodging their attacks is <b>Hard (15) or higher<\/b><\/p>"
+        },
+        {
+            "subsectionName": "Gaining The High Ground",
+            "text": "<h4>Gaining The High Ground:<\/h4> <p>In a Scuffle, players roll to act against or react to the Enemy depending on if the player has the <b>High Ground<\/b> or not<\/p> <p><b>When a Scuffle begins:<\/b><\/p> <p><b>1<\/b> Decide in fiction if the players or enemies start with the High Ground, and the order the players will go. After the Scuffle starts, players may gain or lose the High Ground individually.<\/p> <p><b>2. If a player has the High Ground:<\/b>they can roll to act against the enemy. <b>If the player has lost the High Ground:<\/b> they can only roll to react to their enemy’s actions.<\/p> <p><b>3. <\/b>A player gains the High Ground on a rolled Benefit. A player loses the High Ground on a rolled Cost<\/p> <p><b>4. <\/b>Players take turns, acting upon or reacting to the Enemy depending on who has High Ground. <b>The player is always the one rolling, never the GM.<\/b><\/p> <p>Whichever side runs out of Gumption or waves the white flag is now at the mercy of the victor. Ruh roh...<\/p>"
+        },
+        {
+            "subsectionName": "Crafting An Episode",
+            "text": "<h4>Crafting An Episode<\/h4> <p>Space Aces plays best episodically, each episode encapsulated in itself. To build an Episode: Roll & interpret the Mission as a group. Then work together to develop a 3-step plan to pull it off. This plan becomes the framework for the episode. Roll some Episode Events to slot in as needed. Finally, roll a Difficulty Event to start ‘in medias res’ and you’re good to go! When in doubt, Ask the AI.<\/p> <p><b>Heat Level As A Clock:<\/b> Heat Level can also function as a kind of clock, and the GM may wish to determine what kind of challenges could happen at various Heat Levels.<\/p> <p><b>The Snag<\/b>Typically a Snag is a twist dropped by the GM at an opportune moment during the mission to make the story more fun and surprising.<\/p> <p><b>Snags in GM-Less Play:<\/b> It is hard to surprise yourself with a twist... As an option, when a failed Action also has a Cost, compare the Action roll to the current Heat level. If the result is less than the Heat Level, roll on the Snag table. The Snag triggers immediately or at the next possible moment. It is a ticking time bomb in your mission... sometimes literally.<\/p>"
+        },
+        {
+            "subsectionName": "Complex Task Challenges",
+            "text": "<h4>Complex Task Challenges<\/h4> <p>Sometimes it’s fun to turn a Complex Task into a Challenge. To do this: First figure out the Difficulty of the Task. Then determine the Complexity Level: <b>Simple<\/b> (2 steps), <b>Involved<\/b> (3 steps), <b>Complex<\/b> (4 steps). Finally decide on the Fail Conditions of the Task: 3 Failures and you’re out. Do-or-Die when failure isn’t an option.<\/p> <p>For time sensitive tasks, only so many attempts are allowed. Or use a fuel gauge where each Success raises it by 1 and each Failure reduces it by 1, the Task fails if you go below empty.<\/p> <p>To pass each step, state what you try to do, determine the stakes, and roll D20+Stat vs Difficulty. Also roll Complication D6. A Cost raises Difficulty by 1 and a Benefit reduces it by 1.<\/p>"
+        },
+        {
+            "subsectionName": "Finishing & Advancing",
+            "text": "<h4>Finishing & Advancing<\/h4><p>Upon completing a mission successfully players may choose to Increase their Gumption by +1 automatically or attempt to Enhance a Stat. To Enhance a Stat they must tell a story about what they do to train that particular Stat, then roll a D6. If the result is higher than the current Stat number, they may enhance it by +1.<\/p>"
+        },
+        {
+            "subsectionName": "The Last Word",
+            "text": "<h4>The Last Word: </h4><p><b>Fun > Rulings > Rules.<\/b> Decide together how to handle new situations by asking: What is most fun? If you can determine that, then there's no wrong way to play Space Aces.<\/p><p>Have fun. Show respect. Keep playing pretend. <b>Adventure Awaits!<\/b><\/p>"
+        }
+    ]
+},
+{
+    "chapter": "<h2>Mission Generator<\/h2>",
+    "chapterSubtext": "<h4>Roll 1D6 on each table and interpret together.<\/h4>",
+    "subsections": [
+        {
+            "subsectionName": "Faction",
+            "text": "<h4>Factional<\/h4> <ul> <p><i className=\"bi bi-dice-1-fill\"><\/i> Order of Shadow (stay hidden)<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Galactic Congress (maintain control)<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Stellar Alliance (stop oppression)<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Freetrader Syndicate (defy authority)<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Explor-A-Corp (boldly go)<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Species 4774 (who knows...)<\/p> <\/ul>"
+        },
+        {
+            "subsectionName": "The Mission",
+            "text": "<h4>The Mission:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Destroy or Defend<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Deliver or Steal<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Capture or Escort<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Aid or Investigate<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Save or Negotiate<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Retrieve or Infiltrate<\/p>"
+        },
+        {
+            "subsectionName": "The Objective",
+            "text": "<h4>The Objective:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Friend or Frenemy<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Gizmo or Treasure<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Discovery or Beasty<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Massive Monster<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Message or Secret<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Space Hulk or Mech<\/p>"
+        },
+        {
+            "subsectionName": "The Location",
+            "text": "<h4>The Location:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Planet or Deep Space<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Station or Colony<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Starship or Shipyard<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Asteroid Field<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Badlands or Nebula<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Strange Anomaly<\/p>"
+        },
+        {
+            "subsectionName": "Location Aspect",
+            "text": "<h4>Location Aspect:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Enclave (congregate)<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Archive (contain info)<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Fortification (protect)<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Den (harbor danger)<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Wonder (inspire awe)<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Ruins (hidden things)<\/p>"
+        },
+        {
+            "subsectionName": "The Opposition",
+            "text": "<h4>The Opposition:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Pirate or Bounty<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Monster or Invasion<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Friend or Rival<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Time or Puzzle<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Viral or Corporation<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Environment or Law<\/p>"
+        },
+        {
+            "subsectionName": "Their Agenda",
+            "text": "<h4>Their Agenda:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Sow Chaos<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Gain Wealth<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Increase Power<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Infest & Spread<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Enact Revenge<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Destroy Enemy<\/p>"
+        },
+        {
+            "subsectionName": "The Snag",
+            "text": "<h4>The Snag:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Tough Decision or Trap<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Creature or Enemy<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Theft or Abduction<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Mistaken or Manipulated<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Countdown or Betrayal<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Disaster or Malfunction<\/p>"
+        }
+    ]
+},
+{
+    "chapter": "<h2>Episode Events:<\/h2>",
+    "chapterSubtext": "<div><h4>Choose <em>or<\/em> Roll to generate an event as needed:<\/h4><p><i className=\"bi bi-dice-1-fill\"><\/i> - <i className=\"bi bi-dice-4-fill\"><\/i> See Below<\/p><p><i className=\"bi bi-dice-5-fill\"><\/i> - <i className=\"bi bi-dice-6-fill\"><\/i> Complex Event (combine 2 elements)<\/p><\/div>",
+    "subsections": [
+        {
+            "subsectionName": "Scuffle",
+            "text": "<h4><i className=\"bi bi-dice-1-fill\"><\/i> Scuffle:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> - <i className=\"bi bi-dice-3-fill\"><\/i> <small>1 Gumption & 1 Harm<\/small><\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> - <i className=\"bi bi-dice-5-fill\"><\/i> <small>3 Gumption & 2 Harm<\/small><\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> <small>6+D6 Gumption & 3 Harm<\/small><\/p>"
+        },
+        {
+            "subsectionName": "Tactic",
+            "text": "<h4>The Tactic:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Destroy<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Weaken<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Capture<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Deceive<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Steal<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Hunt<\/p>"
+        },
+        {
+            "subsectionName": "Social",
+            "text": "<h4><i className=\"bi bi-dice-2-fill\"><\/i> Social:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Harbinger or Hero<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Guardian or Gossip<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Trickster or Sage<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Hunter or Authority<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Seeker or Outcast<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Outlaw or Shadow<\/p>"
+        },
+        {
+            "subsectionName": "Bearing",
+            "text": "<h4>Bearing:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Hostile<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> In Peril<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> In Need<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Shifty<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Nervous<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Friendly<\/p>"
+        },
+        {
+            "subsectionName": "Encounter",
+            "text": "<h4><i className=\"bi bi-dice-3-fill\"><\/i> Encounter:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Danger (imperil)<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Obstacle (slow)<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Barrier (prevent)<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Passage (advance)<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Resource (enable)<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Refuge (refresh)<\/p>"
+        },
+        {
+            "subsectionName": "Difficulty",
+            "text": "<h4><i className=\"bi bi-dice-4-fill\"><\/i> Difficulty:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i> Overcome or Aid<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Rescue or Protect<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Endure or Choose<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Outwit or Restore<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Survive or Avoid<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Escape or Hinder<\/p>"
+        },
+        {
+            "subsectionName": "Flavor For Locations, Difficulties & Encounters",
+            "text": "<h4> Flavor For Locations, Difficulties & Encounters:<\/h4> <div className=\"row d-flex\"> <div className=\"col col-4 d-flex\"> <p><i className=\"bi bi-dice-1-fill\"><\/i> - <i className=\"bi bi-dice-2-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Captured<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Abandoned<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Advanced<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Monolithic<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Endangered<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Treacherous<\/p> <\/div> <div className=\"col col-4 d-flex\"> <p><i className=\"bi bi-dice-3-fill\"><\/i> - <i className=\"bi bi-dice-4-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Protected<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Volatile<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Beautiful<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Deceptive<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Shattered<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Savage<\/p> <\/div> <div className=\"col col-4 d-flex\"> <p><i className=\"bi bi-dice-5-fill\"><\/i> - <i className=\"bi bi-dice-6-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Exotic<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Fragile<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Civilized<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Hidden<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Active<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Moving<\/p> <\/div> <\/div>"
+        },
+        {
+            "subsectionName": "Ask The AI",
+            "text": "<div className=\"border border-dark row d-flex justify-content-center\"> <div className=\"col col-6 col-md-4 border border-end\"> <h4>Ask The AI:<\/h4> <ul> <li>Ask Yes/No question<\/li> <li>Determine likelihood<\/li> <li>Roll D20 & D6<\/li> <\/ul> <\/div> <div className=\"col col-6 col-md-4 border border-end\"> <h4>D20 Result:<\/h4> <p><b>Likely:<\/b> Yes if over 5<\/p> <p><b>Possibly:<\/b> Yes if over 5<\/p> <p><b>Unlikely:<\/b> Yes if over 5<\/p> <\/div> <div className=\"col col-6 col-md-4\"> <h4>D6 Result:<\/h4> <p>But... : <i className=\"bi bi-dice-1-fill\"><\/i> - <i className=\"bi bi-dice-2-fill\"><\/i><\/p> <p>But... : <i className=\"bi bi-dice-5-fill\"><\/i> - <i className=\"bi bi-dice-6-fill\"><\/i><\/p> <\/div> <\/div>"
+        }
+    ]
+},
+{
+    "chapter": "<h2>Galactic Guidebook<\/h2>",
+    "chapterSubtext": "<p>Explore strange new Planets, meet new Species & interesting Cultures, and review their Features Of Interest. Go where no Space Tourist has gone before.<\/p>",
+    "subsections": [
+        {
+            "subsectionName": "Exploring",
+            "text": "<h4>Exploring:<\/h4> <p><b>1.<\/b>Roll to determine Planet Type, Species, Culture & Planetary Pickle.<\/p> <p><b>2.<\/b>Land at the flag & roll 1D6 for an Event.<\/p> <p><b>3.<\/b>Every new hex you enter, roll for a new Event until all hexes have been explored.<\/p>"
+        },
+        {
+            "subsectionName": "Event",
+            "text": "<h4>Event:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-2-fill\"><\/i> All Of A Sudden...<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i>-<i className=\"bi bi-dice-4-fill\"><\/i> Feature Of Interest<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i> Double Trouble (both)<\/p>"
+        },
+        {
+            "subsectionName": "All Of A Sudden...",
+            "text": "<h4>All Of A Sudden...<\/h4> <p>(Roll on tables in parentheses for this Event)</p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Red Alert! You're attacked! (Scuffle + Tactic, pg. 7)<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> You find some kind of... (Encounter + Flavor, pg. 7)<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> You discover a... (Location Aspect + Flavor, pg. 6-7)<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> There is a problem... (Difficulty + Flavor)<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> You meet a... (Social + Bearing. pg. 7)<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> The plot thickens... (Snag, pg. 6)<\/p>"
+        },
+        {
+            "subsectionName": "Planet Type",
+            "text": "<h4>Planet Type:<\/h4> <p><i className=\"bi mt-2 bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-2-fill\"><\/i></p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Desert<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Jungle<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Oceanic<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Frozen<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Volcanic<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Junkyard<\/p> <p><i className=\"bi mt-2 bi-dice-3-fill\"><\/i>-<i className=\"bi bi-dice-4-fill\"><\/i></p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Artificial<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Hollow<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Sentient<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Metropolis<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Paradisiac<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Dark<\/p> <p><i className=\"bi mt-2 bi-dice-5-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i></p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Shattered<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Gaseous<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Mountain<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Swamp<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Tropical<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Roll Twice<\/p>"
+        },
+        {
+            "subsectionName": "Planetary Pickle",
+            "text": "<h4>Planet Pickle:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-3-fill\"><\/i> No Pickles</p> <p><i className=\"bi bi-dice-4-fill\"><\/i>-<i className=\"bi bi-dice-5-fill\"><\/i> One Pickle</p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Jar O' Pickles (roll twice)</p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Corrupt Leadership<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Resource Scarcity<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Natural Disaster<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Plague or Unrest<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Raiders or Invaders<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Darkverse Incursion<\/p>"
+        },
+        {
+            "subsectionName": "Species Prefix",
+            "text": "<div className=\"d-flex row\"> <h4>Species Prefix:<\/h4> <div className=\"d-flex col col-6\"> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-3-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Bork<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Mew<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Dino<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Geo<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Octo<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Birdo<\/p> <\/div> <div className=\"d-flex col col-6\"> <p><i className=\"bi bi-dice-4-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Botano<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Xeno<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Merma<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Plushy<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Gorillo<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Robo<\/p> <\/div> <\/div>"
+        },
+        {
+            "subsectionName": "Species Suffix",
+            "text": "<div className=\"d-flex row\"> <h4>Species Suffix:<\/h4> <div className=\"d-flex col col-6\"> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-3-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> ...poid<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> ...onian<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> ...saur<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> ...bot<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> ...mera<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> ...whal<\/p> <\/div> <div className=\"d-flex col col-6\"> <p><i className=\"bi bi-dice-4-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> ...shroom<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> bear<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> ...chilla<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> ...bug<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> ...nicorn<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> ...golem<\/p> <\/div> <\/div>"
+        },
+        {
+            "subsectionName": "Culture",
+            "text": "<div className=\"d-flex row\"> <h4>Culture:<\/h4> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-3-fill\"><\/i> One Culture<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i>-<i className=\"bi bi-dice-5-fill\"><\/i> Two Cultures at Peace<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Two Cultures At Odds<\/p> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-2-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Primitive<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Pacifist<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Medieval<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Utopian<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Scientific<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Warrior<\/p> <\/div> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-3-fill\"><\/i>-<i className=\"bi bi-dice-4-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Outlaws<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Psionic<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Wild West<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Merchant<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Monastic<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Hospitality<\/p> <\/div> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-5-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Steampunk<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Cyberpunk<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Xenophobic<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Suburbia<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Subterfuge<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Aristocrat<\/p> <\/div> <\/div>"
+        },
+        {
+            "subsectionName": "Feature Aspect",
+            "text": "<div className=\"d-flex row\"> <h4>Feature Aspect:<\/h4> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-2-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Stylish<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Dangerous<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Adorable<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Enigmatic<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Colossal<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Miniature<\/p> <\/div> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-3-fill\"><\/i>-<i className=\"bi bi-dice-4-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Diverse<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> High-Tech<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Flamboyant<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Rejuvenating<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Floating<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Crystalline<\/p> <\/div> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-5-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Legendary<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Dramatic<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Terrible<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Orbital<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Volatile<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Desirable<\/p> <\/div> <\/div>"
+        },
+        {
+            "subsectionName": "Features Of Interest",
+            "text": "<div className=\"d-flex row\"> <h4>Features Of Interest:<\/h4> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-1-fill\"><\/i>-<i className=\"bi bi-dice-2-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Food & Drink<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Resorts<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Recreation<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Palaces<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Art & Music<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Wildlife<\/p> <\/div> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-3-fill\"><\/i>-<i className=\"bi bi-dice-4-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Plantlife<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Landscape<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Population<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Phenomena<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Architecture<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Technology<\/p> <\/div> <div className=\"d-flex col col-4\"> <p><i className=\"bi bi-dice-5-fill\"><\/i>-<i className=\"bi bi-dice-6-fill\"><\/i><\/p> <p><i className=\"bi bi-dice-1-fill\"><\/i> Artifacts<\/p> <p><i className=\"bi bi-dice-2-fill\"><\/i> Ruins<\/p> <p><i className=\"bi bi-dice-3-fill\"><\/i> Monsters<\/p> <p><i className=\"bi bi-dice-4-fill\"><\/i> Markets<\/p> <p><i className=\"bi bi-dice-5-fill\"><\/i> Academies<\/p> <p><i className=\"bi bi-dice-6-fill\"><\/i> Weather<\/p> <\/div> <\/div>"
+        }
+    ]
+},
+{
+    "chapter": "<h2>Star Ruins & Space Hulks<\/h2>",
+    "chapterSubtext": "<div> <p>Outer Space is brimming with Labyrinthine Star Ruins & Space Hulks chock full of <b>Valuable Loot, Monsters & DANGER.<\/b> Can you find the <b>Treasure<\/b> and <b>Escape</b> alive? Probably not... but the pay is good and you are just dying to try!<\/p> <p><h4>Step 1:<\/h4>Determine the <b>Type, Aesthetic, Purpose, Danger Level, Depth<\/b> (how much Progress is needed to reach Goal) & <b>Looming Threat.<\/b><\/p><\/div>",
+    "subsections": [
+        {
+            "subsectionName": "Exploring",
+            "text": "<h4>Exploring:<\/h4> <p><b>1.<\/b>Roll to determine Planet Type, Species, Culture & Planetary Pickle.<\/p> <p><b>2.<\/b>Land at the flag & roll 1D6 for an Event.<\/p> <p><b>3.<\/b>Every new hex you enter, roll for a new Event until all hexes have been explored.<\/p>"
+        }
+    ]
+}
+]}

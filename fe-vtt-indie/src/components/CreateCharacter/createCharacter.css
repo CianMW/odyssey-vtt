@@ -17,7 +17,7 @@
     /* bottom: 90px;
     right: 90px; */
     z-index: 999;
-    color: rgb(255 200 255 / 0.5);
+    color: rgba(255, 200, 255, 0.747);
     text-shadow: 0 0 0px rgb(255, 255, 255);
     letter-spacing: 0.1em;
   }
@@ -49,7 +49,7 @@
     z-index: 2;
     pointer-events: none;
     --glow: drop-shadow(0 0 1px rgb(0, 17, 255));
-    filter: var(--glow) brightness(1.5) drop-shadow(0 0 10px rgb(60, 38, 251));
+    filter: var(--glow) brightness(3) drop-shadow(0 0 5px rgb(92, 74, 255));
   }
   
   .augs {
@@ -143,16 +143,15 @@
   
   /* https://marketplace.visualstudio.com/items?itemName=webrender.synthwave-x-fluoromachine */
   .bg {
-    background: rgb(179,255,246);
-    background: rgba(0, 190, 190, 0.1);
-/* background: linear-gradient(0deg, rgba(179,255,246,0.8438725832129726) 0%, rgba(223,255,251,1) 30%, rgba(234,255,252,0.8578781854538691) 56%, rgba(255,255,255,0.8046568969384629) 100%); */
+    background: rgb(75,225,255);
+background: linear-gradient(0deg, rgba(75,225,255,0.7458333675266982) 0%, rgba(211,247,255,0.8242647400757178) 32%, rgba(211,247,255,0.8382703423166141) 64%, rgba(93,227,255,0.7598389697675946) 100%);
   }
   .bg::after{
     content:'';
     height:50%;
     width:100%;
     display:block;
-    background-image:linear-gradient(90deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px);
+    /* background-image:linear-gradient(90deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px); */
     background-position:bottom;
     background-repeat:repeat;
     background-size:20px 20px;
@@ -454,6 +453,14 @@
  .charSheetContainer{
    min-width: 244px;
    overflow: visible;
+ }
+
+ .clickable-stat{
+   cursor:pointer;
+   transition:all ease 300ms;
+ }
+ .clickable-stat:hover{
+   color: rgb(158, 0, 0)
  }
  
   /* Character Sheet Version April END */

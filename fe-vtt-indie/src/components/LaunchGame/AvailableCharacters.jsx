@@ -23,8 +23,9 @@ const AvailableCharacters = ({gameId}) => {
         {
             currentGame[0].characters.length > 0 ? (
         currentGame[0].characters.map(char => (
-                <Row className="d-flex justify-content-center" onClick={e => dispatch(addOpenChar(char))} style={{cursor:"pointer"}}>
-                   <p className="text-center mt-1">
+                <Row className="d-flex justify-content-center  border-bottom border-secondary border-2 mx-2" onClick={e => dispatch(addOpenChar(char))} style={{cursor:"pointer"}}>
+                  <p className="  text-start d-flex align-items-center align-bottom availableCharacterName mt-1">
+                  <img src={char.avatar} style={{width:"100px"}} /> 
                         {char.characterName}
                        </p>
                 </Row>
