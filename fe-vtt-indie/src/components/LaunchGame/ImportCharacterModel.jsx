@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Container, Modal, Row, Col, Form, FormControl, InputGroup, CloseButton } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { updateSystem } from "../../Actions";
 import "../CreateGame/NewGame.css"
 const ImportCharacterModal = (props) => {
 
@@ -32,6 +33,8 @@ const ImportCharacterModal = (props) => {
           if (response.ok) {
             const data = await response.json()
             console.log("character added successfully!!", data)
+            await props.updateUser()
+          //  await dispatch(updateSystem)
           } else {
             console.log("Problem!!!!")
           }
@@ -40,7 +43,8 @@ const ImportCharacterModal = (props) => {
         }
       }
 
-
+    const currentGameCharacters = currentState.user.info.games.filter(game => game._id === props.gameId)[0].characters.length > 0 ?  true : false ;
+    const loadedCharacters = currentState.user.info.games.filter(game => game._id === props.gameId)[0].characters
     return (
       <Modal id="newGameModalContainer"
         {...props}
@@ -67,7 +71,7 @@ const ImportCharacterModal = (props) => {
               currentState.user.info.characters.map(char => (
                   <Row>
                       <Col className="col-10 mb-3">{char.characterName}</Col>
-                      <Col className="col-2"><Button size="sm" onClick={e => addCharacterToGame(char._id)}>+ Add</Button></Col>
+                      <Col className="col-2"><Button size="sm" disabled={currentGameCharacters ? loadedCharacters.includes(char._id) : false}   onClick={e => addCharacterToGame(char._id)}>+ Add</Button></Col>
                   </Row>
             ))) 
               : 

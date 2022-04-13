@@ -9,39 +9,48 @@ import RecentGames from "./RecentGames.jsx";
 import MyCharacters from "./MyCharacters.jsx";
 import MyVerticallyCenteredModal from "../CreateGame/NewGameModal.jsx";
 import Tilt from "react-parallax-tilt"
-const Home = () => {
+
+
+const Home = ({ updateUser }) => {
   const [games, setGames] = useState(null);
   const [modalShow, setModalShow] = useState(false);
+  const [isReady, setIsReady] = useState(false);
   const currentState = useSelector((state) => state);
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const updateUser = async () => {
-    const response = await fetch("http://localhost:3150/user/me", {
-      headers: {
-        authorization: currentState.auth.b64Auth,
-      },
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      dispatch(setUser(data));
-      console.log("here is the user: ", data);
-    }
-  };
 
   useEffect(() => {
     // fetchUserData()
-    updateUser();
+    const timedFunc = async () => {
+   await updateUser();
+    }
+    timedFunc();
     console.log(location.pathname);
   }, []);
 
+  useEffect(() => {
+   setTimeout(() => {
+      setIsReady(true)}
+      ,1500) 
+  }, []);
+
   return (
+      <>
+    <header className={isReady && "ready"}>
+  <div className="box"></div>
+  <div className="curve">
+    <div className="left"><div></div></div>
+    <div className="center"></div>
+    <div className="right"><div></div></div>
+  </div>
+</header>
+
       <Container className="background-grayed">
         <Row >
           <Col className="dashboard-home col-12">
             <div>
-              <h4 className="mt-2 bottom-border text-center">Dashboard</h4>
+              <h2 className="mt-4 text-center">Your Personal Terminal</h2>
               {/* <Link to="/createGame">
                     <h6>
                       <i className=" bold bi bi-plus-lg"></i> create a new game{" "}
@@ -57,13 +66,14 @@ const Home = () => {
             <Row className="db-div-cont d-flex justify-content-center">
           <Col className="m-0 p-0 col-8 col-md-8 flex-row ">
           <MyVerticallyCenteredModal
+          updateUser={updateUser}
         show={modalShow}
         onHide={() => setModalShow(false)}/>
 
                 <Tilt  tiltAngleXInitial={0} tiltAngleYInitial={-45} className="left-panel">
                   <div data-augmented-ui="tr-clip bl-clip br-round both " className="bd21">
 
-             <RecentGames setModalShow={setModalShow}/>
+             <RecentGames updateUser={updateUser} setModalShow={setModalShow}/>
                   </div>
                 </Tilt>
 
@@ -73,7 +83,7 @@ const Home = () => {
                 <Tilt tiltAngleXInitial={0} tiltAngleYInitial={45} className="right-panel">
 
                 <div data-augmented-ui="tl-clip br-clip bl-round both" className="bd21">
-             <MyCharacters/>
+             <MyCharacters  updateUser={updateUser}/>
                 </div>
                 </Tilt>
 
@@ -85,6 +95,15 @@ const Home = () => {
 
         </Row>
       </Container>
+      <footer className={isReady && "ready"}>
+      <div className="curve">
+        <div className="left"><div></div></div>
+        <div className="center"></div>
+        <div className="right"><div></div><div></div></div>
+      </div>
+      <div className="box"></div>
+    </footer>
+    </>
   );
 };
 

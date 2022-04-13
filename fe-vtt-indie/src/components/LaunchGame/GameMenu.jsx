@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import LibrarySearch from '../../SingleComponents/LibrarySearch';
 import AvailableCharacters from './AvailableCharacters';
 import GameCharacters from './GameCharacters';
 import GameChat from './GameChat';
@@ -14,7 +15,7 @@ import ImportCharacterModal from './ImportCharacterModel';
 
 
 
-const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId}) => {
+const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMessage, gameId}) => {
     const [modalShow, setModalShow] = useState(false);
     const currentState = useSelector(state => state)
 
@@ -23,7 +24,7 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
     return (
         
         
-          <Tabs style={{backgroundColor: "lightgray"}} className="scifiUI">
+          <Tabs style={{backgroundColor: "#dfe5ed", height: "100vh", overflow: "hidden"}} className="scifiUI">
             <TabList>
               <Tab><i className="bi bi-chat-left-text-fill"></i></Tab>
               <Tab><i className="bi bi-folder-fill"></i></Tab>
@@ -33,7 +34,7 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
             </TabList>
         
             <TabPanel>
-              <Container>
+              <Container className="m-0 p-0">
 
               <GameChat
               chatHistory={chatHistory}
@@ -43,9 +44,10 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
               />
               </Container>
             </TabPanel>
-            <TabPanel>
+            <TabPanel style={{height:"100%", overflow:"hidden"}}>
               <GameCharacters setModalShow={setModalShow}/>
             <ImportCharacterModal
+            updateUser={updateUser}
             gameId={gameId}
             show={modalShow}
             onHide={() => setModalShow(false)} />
@@ -55,12 +57,15 @@ const GameMenu = ({chatHistory, handleMessageSubmit, message, setMessage, gameId
                 <Generators/>
             </TabPanel>
             <TabPanel>
-                <p>lib</p>
+                <LibrarySearch/>
             </TabPanel>
             <TabPanel>
+              <Row className="d-flex justify-content-center">
+
                 <Link to={`/`+ currentState.user.info._id}>
             <Button variant="danger" >Exit Game</Button>
                 </Link>
+              </Row>
             </TabPanel>
           </Tabs>
     )

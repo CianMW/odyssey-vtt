@@ -13,12 +13,14 @@ import { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import GameSocket from './components/LaunchGame/GameSocket';
 import { useSelector, useDispatch } from 'react-redux';
-import { setLocation } from './Actions';
+import { setLocation, setUser } from './Actions';
 import TopNav from './components/TopNav';
 import MainSideBar from './components/MainSideBar';
 import './App.css';
 import LandingSideBar from './components/LandingSideBar';
 import SciFiToast from './SingleComponents/SciFiToast';
+import WormholeLoader from './SingleComponents/WormholeLoader.jsx';
+import Contact from './components/Contact/Contact';
 
 function App() {
   const [wid, setWid] = useState("closed");
@@ -37,6 +39,21 @@ const closeSideNav = () => {
   setDisplay("inline-block")
 }
 
+
+const updateUser = async () => {
+  const response = await fetch("http://localhost:3150/user/me", {
+    headers: {
+      authorization: currentState.auth.b64Auth,
+    },
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    dispatch(setUser(data));
+    console.log("here is the user: ", data);
+  }
+};
+
 const loggedIn = currentState.data.loggedIn ? "none" : "block"
 
 
@@ -44,7 +61,9 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
       <Container  className=" full-parent-size m-0 p-0 full-length column-wrapper">
             <SciFiToast/>
           <Router>
+            { !currentState.data.inGame &&
           <TopNav openSideNav={openSideNav} loggedIn={loggedIn} display={display}/>
+            }
 
           {
             currentState.data.loggedIn ? (
@@ -57,23 +76,25 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
           <Routes>
             {
               currentState.data.loggedIn ? (
-               <Route path="/:userId" element={<Home/>}/>
+               <Route path="/:userId" element={<Home updateUser={updateUser}/>}/>
                ) : (
                <Route exact path="/" element={<LandingPage/>}/>
                )
             }
-            <Route path="/gameroom/:gameId" element={<GameSocket/>}/>
+            <Route path="/gameroom/:gameId" element={<GameSocket updateUser={updateUser}/>}/>
             <Route path="/character" element={<CharacterSheet/>}/>
             <Route path="/signUp" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+
 
           </Routes>
           </div>
           </Router>
 
-          {!currentState.data.inGame && 
+          {/* {!currentState.data.inGame && 
            <MainFooter/>
-          }
+          } */}
           
           </Container>
   );

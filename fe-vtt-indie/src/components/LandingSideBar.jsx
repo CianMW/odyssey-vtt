@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const LandingSideBar = ({wid, closeSideNav}) => {
     return (
@@ -6,18 +7,18 @@ const LandingSideBar = ({wid, closeSideNav}) => {
 
         <i className="unstyled bi bi-list" ></i>
         </div >
-        <a href="#home-section" className="unstyled text-end" to="/">
-        <h2 className="unstyled d-flex text-end">Get Started</h2>
-        </a>
+        <Link  className="unstyled text-end" to="/">
+        <h2 className="unstyled d-flex text-end">Home</h2>
+        </Link>
         <a href="#project_section" className="unstyled" to="/">
         <h2 className="unstyled">Player Portal</h2>
         </a>
         <a href="#about_section" className="unstyled" to="/">
         <h2 className="unstyled">About</h2>
         </a>
-        <a href="#contact_section" className="unstyled" to="/">
+        <Link  className="unstyled" to="/contact">
         <h2 className="unstyled">Contact</h2>
-        </a>
+        </Link>
     </div>
      )
     };

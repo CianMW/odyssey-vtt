@@ -32,7 +32,9 @@ const MyVerticallyCenteredModal = (props) => {
           if (response.ok) {
             const data = await response.json()
             console.log("Success!!", data)
-             navigate(`/${data._id}`, {replace: true})
+            props.updateUser()
+            await props.onHide()
+            //  navigate(`/${data._id}`, {replace: true})
           } else {
             console.log("Problem!!!!")
           }

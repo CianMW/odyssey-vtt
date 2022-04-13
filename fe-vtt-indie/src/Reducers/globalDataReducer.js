@@ -23,6 +23,21 @@ const dataReducer = (state = initialState, action) => {
 			...state,
 			diceNotation: action.payload,
 		}	
+		case "SETDICEROLLRESULT":
+			return {
+			...state,
+			diceRollResult: action.payload,
+		}	
+		case "ADDOPENCHAR": 
+		return {
+			...state, 
+			activeCharacters: state.activeCharacters.length > 0 ? state.activeCharacters.filter(char => char._id === action.payload._id).length > 0 ? [...state.activeCharacters] : [...state.activeCharacters, action.payload]  : [action.payload] 
+		}
+		case "SETCHARACTERCLOSED": 
+		return {
+			...state, 
+			activeCharacters: state.activeCharacters.filter(char => char._id !== action.payload)
+		}
 		default:
 		return state 	
 	}

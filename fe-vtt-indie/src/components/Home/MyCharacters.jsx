@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { CButton } from "../../SingleComponents/CButton";
 import CreateCharacterModal from "../CreateCharacter/CreateCharacterModal";
 import { useState } from "react";
+import CyberButton from "../../SingleComponents/CyberButton";
 
-const MyCharacters = () => {
+const MyCharacters = ({ updateUser}) => {
   const [modalShow, setModalShow] = useState(false)
   const currentState = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const MyCharacters = () => {
   return (
     <>
     <CreateCharacterModal 
+     updateUser={updateUser}
     show={modalShow}
     onHide={() => setModalShow(false)}
     />
@@ -80,7 +82,7 @@ const MyCharacters = () => {
             )}
           </Row>
           <Row className="justify-content-center text-center">
-              <h4 className="text-center clickable" onClick={e => setModalShow(true)}> + New Character</h4>
+          <CyberButton callback={e => setModalShow(true)} text="+ New Character"/>
           </Row>
         </Container>
     </>

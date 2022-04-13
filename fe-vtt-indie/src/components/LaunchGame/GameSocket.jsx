@@ -20,6 +20,8 @@ import { setDiceRoll, setInGame } from "../../Actions";
 import GameMenu from "./GameMenu";
 import CharacterSheet from "../CreateCharacter/CharacterSheet";
 import DiceInstance from "../DiceRoller/DiceInstance";
+import InGameUsers from "./InGameUsers";
+import BackgroundOverlay from "../../SingleComponents/BackgroundOverlay";
 // import socket  from "./Socket";
 
 
@@ -29,7 +31,7 @@ const socket = io(ADDRESS, { transports: ["websocket"] });
 
 
 
-const GameSocket = () => {
+const GameSocket = ({updateUser}) => {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
@@ -76,6 +78,14 @@ const GameSocket = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const submitDice = async () => {
+      let e = {key:"dice"}
+      await handleMessageSubmit(e)
+    }
+    submitDice()
+  }, [currentState.data.diceRollResult]);
+
   socket.on('connect', () => {
     console.log('Connection established!')
     dispatch(setInGame(true))
@@ -103,7 +113,7 @@ const GameSocket = () => {
   });
 
   async function handleMessageSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (e.key === "Enter") {
       const regex = /(\d*)(D\d*)((?:[+*-](?:\d+|\([A-Z]*\)))*)(?:\+(D\d*))?/gi;
       const match = regex.test(message);
@@ -137,9 +147,10 @@ const GameSocket = () => {
         
         const newMessage = {
           text: message,
-          sender: username,
+          sender: currentState.user.info.name,
           id: socket.id,
           timestamp: Date.now(),
+          diceRoll: false,
         };
         
         // emitMessage(newMessage);
@@ -148,6 +159,16 @@ const GameSocket = () => {
         
       }
       setMessage("");
+    } else if (e.key === "dice"){
+      let diceMessage = {
+        diceResults: currentState.data.diceRollResult[0].rolls,
+        total: currentState.data.diceRollResult[0].value,
+        sender: currentState.user.info.name,
+        id: socket.id,
+        timestamp: Date.now(),
+        diceRoll: true,
+      }
+      setChatHistory([...chatHistory, diceMessage]);
     }
   }
 
@@ -169,6 +190,7 @@ const GameSocket = () => {
 
   return (
     <Container className=" m-0 p-0">
+      <BackgroundOverlay/>
       <Row className="max-row static-full-height  d-flex m-0 p-0">
         {/* <Col md={2} className=" p-0 m-0 col-lg-2 full-height bg-blue">asdasd</Col> */}
         <Col
@@ -177,14 +199,19 @@ const GameSocket = () => {
           style={{overflow: "hidden"}}
         >
           <div>
+            <InGameUsers/>
           <DiceInstance/>
-          <CharacterSheet />
+          {currentState.data.activeCharacters.map( char => 
+          <CharacterSheet character={char}/>
+          )
+          }
           </div>
         </Col>
-        <Col md={3} className="px-0 m-0  full-height col-12 col-md-3">
+        <Col md={3} className="px-0 m-0 full-height col-12 col-md-3">
           <Row className="">
             <Col>
             <GameMenu
+            updateUser={updateUser}
              chatHistory={chatHistory}
              handleMessageSubmit={handleMessageSubmit}
              message={message}

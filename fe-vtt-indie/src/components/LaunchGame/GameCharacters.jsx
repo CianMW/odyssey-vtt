@@ -7,7 +7,7 @@ const GameCharacters = ({setModalShow}) => {
 
 
     return(
-        <Container className="m-0 p-0">
+        <Container className="m-0 p-0" >
             <Row>
             <Button onClick={e => setModalShow(true)} variant="outline-secondary" size="sm">+ Import Character</Button>
             </Row>

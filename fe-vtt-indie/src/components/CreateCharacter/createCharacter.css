@@ -1,24 +1,24 @@
 .code-container {
-    resize: both;
+    /* resize: both; */
     overflow: hidden;
-    margin: auto;
-    width: 80vw;
-    height: 80vh;
+    /* margin: auto; */
+    width: 100%;
+    height: 100%;
     min-width: 240px;
     min-height: 150px;
-    position: relative;
-    --glow-margin: 70px;
-    filter: drop-shadow(0 0 25px rgb(73, 158, 255));
+    /* position: relative; */
+    --glow-margin: 0px;
+    filter: drop-shadow(0 0 15px rgb(3, 221, 255));
   }
   
   .code-container::before {
     content: attr(content);
     position: absolute;
-    bottom: 90px;
-    right: 90px;
+    /* bottom: 90px;
+    right: 90px; */
     z-index: 999;
-    color: rgb(255 200 255 / 0.5);
-    text-shadow: 0 0 12px rgb(90, 106, 192);
+    color: rgba(255, 200, 255, 0.747);
+    text-shadow: 0 0 0px rgb(255, 255, 255);
     letter-spacing: 0.1em;
   }
   
@@ -48,8 +48,8 @@
     display: grid;
     z-index: 2;
     pointer-events: none;
-    --glow: drop-shadow(0 0 1px violet);
-    filter: var(--glow) brightness(1.5) drop-shadow(0 0 10px violet);
+    --glow: drop-shadow(0 0 1px rgb(0, 17, 255));
+    filter: var(--glow) brightness(3) drop-shadow(0 0 5px rgb(92, 74, 255));
   }
   
   .augs {
@@ -74,14 +74,14 @@
     --aug-tl1: 8px;
     --aug-round-br1: initial;
     --aug-br1: 8px;
-    width: calc(100% - var(--glow-margin) * 2);
-    height: calc(100% - var(--glow-margin) * 2);
+    /* width: calc(100% - var(--glow-margin) * 2);
+    height: calc(100% - var(--glow-margin) * 2); */
   }
   
   .glow-container .augs {
     --aug-border: initial;
     --aug-border-all: 2px;
-    --aug-border-bg: linear-gradient(to bottom left, rebeccapurple, orange);
+    --aug-border-bg: linear-gradient(to bottom left, rgb(84, 100, 130), rgb(13, 0, 255));
   }
   .dots {
     position: absolute;
@@ -93,26 +93,26 @@
     --yellow: #ffcc00;
     --green: #61e2ff;
     --close: radial-gradient(circle, var(--red), var(--red) 7px, transparent 8px);
-    --min: radial-gradient(circle, var(--yellow), var(--yellow) 7px, transparent 8px);
-    --max: radial-gradient(circle, var(--green), var(--green) 7px, transparent 8px);
-    background: var(--close) -28px no-repeat,
-                var(--min) -2px no-repeat,
-                var(--max) 24px no-repeat;
+    background: var(--close) -28px no-repeat;
     filter: brightness(0.5);
     opacity: 0.75;
     cursor: pointer;
     border: none;
   }
+  .dots:hover{
+    opacity: 1;
+    filter: brightness(85%)
+  }
   
  
-  
+/*   
   .code {
     position: absolute;
     inset: 80px 10px 10px 10px;
     font-size: 20px;
     color: white;
     filter: brightness(1.2);
-  }
+  } */
   .code * {
     font-size: 18px;
     font-weight: normal;
@@ -143,15 +143,15 @@
   
   /* https://marketplace.visualstudio.com/items?itemName=webrender.synthwave-x-fluoromachine */
   .bg {
-    background: rgb(179,255,246);
-background: linear-gradient(0deg, rgba(179,255,246,0.8438725832129726) 0%, rgba(223,255,251,1) 30%, rgba(234,255,252,0.8578781854538691) 56%, rgba(255,255,255,0.8046568969384629) 100%);
+    background: rgb(75,225,255);
+background: linear-gradient(0deg, rgba(75,225,255,0.7458333675266982) 0%, rgba(211,247,255,0.8242647400757178) 32%, rgba(211,247,255,0.8382703423166141) 64%, rgba(93,227,255,0.7598389697675946) 100%);
   }
   .bg::after{
     content:'';
     height:50%;
     width:100%;
     display:block;
-    background-image:linear-gradient(90deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px);
+    /* background-image:linear-gradient(90deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px), linear-gradient(0deg, rgba(252,25,154,.1) 1px, rgba(0,0,0,0) 1px); */
     background-position:bottom;
     background-repeat:repeat;
     background-size:20px 20px;
@@ -362,3 +362,105 @@ background: linear-gradient(0deg, rgba(179,255,246,0.8438725832129726) 0%, rgba(
     color: #8a2dc066;
     text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 10px #8a2dc066, 0 0 2px #8a2dc066;
   } */
+
+
+
+
+  /* Character Sheet Version April START */
+  .squaredThree {
+    width: 20px;
+    position: relative;
+    /* margin: 10px ; */
+ }
+  .squaredThree label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, .4);
+ }
+  .squaredThree label:after {
+    content: '';
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    transform: rotate(-45deg);
+ }
+  .squaredThree label:hover::after {
+    opacity: 0.3;
+ }
+  .squaredThree input[type=checkbox] {
+    visibility: hidden;
+ }
+  .squaredThree input[type=checkbox]:checked + label:after {
+    opacity: 1;
+ }
+
+
+
+  .squaredGrit {
+    width: 20px;
+    position: relative;
+    /* margin: 10px ; */
+ }
+  .squaredGrit label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+   }
+  .squaredGrit label:after {
+    content: '';
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    transform: rotate(-45deg);
+ }
+  .squaredGrit label:hover::after {
+    opacity: 0.3;
+ }
+  .squaredGrit input[type=checkbox] {
+    visibility: hidden;
+ }
+  .squaredGrit input[type=checkbox]:checked + label:after {
+    opacity: 1;
+ }
+  
+ .charSheetContainer{
+   min-width: 244px;
+   overflow: visible;
+ }
+
+ .clickable-stat{
+   cursor:pointer;
+   transition:all ease 300ms;
+ }
+ .clickable-stat:hover{
+   color: rgb(158, 0, 0)
+ }
+ 
+  /* Character Sheet Version April END */
