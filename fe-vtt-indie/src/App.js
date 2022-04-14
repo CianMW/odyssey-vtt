@@ -76,7 +76,7 @@ const loggedIn = currentState.data.loggedIn ? "none" : "block"
           <Routes>
             {
               currentState.data.loggedIn ? (
-               <Route path="/:userId" element={<Home updateUser={updateUser}/>}/>
+               <Route path="/" element={<Home updateUser={updateUser}/>}/>
                ) : (
                <Route exact path="/" element={<LandingPage/>}/>
                )

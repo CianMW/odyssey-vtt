@@ -47,7 +47,7 @@ const Login = ({setUserId}) => {
       dispatch(setBasicAuth(b64Authentication))
       console.log("here is the user: ", data)
      await dispatch(setLoggedIn(true));
-       await navigate(`/${data._id}`, {replace: true})
+       await navigate(`/`, {replace: true})
     }
       
     }

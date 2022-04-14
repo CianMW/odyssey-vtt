@@ -62,7 +62,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
             <TabPanel>
               <Row className="d-flex justify-content-center">
 
-                <Link to={`/`+ currentState.user.info._id}>
+                <Link to="/" >
             <Button variant="danger" >Exit Game</Button>
                 </Link>
               </Row>
