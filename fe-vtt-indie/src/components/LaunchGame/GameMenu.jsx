@@ -51,7 +51,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
             gameId={gameId}
             show={modalShow}
             onHide={() => setModalShow(false)} />
-            <AvailableCharacters gameId={gameId}/>
+            <AvailableCharacters updateUser={updateUser} gameId={gameId}/>
             </TabPanel>
             <TabPanel>
                 <Generators/>

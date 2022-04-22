@@ -443,12 +443,8 @@ background: linear-gradient(0deg, rgba(75,225,255,0.7458333675266982) 0%, rgba(2
   .squaredGrit label:hover::after {
     opacity: 0.3;
  }
-  .squaredGrit input[type=checkbox] {
-    visibility: hidden;
- }
-  .squaredGrit input[type=checkbox]:checked + label:after {
-    opacity: 1;
- }
+
+
   
  .charSheetContainer{
    min-width: 244px;

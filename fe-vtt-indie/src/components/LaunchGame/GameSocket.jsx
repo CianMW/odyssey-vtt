@@ -202,7 +202,7 @@ const GameSocket = ({updateUser}) => {
             <InGameUsers/>
           <DiceInstance/>
           {currentState.data.activeCharacters.map( char => 
-          <CharacterSheet character={char}/>
+          <CharacterSheet updateUser={updateUser} character={char}/>
           )
           }
           </div>
