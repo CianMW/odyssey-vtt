@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FormControl, Row } from "react-bootstrap";
+import FormControl from "react-bootstrap/FormControl"
 import spaceAcesJson from "./spaceAces.json"
 
 

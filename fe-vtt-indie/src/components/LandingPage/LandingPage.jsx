@@ -1,8 +1,7 @@
-import { Container, Row , Col, Button} from "react-bootstrap"
-import LoginNavBar from "../login-signup/LoginNavBar"
-import { Link } from "react-router-dom"
+import Container from "react-bootstrap/Container"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 import "../../styleSheets/landingPageStyle.css"
-import ThreeScene from "../ThreeJS/three-scene"
 import SpaceAcesLogo from "./SpaceAcesLogo"
 import LogInButton from "../../SingleComponents/logInButton"
 
@@ -129,9 +128,7 @@ const LandingPage = () => {
                 <i className=" bi bi-x-square" style={{color:"red", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
                     A three-headed donkey named George.
                     </span>
-
                         </li>
-
                     </ul>
                 </div>
                 </Col>

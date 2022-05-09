@@ -1,7 +1,16 @@
 import { useState } from "react";
-import { Button, Container, Modal, Row, Col, Form, FormControl, InputGroup, CloseButton } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
+import FormControl from "react-bootstrap/FormControl";
+import InputGroup from "react-bootstrap/InputGroup";
+import CloseButton from "react-bootstrap/CloseButton";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+
 import "./NewGame.css"
 const MyVerticallyCenteredModal = (props) => {
 

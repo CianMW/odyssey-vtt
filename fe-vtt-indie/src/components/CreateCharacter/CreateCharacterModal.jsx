@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { Button, Container, Modal, Row, Col, Form, FormControl, InputGroup, CloseButton, Tooltip, OverlayTrigger } from "react-bootstrap";
+import Button from "react-bootstrap/Button"
+import Container from "react-bootstrap/Container"
+import Modal from "react-bootstrap/Modal"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Form from "react-bootstrap/Form"
+import FormControl from "react-bootstrap/FormControl"
+import InputGroup from "react-bootstrap/InputGroup"
+import Tooltip from "react-bootstrap/Tooltip"
+import OverlayTrigger from "react-bootstrap/OverlayTrigger"
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { updateSystem } from "../../Actions";

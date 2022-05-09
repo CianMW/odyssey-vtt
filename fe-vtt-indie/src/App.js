@@ -1,27 +1,21 @@
-import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Routes, useParams, useLocation } from 'react-router-dom';
 import CharacterSheet from './components/CharacterSheet.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './components/Home/Home';
 import Login from './components/login-signup/Login';
 import LandingPage from './components/LandingPage/LandingPage';
-import MainFooter from './components/Footer';
-import { connect } from "react-redux";
 import SignUp from './components/login-signup/SignUp';
-import LoginNavBar from './components/login-signup/LoginNavBar';
-import { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { useState } from 'react';
 import GameSocket from './components/LaunchGame/GameSocket';
 import { useSelector, useDispatch } from 'react-redux';
-import { setLocation, setUser } from './Actions';
+import { setUser } from './Actions';
 import TopNav from './components/TopNav';
 import MainSideBar from './components/MainSideBar';
 import './App.css';
 import LandingSideBar from './components/LandingSideBar';
 import SciFiToast from './SingleComponents/SciFiToast';
-import WormholeLoader from './SingleComponents/WormholeLoader.jsx';
 import Contact from './components/Contact/Contact';
-
+import Container from 'react-bootstrap/Container';
 function App() {
   const [wid, setWid] = useState("closed");
   const [display, setDisplay] = useState("inline-block");

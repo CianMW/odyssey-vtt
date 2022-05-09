@@ -1,7 +1,8 @@
 
-import { Row, Col, Container, Accordion } from "react-bootstrap"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom"
 import { CButton } from "../../SingleComponents/CButton";
 import CyberButton from "../../SingleComponents/CyberButton";
 

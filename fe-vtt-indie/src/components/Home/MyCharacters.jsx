@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Row, Col, Accordion } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
 import { CButton } from "../../SingleComponents/CButton";
 import CreateCharacterModal from "../CreateCharacter/CreateCharacterModal";
 import { useState } from "react";

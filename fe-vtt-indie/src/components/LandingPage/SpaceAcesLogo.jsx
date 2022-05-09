@@ -1,4 +1,5 @@
-import { Container, Row } from "react-bootstrap"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
 
 const SpaceAcesLogo = () => {
 

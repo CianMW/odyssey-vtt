@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Form, FormControl, Row } from "react-bootstrap";
-import Draggable from "react-draggable";
-import { Resizable, ResizableBox } from "react-resizable";
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
+import Form from "react-bootstrap/Form"
+import FormControl from "react-bootstrap/FormControl"
+import Row from "react-bootstrap/Row"
 import { useDispatch, useSelector } from "react-redux";
-import { setCharacterClosed, setDiceRoll, updateSystem } from "../../Actions";
+import { setCharacterClosed, setDiceRoll } from "../../Actions";
 import { Rnd } from "react-rnd";
 import "./createCharacter.css";
 
