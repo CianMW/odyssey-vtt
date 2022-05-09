@@ -1,4 +1,3 @@
-import {Container, Navbar, Nav, NavDropdown} from "react-bootstrap"
 import "../styleSheets/mainNavBarStyle.css"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
@@ -27,17 +26,17 @@ const MainSideBar = ({wid, closeSideNav}) => {
 
         <i className="unstyled bi bi-list" ></i>
         </div >
-        <Link to={`/${currentState.user.info._id}`}>
+        <Link to={`/`}>
         <h2 className="unstyled d-flex text-end">Home</h2>
         </Link>
-        <a href="#project_section" className="unstyled" to="/">
+        <a href="#project_section" className="unstyled" to="/" style={{cursor:"default"}}>
         <h2 className="unstyled">My Games</h2>
         </a>
-        <a href="#about_section" className="unstyled" to="/">
+        <a href="#about_section" className="unstyled" to="/" style={{cursor:"default"}}>
         <h2 className="unstyled">New Game</h2>
         </a>
-        <a href="#contact_section" className="unstyled" to="/">
-        <h2 className="unstyled">Messages</h2>
+        <a href="#contact_section" className="unstyled" style={{cursor:"default"}}>
+        <h2 disabled="true" className="unstyled">Messages</h2>
         <h2 className="unstyled">Settings</h2>
         <div className="parent-width d-flex justify-content-center ">
 

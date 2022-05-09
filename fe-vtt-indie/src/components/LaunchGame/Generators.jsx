@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Accordion, Row } from "react-bootstrap"
+import Accordion from "react-bootstrap/Accordion"
+import Row from "react-bootstrap/Row"
 import { featureAspect, featureOfInterest, planetType, randAesthetic, randAnotherShip, randBearing, randBeastTrait, randBeastySize, randDemeanour, randDepth, randDifficulty, randEncounter, randExploitableFlaw, randFaction, randFlavour, randGizmoAspect, randGizmoEffect, randGizmoForm, randGizmoPrefix, randGizmoType, randGoal, randHelpfulForte, randHowYouGotIt, randLocation, randLocationAspect, randLoomingThreat, randMechSystems, randMechWeapons, randMegaMonsterType, randMission, randMonsterAbilityType, randMonsterAspect, randMonsterBearing, randMonsterClass, randMonsterElement, randMonsterForm, randMonsterHazard, randMonsterMotivation, randMonsterNature, randMonsterSize, randMonsterType, randMonsterWeakSpot, randMonsterZoneEffect, randNotableQuirk, randObject, randObjective, randOpposition, randOppositionAgenda, randPersonality, randPurpose, randRuinType, randScuffle, randSecret, randShipStatus, randSnag, randSocial, randSpaceWeather, randStrangeEncounter, randTactic, randTreasure, speciesPrefix, speciesSuffix } from "../../GeneratorFunctions"
 import AskTheAI from "../../SingleComponents/AskTheAI"
 import SciFiButton from "../../SingleComponents/SciFiButton"

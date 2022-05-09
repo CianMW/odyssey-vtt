@@ -1,8 +1,7 @@
-import { Container, Row , Col, Button} from "react-bootstrap"
-import LoginNavBar from "../login-signup/LoginNavBar"
-import { Link } from "react-router-dom"
+import Container from "react-bootstrap/Container"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 import "../../styleSheets/landingPageStyle.css"
-import ThreeScene from "../ThreeJS/three-scene"
 import SpaceAcesLogo from "./SpaceAcesLogo"
 import LogInButton from "../../SingleComponents/logInButton"
 
@@ -129,52 +128,38 @@ const LandingPage = () => {
                 <i className=" bi bi-x-square" style={{color:"red", fontSize: "30px"}}></i> <span style={{paddingLeft:"10px"}}>
                     A three-headed donkey named George.
                     </span>
-
                         </li>
-
                     </ul>
                 </div>
                 </Col>
             </Row>
-            <Container>
+            <Container className="justify-content-center px-5">
                 <Row className="text-center">
                 <h1>What Can You Do In Space Aces?</h1>
                 </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Generate over 100 million missions</b></span></Col>
+                <Row className="p-5 text-center justify-content-center align-items-center">
+                <Col sm={12} md={4} ><img src="https://i.ibb.co/yYCWrrZ/planets-1.png" width="200px"/></Col>
+                <Col md={12} ><span><b>Generate over 100 million missions</b></span></Col>
                 </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Delve dangerous space wrecks and ruins</b></span></Col>
+                <Row className="p-5 text-center justify-content-center align-items-center">
+                <Col md={4} ><span className="text-center"><b>Delve dangerous space wrecks and ruins, finding ancient artefacts along the way</b></span></Col>
+                <Col md={4} ><img src="https://i.ibb.co/XZqFhyw/planets-2.png" width="200px"/></Col>
                 </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Hex crawl thousands of unique and populated planets</b></span></Col>
+                <Row className="p-5 justify-content-center text-center align-items-center">
+                <Col md={4} ><img src="https://i.ibb.co/FhCbFvz/aliens-1.png" width="200px"/></Col>
+                <Col md={4} ><span><b>Simple character creation or complex life path generation to create a Space Ace with baggage!</b></span></Col>
                 </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Generate endless sectors of space and travel them with over 10,000 space travel encounters</b></span></Col>
+                <Row className="p-5 justify-content-center text-center align-items-center">
+                <Col md={4} ><span><b>Quick on-the-fly NPC generation complete with personality and SECRETS…</b></span></Col>
+                <Col md={4} ><img src="https://i.ibb.co/1qDL02w/pirate-Ship.png" width="200px"/></Col>
                 </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Simple character creation or complex life path generation to create a Space Ace with baggage!</b></span></Col>
+                <Row className="p-5 justify-content-center text-center align-items-center">
+                <Col md={4} ><img src="https://i.ibb.co/TbhDCdJ/beasties.png" width="200px"/></Col>
+                <Col md={4} c><span>Craft unique gizmos & gadgets, woo beasties to become your besties, battle massive monsters in mega mechs, travel the cosmos in one-of-a-kind starships</span></Col>
                 </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Quick on-the-fly NPC generation complete with personality and SECRETS…</b></span></Col>
-                </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Craft unique gizmos & gadgets, woo beasties to become your besties, battle massive monsters in mega mechs, travel the cosmos in one-of-a-kind starships, and more…</b></span></Col>
-                </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Engage in simple space combat that keeps the whole crew engaged. Face off against wandering omnipotent entities. Explore thousands of space anomalies.</b></span></Col>
-                </Row>
-                <Row className="justify-content-center align-items-center">
-                <Col md={4} className="text-center"><img src="/imgFiles/green-ship.png" width="200px"/></Col>
-                <Col md={8} className=""><span><b>Dare to play on Shark Jumping Mode, Hard Mode, and so much more… all in 24 full-color richly illustrated pages.</b></span></Col>
+                <Row className="p-5 justify-content-center text-center align-items-center">
+                <Col md={4} ><span>Engage in simple space combat that keeps the whole crew engaged. Face off against wandering omnipotent entities. Explore thousands of space anomalies.</span></Col>
+                <Col md={4} ><img src="https://i.ibb.co/pQsY4dX/mech-monster.png" width="200px"/></Col>
                 </Row>
             </Container>
             <Container className="mt-5 mb-5 justify-content-center">

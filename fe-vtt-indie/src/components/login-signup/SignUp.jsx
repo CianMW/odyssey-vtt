@@ -1,11 +1,11 @@
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  InputGroup,
-  FormControl,
-} from "react-bootstrap";
+
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
+import InputGroup from "react-bootstrap/InputGroup"
+import FormControl from "react-bootstrap/FormControl"
+
+
 import LoginNavBar from "./LoginNavBar";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";

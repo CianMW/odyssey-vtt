@@ -1,13 +1,8 @@
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  FormControl,
-  ListGroup,
-  ListGroupItem,
-  Button,
-} from "react-bootstrap";
+
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+
 import { useState, useEffect, FormEvent } from "react";
 import { io } from "socket.io-client";
 import { useLocation } from "react-router";
@@ -202,7 +197,7 @@ const GameSocket = ({updateUser}) => {
             <InGameUsers/>
           <DiceInstance/>
           {currentState.data.activeCharacters.map( char => 
-          <CharacterSheet character={char}/>
+          <CharacterSheet updateUser={updateUser} character={char}/>
           )
           }
           </div>

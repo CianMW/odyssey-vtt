@@ -1,4 +1,5 @@
-import { Row, Col } from "react-bootstrap"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import { useDispatch, useSelector } from "react-redux"
 
 

@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Button, Container, Modal, Row, Col, Form, FormControl, InputGroup, CloseButton } from "react-bootstrap";
+import Button from "react-bootstrap/Button"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Modal from "react-bootstrap/Modal"
+import Col from "react-bootstrap/Col"
+
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { updateSystem } from "../../Actions";

@@ -1,5 +1,9 @@
 
-import { Container, Row, Col, Form, FormControl, ListGroup, ListGroupItem } from 'react-bootstrap'
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Form from "react-bootstrap/Form"
+import ListGroup from "react-bootstrap/ListGroup"
+import ListGroupItem from "react-bootstrap/ListGroupItem"
 import "../../styleSheets/GameSocketStyle.css"
 
 const GameChat = ({chatHistory, handleMessageSubmit, message, setMessage}) => {

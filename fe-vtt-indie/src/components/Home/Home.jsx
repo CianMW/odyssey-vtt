@@ -1,9 +1,10 @@
-import { Row, Container, Col, Accordion } from "react-bootstrap";
+import Container from "react-bootstrap/Container"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
-import { setLocation, setUser } from "../../Actions/index.js";
+import { useDispatch, useSelector } from "react-redux";
 import "../../styleSheets/homeStyle.css";
 import RecentGames from "./RecentGames.jsx";
 import MyCharacters from "./MyCharacters.jsx";

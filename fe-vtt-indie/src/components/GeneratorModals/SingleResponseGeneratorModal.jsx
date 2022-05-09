@@ -1,6 +1,9 @@
 import "../CreateGame/NewGame.css"
 import { randFaction, randMission, randSnag, randObjective,randLocation, randLocationAspect, randOpposition, randOppositionAgenda, completeMissionGenerator, randScuffle, randTactic, randBearing, randSocial, randEncounter, randDifficulty, randFlavour, planetType, planetaryPickle, speciesPrefix, speciesSuffix, featureAspect, featureOfInterest, randRuinType, randAesthetic, randPurpose, randDepth, randLoomingThreat, randMonsterType, randMonsterAspect, randMonsterBearing, randMonsterSize, randMonsterHazard, randHowYouGotIt, randSpaceWeather, randAnotherShip, randShipStatus, randStrangeEncounter, randNotableQuirk, randHelpfulForte, randExploitableFlaw, randGoal, randObject, randSecret, randDemeanour, randGizmoType, randGizmoForm, randGizmoEffect, randGizmoAspect, randGizmoPrefix, randGizmoDurability, randMechWeapons, randMechSystems, randMonsterClass, randMegaMonsterType, randMonsterForm, randMonsterElement, randMonsterAbilityType, randMonsterNature, randMonsterWeakSpot, randMonsterMotivation, randMonsterZoneEffect, randBeastySize, randPersonality, randBeastTrait, randBeastSpecialAbility, randEarlyLife, randFirstSteps, randHowDidItGo, randOmnipotentEntity, randPlayerProfessions } from "../../GeneratorFunctions"
-import { Container, Modal, Row, Col } from "react-bootstrap";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
 import { useEffect, useState } from "react";
 import ParticleEffectButton from "react-particle-effect-button";
 

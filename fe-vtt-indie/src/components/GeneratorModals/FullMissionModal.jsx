@@ -1,6 +1,9 @@
 import "../CreateGame/NewGame.css"
-import { randFaction, randMission, randSnag, randObjective,randLocation, randLocationAspect, randOpposition, randOppositionAgenda, completeMissionGenerator } from "../../GeneratorFunctions"
-import { Container, Modal, Row, Col } from "react-bootstrap";
+import { completeMissionGenerator } from "../../GeneratorFunctions"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
 import { useEffect, useState } from "react";
 
 

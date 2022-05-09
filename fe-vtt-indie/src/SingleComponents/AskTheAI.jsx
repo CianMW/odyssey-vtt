@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Button, ButtonGroup, Row } from "react-bootstrap"
+import Button from "react-bootstrap/Button"
+import ButtonGroup from "react-bootstrap/ButtonGroup"
+import Row from "react-bootstrap/Row"
 import { useDispatch, useSelector } from "react-redux";
 import { setToast } from "../Actions";
 import { askTheAI } from "../GeneratorFunctions";
-import SciFiToast from "./SciFiToast";
 
 
 

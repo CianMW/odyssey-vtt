@@ -1,28 +1,37 @@
 import { useEffect, useState } from "react";
-import { FormControl } from "react-bootstrap";
-import spaceAces from "./spaceAces.json"
+import FormControl from "react-bootstrap/FormControl"
+import spaceAcesJson from "./spaceAces.json"
 
 
 
 const LibrarySearch = () => {
 const [search, setSearch] = useState("");
+const [resultsArray, setResultsArray] = useState("");
 
-// useEffect(() => {
-//     if (search.length > 2) {
-//         searchSpaceAces()
-//     }
-//     console.log(spaceAces)
+useEffect(() => {
+    if (search.length > 2) {
+        searchSpaceAces()
+    }
+    console.log(spaceAcesJson)
 
-// }, [search]);
+}, [search]);
 
 function searchSpaceAces() {
     let results = []
 
-    for (let index = 0; index < spaceAces.length; index++) {
-        const element = spaceAces[index];
-        element.subsections.map(el => el.text.toLowerCase().includes(search) && results.push(el))
+    for (let i = 0; i < spaceAcesJson.spaceAces.length; i++) {
+        const element = spaceAcesJson.spaceAces[i];
+       let filtered =  element.subsections.filter(el => el.text.toLowerCase().includes(search))
+       if(filtered.length > 0){
+              results.push(filtered)
+           console.log("the filtered", filtered )
+        } else {
+            console.log("No Filtered")
+        }
     }
-    console.log("results!!!", results)
+    setResultsArray(results)
+    console.log(resultsArray, "saved to the state")
+    console.log("results!!!", spaceAcesJson.spaceAces.length)
 }
 
     return (<>
@@ -32,6 +41,7 @@ function searchSpaceAces() {
         value={search}
         onChange={e => setSearch(e.target.value.toLowerCase())}
         />
+        {resultsArray.length > 0 && resultsArray.map(el => console.log("singular text", el))}
         </>
     )
 }

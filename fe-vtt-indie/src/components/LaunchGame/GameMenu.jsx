@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Button, Container, Row } from 'react-bootstrap';
+import Button from "react-bootstrap/Button"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -51,7 +53,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
             gameId={gameId}
             show={modalShow}
             onHide={() => setModalShow(false)} />
-            <AvailableCharacters gameId={gameId}/>
+            <AvailableCharacters updateUser={updateUser} gameId={gameId}/>
             </TabPanel>
             <TabPanel>
                 <Generators/>
@@ -62,7 +64,7 @@ const GameMenu = ({updateUser, chatHistory, handleMessageSubmit, message, setMes
             <TabPanel>
               <Row className="d-flex justify-content-center">
 
-                <Link to={`/`+ currentState.user.info._id}>
+                <Link to="/" >
             <Button variant="danger" >Exit Game</Button>
                 </Link>
               </Row>
