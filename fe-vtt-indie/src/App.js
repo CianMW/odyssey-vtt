@@ -16,6 +16,9 @@ import LandingSideBar from './components/LandingSideBar';
 import SciFiToast from './SingleComponents/SciFiToast';
 import Contact from './components/Contact/Contact';
 import Container from 'react-bootstrap/Container';
+import dotenv from "dotenv/config"
+
+
 function App() {
   const [wid, setWid] = useState("closed");
   const [display, setDisplay] = useState("inline-block");
@@ -35,7 +38,7 @@ const closeSideNav = () => {
 
 
 const updateUser = async () => {
-  const response = await fetch("http://localhost:3150/user/me", {
+  const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/user/me`, {
     headers: {
       authorization: currentState.auth.b64Auth,
     },

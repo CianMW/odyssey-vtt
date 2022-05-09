@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { updateSystem } from "../../Actions";
 import "./../CreateGame/NewGame.css"
+import dotenv from "dotenv/config";
 
 
 const CreateCharacterModal = (props) => {
@@ -42,7 +43,7 @@ const CreateCharacterModal = (props) => {
         }
   
         try{
-          const response = await fetch("http://localhost:3150/character/",{
+          const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/character/`,{
            method: 'POST',
            headers: {
             'Content-Type': 'application/json',

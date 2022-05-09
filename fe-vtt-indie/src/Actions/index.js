@@ -1,4 +1,5 @@
 import thunk from "redux-thunk";
+import dotenv from "dotenv/config";
 
 import { Dispatch } from "react";
 import { useSelector } from "react-redux";
@@ -49,7 +50,7 @@ export const updateSystem = () => {
   return async (dispatch) => {
     const currentState = useSelector((state) => state);
     const updateUser = async () => {
-      const response = await fetch("http://localhost:3150/user/me", {
+      const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/user/me`, {
         headers: {
           authorization: currentState.auth.b64Auth,
         },

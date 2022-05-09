@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setBasicAuth, setLoggedIn, setUser } from "../../Actions";
+import dotenv from "dotenv/config";
+
 
 const Login = ({ setUserId }) => {
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ const Login = ({ setUserId }) => {
     console.log(b64Auth);
     const b64Authentication = "basic " + b64Auth;
 
-    const response = await fetch("http://localhost:3150/user/me", {
+    const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/user/me`, {
       headers: {
         authorization: b64Authentication,
       },

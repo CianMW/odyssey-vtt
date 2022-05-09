@@ -10,6 +10,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import CloseButton from "react-bootstrap/CloseButton";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import dotenv from "dotenv/config";
 
 import "./NewGame.css"
 const MyVerticallyCenteredModal = (props) => {
@@ -30,7 +31,7 @@ const MyVerticallyCenteredModal = (props) => {
         }
   
         try{
-          const response = await fetch("http://localhost:3150/game/",{
+          const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/game/`,{
            method: 'POST',
            headers: {
             'Content-Type': 'application/json',

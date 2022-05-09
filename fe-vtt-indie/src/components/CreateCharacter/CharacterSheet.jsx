@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCharacterClosed, setDiceRoll } from "../../Actions";
 import { Rnd } from "react-rnd";
 import "./createCharacter.css";
+import dotenv from "dotenv/config";
+
 
 const CharacterSheet = ({ character, updateUser }) => {
   const [randomAvatar, setRandomAvatar] = useState("");
@@ -72,7 +74,7 @@ const CharacterSheet = ({ character, updateUser }) => {
   const updateCharacter = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3150/character/${character._id}`,
+        `${process.env.REACT_APP_SOCKETSERVER}/character/${character._id}`,
         {
           method: "PUT",
           headers: {
