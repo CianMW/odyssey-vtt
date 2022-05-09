@@ -1,0 +1,33 @@
+.attributes {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  #roll-all {
+    margin-bottom: 5px;
+  }
+  
+  .attrib-group {
+    display: flex;
+    margin: 5px 0;
+  }
+  
+  .attrib-name button {
+    width: 4em;
+  }
+  
+  .attrib-input {
+    font-size: 1rem;
+    padding: 5px;
+    margin-left: 5px;
+  }
+  
+
+  .die-btn{
+    border: none;
+    --aug-inlay-bg: lightgray;
+    transition: --aug-inlay-bg 1s;
+  }
+  .die-btn:hover{
+    --aug-inlay-bg: lightblue;
+  }

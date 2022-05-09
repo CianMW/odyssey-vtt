@@ -1,4 +1,9 @@
-import { FormControl, Col, Row, Container, InputGroup } from "react-bootstrap";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
+import InputGroup from "react-bootstrap/InputGroup"
+import FormControl from "react-bootstrap/FormControl"
+
 import "../styleSheets/characterSheetStyle.css";
 import { useState, useEffect } from "react";
 import rough from "roughjs"

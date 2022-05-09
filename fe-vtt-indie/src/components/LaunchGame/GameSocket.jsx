@@ -1,22 +1,22 @@
-import {
-  Container,
-  Row,
-  Col,
-  Form,
-  FormControl,
-  ListGroup,
-  ListGroupItem,
-  Button,
-} from "react-bootstrap";
+
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+
 import { useState, useEffect, FormEvent } from "react";
 import { io } from "socket.io-client";
 import { useLocation } from "react-router";
-import "../../styleSheets/GameSocketStyle.css";
+import "./GameSocketStyle.css";
 import GameChat from "./GameChat";
 import ADDRESS from "./addressSetup.js";
 import { useDispatch, useSelector } from "react-redux";
-import CharacterSheet from "../CharacterSheet";
-import { setInGame } from "../../Actions";
+// import CharacterSheet from "../CharacterSheet";
+import { setDiceRoll, setInGame } from "../../Actions";
+import GameMenu from "./GameMenu";
+import CharacterSheet from "../CreateCharacter/CharacterSheet";
+import DiceInstance from "../DiceRoller/DiceInstance";
+import InGameUsers from "./InGameUsers";
+import BackgroundOverlay from "../../SingleComponents/BackgroundOverlay";
 // import socket  from "./Socket";
 
 
@@ -26,7 +26,7 @@ const socket = io(ADDRESS, { transports: ["websocket"] });
 
 
 
-const GameSocket = () => {
+const GameSocket = ({updateUser}) => {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
@@ -73,6 +73,14 @@ const GameSocket = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const submitDice = async () => {
+      let e = {key:"dice"}
+      await handleMessageSubmit(e)
+    }
+    submitDice()
+  }, [currentState.data.diceRollResult]);
+
   socket.on('connect', () => {
     console.log('Connection established!')
     dispatch(setInGame(true))
@@ -100,19 +108,62 @@ const GameSocket = () => {
   });
 
   async function handleMessageSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
     if (e.key === "Enter") {
-      const newMessage = {
-        text: message,
-        sender: username,
+      const regex = /(\d*)(D\d*)((?:[+*-](?:\d+|\([A-Z]*\)))*)(?:\+(D\d*))?/gi;
+      const match = regex.test(message);
+      console.log("MESSAGE!", message[0])
+      // check if all characters are numbers before the initial "d"
+      let charsAreNumbers 
+      let lastNum
+
+      const checkChars = () => {
+      let loopTerm = message.indexOf("d")  
+
+      for (let i = 0; i < loopTerm; i++) {
+        if (isNaN(parseInt(message[i])) === false) {
+          charsAreNumbers = true
+          lastNum = i
+        } else {
+          charsAreNumbers = false
+          break
+        }
+      }
+    }
+    checkChars()
+
+    console.log(isNaN(message[lastNum+1]))
+    console.log("char are numbers", charsAreNumbers)
+
+      if (match && isNaN(message[lastNum+1]) && charsAreNumbers) {
+        dispatch(setDiceRoll(message))
+      } else {
+
+        
+        const newMessage = {
+          text: message,
+          sender: currentState.user.info.name,
+          id: socket.id,
+          timestamp: Date.now(),
+          diceRoll: false,
+        };
+        
+        // emitMessage(newMessage);
+        console.log("reeee");
+        setChatHistory([...chatHistory, newMessage]);
+        
+      }
+      setMessage("");
+    } else if (e.key === "dice"){
+      let diceMessage = {
+        diceResults: currentState.data.diceRollResult[0].rolls,
+        total: currentState.data.diceRollResult[0].value,
+        sender: currentState.user.info.name,
         id: socket.id,
         timestamp: Date.now(),
-      };
-
-      // emitMessage(newMessage);
-      console.log("reeee");
-      setChatHistory([...chatHistory, newMessage]);
-      setMessage("");
+        diceRoll: true,
+      }
+      setChatHistory([...chatHistory, diceMessage]);
     }
   }
 
@@ -134,64 +185,39 @@ const GameSocket = () => {
 
   return (
     <Container className=" m-0 p-0">
+      <BackgroundOverlay/>
       <Row className="max-row static-full-height  d-flex m-0 p-0">
         {/* <Col md={2} className=" p-0 m-0 col-lg-2 full-height bg-blue">asdasd</Col> */}
         <Col
           md={9}
-          className=" static-full-height-scroll px-2 m-0 col-md-8 bg-custom-textured"
+          className="justify-content-center align-items-center static-full-height-scroll px-2 m-0 d-none d-md-block col-md-8 bg-custom-textured"
+          style={{overflow: "hidden"}}
         >
-          <CharacterSheet />
+          <div>
+            <InGameUsers/>
+          <DiceInstance/>
+          {currentState.data.activeCharacters.map( char => 
+          <CharacterSheet updateUser={updateUser} character={char}/>
+          )
+          }
+          </div>
         </Col>
-        <Col md={3} className="px-0 m-0 full-height col-md-1">
+        <Col md={3} className="px-0 m-0 full-height col-12 col-md-3">
           <Row className="">
-            <Col
-              md={3}
-              className={`text-center dynamic-folder ${
-                selectedFolder === "chat" ? "semi-bordered" : "bordered"
-              }`}
-              onClick={(e) => setSelectedFolder("chat")}
-            >
-              <i className="bi bi-chat-left-text-fill"></i>
+            <Col>
+            <GameMenu
+            updateUser={updateUser}
+             chatHistory={chatHistory}
+             handleMessageSubmit={handleMessageSubmit}
+             message={message}
+             setMessage={setMessage}
+             gameId={getUrlParams[1]}
+             />
             </Col>
-            <Col
-              md={3}
-              className={`text-center dynamic-folder ${
-                selectedFolder === "characters" ? "semi-bordered" : "bordered"
-              }`}
-              onClick={(e) => setSelectedFolder("characters")}
-            >
-              <i className="bi bi-folder-fill"></i>
-            </Col>
-            <Col
-              md={3}
-              className={`text-center dynamic-folder ${
-                selectedFolder === "library" ? "semi-bordered" : "bordered"
-              }`}
-              onClick={(e) => setSelectedFolder("library")}
-            >
-              <i className="bi bi-search"></i>
-            </Col>
-            <Col
-              md={3}
-              className={`text-center dynamic-folder ${
-                selectedFolder === "settings" ? "semi-bordered" : "bordered"
-              }`}
-              onClick={(e) => setSelectedFolder("settings")}
-            >
-              <i className="bi bi-gear-fill"></i>
-            </Col>
-          </Row>
-          {selectedFolder === "chat" && (
-            <GameChat
-              chatHistory={chatHistory}
-              handleMessageSubmit={handleMessageSubmit}
-              message={message}
-              setMessage={setMessage}
-            />
-          )}
-        </Col>
-      </Row>
-    </Container>
+              </Row>
+                </Col>
+              </Row>
+            </Container>
 
     // <Container fluid className=' px-0'>
 
@@ -231,3 +257,93 @@ const GameSocket = () => {
 };
 
 export default GameSocket;
+
+
+
+
+{/* <ul class="scifiUI">
+  <li>
+    <input type="radio" name="tab" id="tab1" checked>
+    <label for="tab1">Tab1</label>
+    <div class="section">
+     The user interface, in the industrial design field of human–machine interaction, is the space where interactions between humans and machines occur. The goal of this interaction is effective operation and control of the machine on the user's end, and feedback from the machine, which aids the operator in making operational decisions. Examples of this broad concept of user interfaces include the interactive aspects of computer operating systems, hand tools, heavy machinery operator controls, and process controls. The design considerations applicable when creating user interfaces are related to or involve such disciplines as ergonomics and psychology.
+    </div>
+  </li>
+  <li>
+    <input type="radio" name="tab" id="tab2" />
+    <label for="tab2">Tab2</label>
+    <div class="section">
+    User Experience (UX) involves a person's behaviors, attitudes, and emotions about using a particular product, system or service. User Experience includes the practical, experiential, affective, meaningful and valuable aspects of human-computer interaction and product ownership. Additionally, it includes a person’s perceptions of system aspects such as utility, ease of use and efficiency. User Experience may be considered subjective in nature to the degree that it is about individual perception and thought with respect to the system. User Experience is dynamic as it is constantly modified over time due to changing usage circumstances and changes to individual systems as well as the wider usage context in which they can be found.
+    </div>
+  </li>
+  <li>
+    <input type="radio" name="tab" id="tab3" />
+    <label for="tab3">Tab3</label>
+    <div class="section">
+      Interactive Design is defined as a user-oriented field of study that focuses on meaningful communication of media through cyclical and collaborative processes between people and technology. Successful interactive designs have simple, clearly defined goals, a strong purpose and intuitive screen interface.
+    </div>
+  </li>
+  <li>
+    <input type="radio" name="tab" id="tab4" />
+    <label for="tab4">Tab4</label>
+    <div class="section">
+      In computer science, functional programming is a programming paradigm, a style of building the structure and elements of computer programs, that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions. In functional code, the output value of a function depends only on the arguments that are input to the function, so calling a function f twice with the same value for an argument x will produce the same result f(x) both times. Eliminating side effects, i.e. changes in state that do not depend on the function inputs, can make it much easier to understand and predict the behavior of a program, which is one of the key motivations for the development of functional programming.
+    </div>
+  </li>
+</ul> */}
+
+
+
+
+
+
+
+// OLD
+
+
+
+
+          //     md={3}
+          //     className={`text-center dynamic-folder ${
+          //       selectedFolder === "chat" ? "semi-bordered" : "bordered"
+          //     }`}
+          //     onClick={(e) => setSelectedFolder("chat")}
+          //   >
+          //     <i className="bi bi-chat-left-text-fill"></i>
+          //   </Col>
+          //   <Col
+          //     md={3}
+          //     className={`text-center dynamic-folder ${
+          //       selectedFolder === "characters" ? "semi-bordered" : "bordered"
+          //     }`}
+          //     onClick={(e) => setSelectedFolder("characters")}
+          //   >
+          //     <i className="bi bi-folder-fill"></i>
+          //   </Col>
+          //   <Col
+          //     md={3}
+          //     className={`text-center dynamic-folder ${
+          //       selectedFolder === "library" ? "semi-bordered" : "bordered"
+          //     }`}
+          //     onClick={(e) => setSelectedFolder("library")}
+          //   >
+          //     <i className="bi bi-search"></i>
+          //   </Col>
+          //   <Col
+          //     md={3}
+          //     className={`text-center dynamic-folder ${
+          //       selectedFolder === "settings" ? "semi-bordered" : "bordered"
+          //     }`}
+          //     onClick={(e) => setSelectedFolder("settings")}
+          //   >
+          //     <i className="bi bi-gear-fill"></i>
+          //   </Col>
+          // </Row>
+          // {selectedFolder === "chat" && (
+          //   <GameChat
+          //     chatHistory={chatHistory}
+          //     handleMessageSubmit={handleMessageSubmit}
+          //     message={message}
+          //     setMessage={setMessage}
+          //   />
+          // )}

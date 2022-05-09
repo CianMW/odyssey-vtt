@@ -1,9 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Container, Row, Col, Accordion } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container";
 import { CButton } from "../../SingleComponents/CButton";
+import CreateCharacterModal from "../CreateCharacter/CreateCharacterModal";
+import { useState } from "react";
+import CyberButton from "../../SingleComponents/CyberButton";
 
-const MyCharacters = () => {
+const MyCharacters = ({ updateUser}) => {
+  const [modalShow, setModalShow] = useState(false)
   const currentState = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -24,12 +29,13 @@ const MyCharacters = () => {
   }
 
   return (
-    <Accordion.Item eventKey="1" className="mt-2">
-      <Accordion.Header>
-        <h3>My Characters</h3>
-      </Accordion.Header>
-      <Accordion.Body>
-        <Container className="bordered py-2 ">
+    <>
+    <CreateCharacterModal 
+     updateUser={updateUser}
+    show={modalShow}
+    onHide={() => setModalShow(false)}
+    />
+        <Container className=" py-2 ">
           <Row className="p-0 m-0">
             {currentState.user.info.characters.length > 0 ? (
               currentState.user.info.characters
@@ -47,20 +53,20 @@ const MyCharacters = () => {
                           </u>
                           </h5>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>Lvl : {char.level}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>moxie:{char.moxie}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>AC : {char.armorClass}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>smarts:{char.smarts}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6><i class="text-danger bi bi-heart-fill"></i> : {char.hitPoints.maxHitPoints} / {char.hitPoints.currentHitPoints}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>pockets:{char.pockets}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>{char.class}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>wiggles:{char.wiggles}</h6>
                       </Col>
-                      <Col className="col-6 col-md-4 col-lg-3">
-                        <h6>{char.race}</h6>
+                      <Col className="col-4 col-md-3 col-lg-3">
+                        <h6>friends:{char.friends}</h6>
                       </Col>
                       <Col className="col-6 col-md-4 col-lg-3">
                         <CButton label="Open Character" type="primary" link={"/character" + char._id} /> 
@@ -77,13 +83,10 @@ const MyCharacters = () => {
             )}
           </Row>
           <Row className="justify-content-center text-center">
-            <Link to="/createCharacter">
-              <h4> + New Character</h4>
-            </Link>
+          <CyberButton callback={e => setModalShow(true)} text="+ New Character"/>
           </Row>
         </Container>
-      </Accordion.Body>
-    </Accordion.Item>
+    </>
   );
 };
 

@@ -22,3 +22,29 @@
 parent-high{
     height: 100%;
 }
+
+.chat-messages span{
+    font-size: 20px;
+}
+.chat-messages p{
+    font-size: 20px;
+}
+.chat-messages{
+    max-width: 100%;
+}
+.message-instance{
+    width: 100%;
+}
+
+.die-result{
+    color: black;
+}
+.die-result.green{
+    color: rgb(5, 235, 5);
+}
+.die-result.red{
+    color: rgb(241, 24, 24);
+}
+.message-username{
+    font-size: 20px;
+}
