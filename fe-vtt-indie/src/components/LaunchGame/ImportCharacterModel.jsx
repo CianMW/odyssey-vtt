@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { updateSystem } from "../../Actions";
 import "../CreateGame/NewGame.css"
+import dotenv from "dotenv/config";
+
 const ImportCharacterModal = (props) => {
 
     const [gameName, setGameName] = useState();
@@ -28,7 +30,7 @@ const ImportCharacterModal = (props) => {
         console.log("characterId and GameID", props.gameId, characterId)
   
         try{
-          const response = await fetch(`http://localhost:3150/game/${props.gameId}/addCharacter/${characterId}`,{
+          const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/game/${props.gameId}/addCharacter/${characterId}`,{
            method: 'PUT',
            headers: {
             'Content-Type': 'application/json',
