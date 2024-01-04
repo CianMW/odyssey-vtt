@@ -31,6 +31,8 @@ const Login = ({ setUserId }) => {
     console.log(b64Auth);
     const b64Authentication = "basic " + b64Auth;
 
+    await dispatch(setLoggedIn(true));
+    await navigate(`/`, { replace: true });
     const response = await fetch(`${process.env.REACT_APP_SOCKETSERVER}/user/me`, {
       headers: {
         authorization: b64Authentication,
@@ -42,8 +44,6 @@ const Login = ({ setUserId }) => {
       dispatch(setUser(data));
       dispatch(setBasicAuth(b64Authentication));
       console.log("here is the user: ", data);
-      await dispatch(setLoggedIn(true));
-      await navigate(`/`, { replace: true });
     }
   };
   return (
@@ -107,7 +107,7 @@ const Login = ({ setUserId }) => {
                   <div className="d-flex justify-content-center">
                     <div
                       onClick={(e) => signIn()}
-                      className="button-red  inverted-glow"
+                      className="button-red inverted-glow"
                       as="Link"
                     >
                       <span>
