@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Character {
+  id             String    @id @default(uuid())
+  owner          User      @relation(fields: [ownerId], references: [id])
+  ownerId        String
+  editors        User[]    @relation("characterEditors")
+  avatar         String?
+  characterName  String
+  skill          String?
+  style          String?
+  moxie          Int?
+  smarts         Int?
+  wiggles        Int?
+  friends        Int?
+  pockets        Int?
+  currentGumption Int      @default(6)
+  maxGumption    Int      @default(6)
+  shaken         Boolean  @default(false)
+  stressed       Boolean  @default(false)
+  frustrated     Boolean  @default(false)
+  confused       Boolean  @default(false)
+  frightened     Boolean  @default(false)
+  exhausted      Boolean  @default(false)
+  firstGrit      Boolean  @default(false)
+  secondGrit     Boolean  @default(false)
+  thirdGrit      Boolean  @default(false)
+  fourthGrit     Boolean  @default(false)
+  fifthGrit      Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Game {
+  id          String     @id @default(uuid())
+  name        String
+  owner       User       @relation(fields: [ownerId], references: [id])
+  ownerId     String
+  characters  Character[] @relation("gameCharacters")
+  players     User[]     @relation("gamePlayers")
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model User {
+  id           String     @id @default(uuid())
+  name         String
+  avatar       String?
+  email        String     @unique
+  surname      String
+  password     String
+  dateOfBirth  DateTime
+  games        Game[]     @relation("gamePlayers")
+  characters   Character[] @relation("characterEditors")
+  role         String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
